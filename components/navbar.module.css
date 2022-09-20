@@ -31,7 +31,7 @@
 .c-nav__logo {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem;
     text-decoration: none;
     color: inherit;
 }
@@ -40,6 +40,12 @@
 }
 .c-nav__logo-text {
     height: 5rem;
+}
+.c-nav h2 {
+    font-size: 2.4rem;
+    letter-spacing: 0.1rem;
+    font-family: 'Playfair display';
+    font-weight: 400;
 }
 .c-nav hr {
     width: 100%;
