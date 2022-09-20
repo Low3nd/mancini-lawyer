@@ -1,0 +1,73 @@
+.c-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 0 8rem;
+    height: 8rem;
+    width: 100%;
+    position: sticky;
+}
+
+.c-nav--light-theme {
+    color: black;
+    fill: black;
+    border-color: white;
+    background-color: white;
+}
+.c-nav--dark-theme {
+    color: white;
+    fill: white;
+    border-color: var(--grey);
+    background-color: var(--grey);
+}.c-nav--hero-theme {
+    color: black;
+    fill: white;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+
+.c-nav__logo {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    text-decoration: none;
+    color: inherit;
+}
+.c-nav__logo-image {
+    height: 4rem;
+}
+.c-nav__logo-text {
+    height: 5rem;
+}
+.c-nav hr {
+    width: 100%;
+    color: inherit;
+    border-style: solid;
+}
+.c-nav__menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.8rem;
+    border-color: inherit;
+}
+.c-nav__menu-item {
+    width: max-content;
+    list-style: none;
+    border-color: inherit;
+}
+.c-nav__menu-link {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    color: inherit;
+    border: 1px solid;
+    border-color: inherit;
+}
+.c-nav__menu-link:hover {
+    border: 1px solid;
+}
+.c-nav__menu-link--is-active {
+    border: 1px solid;
+}
