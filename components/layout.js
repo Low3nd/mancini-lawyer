@@ -1,11 +1,16 @@
-import Navbar from './navbar'
+import Navbar from './navbar';
+import Footer from './footer';
+import styles from './layout.module.css'
 
-export default function Layout({children}) {
+const Layout = ({children}) => {
+    const sectionIds = ['ACCUEIL', 'À PROPOS', 'COMPÉTENCES', 'HONORAIRES', 'CONTACT'];
     return (
         <>
-            <Navbar />
+            <Navbar sectionIds={sectionIds} />
             <main>{children}</main>
-            {/* <Footer /> */}
+            <Footer sectionIds={sectionIds} />
         </>
     )
-}
+};
+
+export default Layout;

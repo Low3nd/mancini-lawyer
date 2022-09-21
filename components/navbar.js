@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import Image from 'next/image'
-import Link from 'next/link'
-import clsx from 'clsx'
-import styles from './navbar.module.css'
+import Link from 'next/link';
+import clsx from 'clsx';
+import styles from './navbar.module.css';
 
-export default function Navbar () {
-    const ids = ['ACCUEIL', 'À PROPOS', 'COMPÉTENCES', 'HONORAIRES', 'CONTACT'];
+const Navbar = ({sectionIds}) => {
     const [activeID, setActiveID] = useState('ACCUEIL');
 
     return (
@@ -22,7 +20,7 @@ export default function Navbar () {
             </Link>
             <hr />
             <ul className={styles['c-nav__menu']}>
-                {ids.map((id) => (
+                {sectionIds.map((id) => (
                     <li key={`c-nav__menu-item${id}`} className={styles['c-nav__menu-item']}>
                         <Link href={`#${id}`}>
                             <a onClick={() => setActiveID(`${id}`)} className={clsx(
@@ -33,10 +31,11 @@ export default function Navbar () {
                                 {id}
                             </a>
                         </Link>
-
                     </li>
                 ))}
             </ul>
         </nav>
-    );
-}
+    )
+};
+
+export default Navbar;
