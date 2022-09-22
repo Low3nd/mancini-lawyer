@@ -8,6 +8,7 @@
     padding: 0 8rem;
     position: sticky;
     top:0;
+    z-index: 9;
 }
 
 .c-nav--light-theme {
@@ -38,6 +39,7 @@
 }
 .c-nav__logo-image {
     height: 4rem;
+    fill: inherit;
 }
 .c-nav__logo-text {
     height: 5rem;

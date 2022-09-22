@@ -1,0 +1,76 @@
+.c-skillcard {
+    height: 30rem;
+    width: 30rem;
+}
+.c-skillcard__container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+.c-skillcard__container--is-active {
+    transform: rotateY(180deg);
+}
+
+.c-skillcard__front, .c-skillcard__back {
+    backface-visibility: hidden;
+}
+
+.c-skillcard__front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.2s;
+}
+.c-skillcard__front:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+.c-skillcard__front h4 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.c-skillcard__front-icon {
+    margin: 0 auto;
+    height: fit-content;
+    width: fit-content;
+}
+.c-skillcard__front-bulletpoint {
+    list-style: none;
+    font-size: 1.8rem;
+}
+.c-skillcard__front-bulletpoint li {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.c-skillcard__front hr {
+    width: 50%;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid black;
+}
+
+.c-skillcard__back {
+    font-size: 1.8rem;
+    padding: 1.5rem;
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: rotateY(180deg);
+}
+.c-skillcard__back:hover {
+    cursor: pointer;
+}
+.c-skillcard__back h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
