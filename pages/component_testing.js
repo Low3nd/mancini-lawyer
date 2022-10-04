@@ -14,7 +14,7 @@ const ComponentTesting = () => {
     return (
         <div className={styles['testing-container']}>
             {skillList.map((skillList) => (
-                    <Skillcard key={`skill${skillList}`} skillName={skillList[0]} skillBullet={skillList[1]} skillDescription={skillList[2]} />
+                    <Skillcard key={`skill${skillList}`} title={skillList[0]} skillBullet={skillList[1]} skillDescription={skillList[2]} />
             ))}
         </div>
     )

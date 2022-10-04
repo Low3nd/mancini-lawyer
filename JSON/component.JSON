@@ -1,0 +1,32 @@
+{
+    "skillcard0" : {
+        "title": "Droit de la famille",
+        "bullet": ["chazamm", "hocus", "pocus"],
+        "description" : "Texte très long qui décrit en détails une catégorie de compétence particulière"
+    },
+    "skillcard1": {
+        "title": "Droit des entreprises",
+        "bullet": ["etiam", "erat", "velit"],
+        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière"
+    },
+    "skillcard2": {
+        "title": "Test 3",
+        "bullet": ["erat", "etiam", "velit and company and more company"],
+        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière"
+    },
+    "skillcard3": {
+        "title": "Test 4",
+        "bullet": ["velit", "etiam", "erat"],
+        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière"
+    },
+    "skillcard4": {
+        "title": "Test 5",
+        "bullet": ["etiam", "erat", "velit"],
+        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière"
+    },
+    "skillcard5": {
+        "title": "Test 6",
+        "bullet": ["vilora", "erat", "sabon"],
+        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière"
+    }        
+}

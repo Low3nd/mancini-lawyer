@@ -1,0 +1,31 @@
+.check0 {
+    position: absolute;
+    left: 25%;
+}
+.c-menu__container {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: 0.5s;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    /* right: 0; */
+}
+.c-menu--is-active {
+    transform: translateX(0%);
+}
+.c-menu__blur {
+    backdrop-filter: blur(2px);
+}
+.c-menu__sections {
+    background-color: var(--grey);
+}
+
+
+
+.c-menu input {
+    margin: 50%;
+}

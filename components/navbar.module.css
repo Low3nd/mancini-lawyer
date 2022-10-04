@@ -5,7 +5,7 @@
     gap: 4rem;
     height: 8rem;
     width: 100%;
-    padding: 0 8rem;
+    padding: 0 2rem;
     position: sticky;
     top:0;
     z-index: 9;
@@ -22,11 +22,15 @@
     fill: white;
     border-color: var(--grey);
     background-color: var(--grey);
-}.c-nav--hero-theme {
+}
+.c-nav--hero-theme {
     color: black;
     fill: white;
     border-color: transparent;
     background-color: transparent;
+}
+.c-nav--hero-theme h2 {
+    color: white;
 }
 
 
@@ -49,11 +53,6 @@
     letter-spacing: 0.1rem;
     font-family: 'Playfair display';
     font-weight: 400;
-}
-.c-nav hr {
-    width: 100%;
-    color: inherit;
-    border-style: solid;
 }
 .c-nav__menu {
     display: flex;
@@ -79,4 +78,21 @@
 }
 .c-nav__menu-link--is-active {
     border: 1px solid;
+}
+.c-nav__hamburger-menu {
+    display: none;
+}
+
+@media (max-width: 45rem) {
+    .c-nav__menu {
+        display: none;
+    }
+    .c-nav__hamburger-menu {
+        display: initial;
+        height: 5rem;
+        color: white;
+    }
+    .c-nav__hamburger-menu:hover {
+        cursor: pointer;
+    }
 }

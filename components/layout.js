@@ -1,13 +1,13 @@
 import Navbar from './navbar';
 import Footer from './footer';
+import menuIds from '../JSON/menu.json';
 
 const Layout = ({children}) => {
-    const sectionIds = ['ACCUEIL', 'À PROPOS', 'COMPÉTENCES', 'HONORAIRES', 'CONTACT'];
     return (
         <>
-            <Navbar sectionIds={sectionIds} />
+            <Navbar sectionIds={menuIds.sectionIds} />
             <main>{children}</main>
-            <Footer sectionIds={sectionIds} />
+            <Footer sectionIds={menuIds.sectionIds} />
         </>
     )
 };
