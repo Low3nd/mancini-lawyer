@@ -20,14 +20,22 @@ const Menu = ({sectionIds, menuState, menuActivation}) => {
                     menuState === 1 && styles['c-menu--is-active']
                 )}
             >
-                <div className={'c-menu__container'}>
-                    <h2>MANCINI<br />AVOCATE</h2>
-                    <ul className={'c-menu__sections'}>
-                    {sectionIds.map((id)=> (
-                        <li key={id}>{id}</li>
+                <div className={styles['c-menu__container']}>
+                    <h3>MANCINI<br />AVOCATE</h3>
+                    <ul className={styles['c-menu__sections']}>
+                        {sectionIds.map((id)=> (
+                            <>
+                            <hr />
+                                <li key={id} className={styles['c-menu__sections-link']}>
+                                    <Link href={`#${id}`}>
+                                        <a onClick={menuActivation}>{id}</a>
+                                    </Link>
+                                </li>
+                            </>
                         ))}
+                        <hr />
                     </ul>
-                    <svg viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className={styles['c-menu__logo']} viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <symbol id="test" width="102" height="102" viewBox="0 0 102 102"></symbol>
                         <path d="M51 101C78.6142 101 101 78.6142 101 51C101 23.3858 78.6142 1 51 1C23.3858 1 1 23.3858 1 51C1 78.6142 23.3858 101 51 101Z" stroke="currentcolor" strokeMiterlimit="10"/>
                         <path d="M82.6999 32.1V33.2C81.4999 33.2 80.5999 33.4 79.9999 33.6C79.3999 33.8 78.9999 34.3 78.7999 34.9C78.5999 35.5 78.4999 36.5 78.4999 37.8V64.1C78.4999 65.4 78.5999 66.3 78.7999 67C78.9999 67.7 79.3999 68.1 79.9999 68.3C80.5999 68.5 81.4999 68.7 82.6999 68.7V69.8C81.8999 69.7 80.8999 69.7 79.6999 69.7C78.4999 69.7 77.2999 69.7 75.9999 69.7C74.5999 69.7 73.2999 69.7 72.0999 69.7C70.8999 69.7 69.8999 69.8 69.1999 69.8V68.7C70.3999 68.6 71.2999 68.5 71.8999 68.3C72.4999 68.1 72.8999 67.7 73.0999 67C73.2999 66.4 73.3999 65.4 73.3999 64.1V34.9L73.5999 35.1L60.5999 70H59.7999L46.4999 35.5V51.3H45.2999V37.7C45.2999 36.4 45.1999 35.4 44.9999 34.8C44.7999 34.2 44.3999 33.8 43.7999 33.5C43.1999 33.3 42.2999 33.1 41.0999 33.1V32C41.6999 32 42.4999 32.1 43.3999 32.1C44.2999 32.1 45.1999 32.2 46.0999 32.2C46.8999 32.2 47.6999 32.2 48.4999 32.1C49.2999 32.1 49.9999 32 50.5999 32L62.5999 63.7L61.6999 64.1L73.5999 32.1C73.9999 32.1 74.3999 32.1 74.7999 32.1C75.1999 32.1 75.5999 32.1 75.9999 32.1C77.1999 32.1 78.4999 32.1 79.6999 32C80.8999 32.2 81.8999 32.2 82.6999 32.1Z" fill="currentcolor"/>
