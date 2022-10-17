@@ -1,6 +1,6 @@
 import Navbar from './navbar';
 import Footer from './footer';
-import menuIds from '../JSON/menu.json';
+import menuIds from '../data/menu.json';
 
 const Layout = ({children}) => {
     return (

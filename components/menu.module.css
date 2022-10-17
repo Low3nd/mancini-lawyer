@@ -1,10 +1,22 @@
-.check0 {
-    position: absolute;
-    left: 25%;
-}
-.c-menu__container {
+.c-menu__blur {
+    cursor: pointer;
     height: 100vh;
     width: 100%;
+    position: absolute;
+    transform: translateX(100%);
+    backdrop-filter: blur(0px);
+    transition: 0s;
+    z-index: 8;
+}
+.c-menu__blur--is-active {
+    transform: translateX(0%);
+    backdrop-filter: blur(2px);
+    transition: transform 0s;
+    transition: backdrop-filter 0.5s;
+}
+.c-menu {
+    height: 100vh;
+    width: 75%;
     position: absolute;
     top: 0;
     right: 0;
@@ -12,20 +24,13 @@
     transition: 0.5s;
     display: grid;
     grid-template-columns: 35% 65%;
-    /* right: 0; */
+    z-index: 9;
+    background-color: var(--grey);
 }
 .c-menu--is-active {
     transform: translateX(0%);
 }
-.c-menu__blur {
-    backdrop-filter: blur(2px);
-}
-.c-menu__sections {
-    background-color: var(--grey);
-}
 
+.c-menu__container {
 
-
-.c-menu input {
-    margin: 50%;
 }
