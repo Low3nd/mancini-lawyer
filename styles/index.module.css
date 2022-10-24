@@ -1,3 +1,9 @@
+.scrollspy-button {
+    z-index: 1500;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
 .sectionsb {
     height: 25rem;
     background-color: var(--grey);

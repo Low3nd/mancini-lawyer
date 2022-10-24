@@ -24,14 +24,14 @@ const Menu = ({sectionIds, menuState, menuActivation}) => {
                     <h3>MANCINI<br />AVOCATE</h3>
                     <ul className={styles['c-menu__sections']}>
                         {sectionIds.map((id)=> (
-                            <>
+                            <div key={id}>
                             <hr />
-                                <li key={id} className={styles['c-menu__sections-link']}>
+                                <li className={styles['c-menu__sections-link']}>
                                     <Link href={`#${id}`}>
                                         <a onClick={menuActivation}>{id}</a>
                                     </Link>
                                 </li>
-                            </>
+                            </div>
                         ))}
                         <hr />
                     </ul>

@@ -5,18 +5,38 @@ import clsx from 'clsx';
 import styles from '../styles/index.module.css';
 import Skillcard from '../components/skillcard';
 import skill from '../data/component.JSON';
+import { useRef, useState } from 'react';
+import useScrollSpy from 'react-use-scrollspy';
 
-const Home = () => {
+const Home = ({spyUpdate}) => {
   const skillList = [];
   const skillcardConstructor = Object.values(skill).forEach(skillcard => {
     skillList.push([skillcard.title, skillcard.bullet, skillcard.description])
   });
+
+  const sectionRefs = [
+    useRef(null),
+    useRef(null)
+  ]
+  const activeSection = useScrollSpy({
+    sectionElementRefs: sectionRefs,
+    offsetPx: 0,
+  });
+  const spyUpdater = () => {
+    setSpyState(1);
+    console.log('updated');
+  }
+  if (activeSection === 1) {
+    spyUpdate(spyUpdater);
+  }
+
   return (
     <>
       <Head>
         <title>Maître MANCINI - Avocate à Tours</title>
       </Head>
-      <section className={styles['c-hero']}>
+      <section className={styles['c-hero']} ref={sectionRefs[0]}>
+        <button onClick={() => spyUpdate(spyUpdater)} className={styles['scrollspy-button']}>a</button>
         <div className={styles['c-hero__content']}>
           <div className={styles['c-hero__logo']}>
             <svg viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +64,7 @@ const Home = () => {
           </Link>
         </div>
       </section>
-      <section id='COMPÉTENCES' className={styles['skill']}>
+      <section id='COMPÉTENCES' className={styles['skill']} ref={sectionRefs[1]}>
         <h2>DOMAINES D&apos;EXPERTISE</h2>
         <hr />
         <div className={styles['c-skillcard__container']}>

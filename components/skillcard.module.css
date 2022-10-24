@@ -15,6 +15,7 @@
 
 .c-skillcard__front, .c-skillcard__back {
     backface-visibility: hidden;
+    transform: rotateX(0deg)
 }
 
 .c-skillcard__front {
@@ -67,6 +68,7 @@
     height: 100%;
     position: absolute;
     transform: rotateY(180deg);
+    color: white;
 }
 .c-skillcard__back:hover {
     cursor: pointer;

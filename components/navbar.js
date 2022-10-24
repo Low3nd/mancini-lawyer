@@ -4,15 +4,20 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import styles from './navbar.module.css';
 
-const Navbar = ({sectionIds}) => {
+const Navbar = ({sectionIds, activeSection}) => {
     const [activeID, setActiveID] = useState('ACCUEIL');
+    
     const [menuState, setmenuState] = useState(0);
     const menuActivation = () => {
         menuState === 0 ? setmenuState(1) : setmenuState(0);
         console.log(menuState);
     }
     return (
-        <nav className={styles['c-nav'] + " " + styles['c-nav--hero-theme']}>
+        <nav className={clsx(
+            styles['c-nav'],
+            activeSection === 0 && styles['c-nav--hero-theme'],
+            activeSection === 1 && styles['c-nav--light-theme']
+        )}>
         {/* TODO: className is not final. To be modified when implementing scrollSpy */}
             <Link href="">
                 <a className={styles['c-nav__logo']}>
@@ -23,6 +28,7 @@ const Navbar = ({sectionIds}) => {
                     <h3>MANCINI<br />AVOCATE</h3>
                 </a>
             </Link>
+            <button onClick={() => activeSection}>a</button>
             <ul className={styles['c-nav__menu']}>
                 {sectionIds.map((id) => (
                     <li key={`c-nav__menu-item${id}`} className={styles['c-nav__menu-item']}>
