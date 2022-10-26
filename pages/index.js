@@ -2,13 +2,16 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
+import Navbar from '../components/navbar'
 import styles from '../styles/index.module.css';
 import Skillcard from '../components/skillcard';
 import skill from '../data/component.JSON';
+import menuIds from '../data/menu.json';
 import { useRef, useState } from 'react';
 import useScrollSpy from 'react-use-scrollspy';
 
-const Home = ({spyUpdate}) => {
+const Home = () => {
+  
   const skillList = [];
   const skillcardConstructor = Object.values(skill).forEach(skillcard => {
     skillList.push([skillcard.title, skillcard.bullet, skillcard.description])
@@ -16,27 +19,21 @@ const Home = ({spyUpdate}) => {
 
   const sectionRefs = [
     useRef(null),
-    useRef(null)
-  ]
+    useRef(null),
+  ];
   const activeSection = useScrollSpy({
     sectionElementRefs: sectionRefs,
-    offsetPx: 0,
+    offsetPx: -81,
   });
-  const spyUpdater = () => {
-    setSpyState(1);
-    console.log('updated');
-  }
-  if (activeSection === 1) {
-    spyUpdate(spyUpdater);
-  }
 
   return (
     <>
       <Head>
         <title>Maître MANCINI - Avocate à Tours</title>
       </Head>
+      <Navbar sectionIds={menuIds.sectionIds} sectionTheme={activeSection} />
       <section className={styles['c-hero']} ref={sectionRefs[0]}>
-        <button onClick={() => spyUpdate(spyUpdater)} className={styles['scrollspy-button']}>a</button>
+        <button onClick={() => console.log(sectionRefs, activeSection)} className={styles['scrollspy-button']}>a</button>
         <div className={styles['c-hero__content']}>
           <div className={styles['c-hero__logo']}>
             <svg viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,7 +62,6 @@ const Home = ({spyUpdate}) => {
         </div>
       </section>
       <section id='COMPÉTENCES' className={styles['skill']} ref={sectionRefs[1]}>
-        <h2>DOMAINES D&apos;EXPERTISE</h2>
         <hr />
         <div className={styles['c-skillcard__container']}>
           {skillList.map((skill) => (

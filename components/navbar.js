@@ -1,22 +1,22 @@
 import Menu from './menu.js'
-import React, { useState } from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
 import styles from './navbar.module.css';
+import { useState } from 'react';
 
-const Navbar = ({sectionIds, activeSection}) => {
+const Navbar = ({sectionIds, sectionTheme}) => {
     const [activeID, setActiveID] = useState('ACCUEIL');
-    
     const [menuState, setmenuState] = useState(0);
     const menuActivation = () => {
         menuState === 0 ? setmenuState(1) : setmenuState(0);
-        console.log(menuState);
+        console.log(test);
     }
+
     return (
         <nav className={clsx(
             styles['c-nav'],
-            activeSection === 0 && styles['c-nav--hero-theme'],
-            activeSection === 1 && styles['c-nav--light-theme']
+            sectionTheme === 0 && styles['c-nav--hero-theme'],
+            sectionTheme === 1 && styles['c-nav--dark-theme']
         )}>
         {/* TODO: className is not final. To be modified when implementing scrollSpy */}
             <Link href="">
@@ -28,7 +28,7 @@ const Navbar = ({sectionIds, activeSection}) => {
                     <h3>MANCINI<br />AVOCATE</h3>
                 </a>
             </Link>
-            <button onClick={() => activeSection}>a</button>
+            <button onClick={() => console.log(activeSection)}>a</button>
             <ul className={styles['c-nav__menu']}>
                 {sectionIds.map((id) => (
                     <li key={`c-nav__menu-item${id}`} className={styles['c-nav__menu-item']}>
