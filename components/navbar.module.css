@@ -6,7 +6,7 @@
     height: 8rem;
     width: 100%;
     padding: 0 2rem;
-    transition: all 0.5s ease-out;
+    transition: background-color 0.3s ease;
     position: sticky;
     top:0;
     z-index: 9;
@@ -25,7 +25,7 @@
     background-color: var(--grey);
 }
 .c-nav--hero-theme {
-    color: white;
+    color: black;
     fill: white;
     border-color: transparent;
     background-color: transparent;
@@ -92,6 +92,11 @@
     .c-nav__hamburger-menu {
         display: initial;
         height: 5rem;
+    }
+    .c-nav__hamburger-menu--is-black {
+        color: black;
+    }
+    .c-nav__hamburger-menu--is-white {
         color: white;
     }
     .c-nav__hamburger-menu:hover {

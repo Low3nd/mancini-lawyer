@@ -1,15 +1,3 @@
-.scrollspy-button {
-    z-index: 1500;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-}
-.sectionsb {
-    height: 25rem;
-    background-color: var(--grey);
-}
-
-
 .c-hero {
     display: flex;
     justify-content: flex-end;
@@ -139,22 +127,27 @@
 
 
 .skill {
-    top: -8rem;
     background: url("../public/icon/scale-balanced-solid.svg");
     background-repeat: no-repeat;
-    background-size: 50vw;
-    background-position: calc(100% - 4rem) calc(100% - 2rem);
+    background-size: 80vh 50vw;
+    background-position: calc(150% - 4rem) calc(100% - 4rem);
+    position: relative;
 }
-/* @media screen {
+@media screen and (max-width: 45rem) {
     .skill {
-        background-size: ;
+        background-size: 75vw;
+        background-position: 200% 50%;
     }
-} */
+}
 .skill > h2 {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 400;
-    margin: 3rem 0;
+    margin: 0 0 3rem;
+}
+.skill > hr {
+    border: none;
+    border-top: 1px solid black;
 }
 .c-skillcard__container {
     display: flex;
@@ -166,4 +159,34 @@
     padding: 6rem 0;
     max-width: 96rem;
     height: 100%;
+}
+
+
+.c-intersection {
+    height: 50rem;
+    margin: 6rem 0;
+    background: linear-gradient(to bottom, lightblue 50%, var(--grey) 50%);
+    position: relative;
+}
+.c-intersection__contact-info {
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    padding: 4rem;
+    width: 30rem;
+    height: 15rem;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    text-align: center;
+    background-color: var(--yellow);
+    top: -7.5rem;
+    right: 4rem;
+    position: absolute;
+}
+
+.sectionsb {
+    height: 25rem;
+    background-color: lightsalmon;
 }

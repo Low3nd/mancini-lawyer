@@ -16,7 +16,7 @@ const Skillcard = ({title, bullet, description}) => {
                 <div className={styles['c-skillcard__front']} onClick={cardClick}>
                     <h4>{title}</h4>
                     <div className={styles['c-skillcard__front-icon']}>
-                        <Image src={imgPath} alt="" width={50} height={50} />
+                        <img src={imgPath} alt="" />
                     </div>
                     <hr />
                     <ul className={styles['c-skillcard__front-bulletpoint']}>
@@ -24,6 +24,7 @@ const Skillcard = ({title, bullet, description}) => {
                             <li key={`c-skillcard__front-bulletpoint-${bullet}`}>{bullet}</li>
                         ))}
                     </ul>
+                    <div className={styles['c-skillcard__front-description']}>{description}</div>
                 </div>
                 <div className={styles['c-skillcard__back']} onClick={cardClick}>
                     <h4>{title}</h4>

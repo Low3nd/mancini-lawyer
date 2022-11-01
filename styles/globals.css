@@ -12,11 +12,13 @@ html {
   font-size: 10px;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
 }
 body {
   font-family: raleway;
 }
 section {
   top: -8rem;
+  padding: 3rem;
   position: relative;
 }

@@ -25,7 +25,6 @@ const Menu = ({sectionIds, menuState, menuActivation}) => {
                     <ul className={styles['c-menu__sections']}>
                         {sectionIds.map((id)=> (
                             <div key={id}>
-                            <hr />
                                 <li className={styles['c-menu__sections-link']}>
                                     <Link href={`#${id}`}>
                                         <a onClick={menuActivation}>{id}</a>
@@ -33,7 +32,6 @@ const Menu = ({sectionIds, menuState, menuActivation}) => {
                                 </li>
                             </div>
                         ))}
-                        <hr />
                     </ul>
                     <svg className={styles['c-menu__logo']} viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <symbol id="test" width="102" height="102" viewBox="0 0 102 102"></symbol>

@@ -20,6 +20,7 @@ const Home = () => {
   const sectionRefs = [
     useRef(null),
     useRef(null),
+    useRef(null)
   ];
   const activeSection = useScrollSpy({
     sectionElementRefs: sectionRefs,
@@ -32,8 +33,7 @@ const Home = () => {
         <title>Maître MANCINI - Avocate à Tours</title>
       </Head>
       <Navbar sectionIds={menuIds.sectionIds} sectionTheme={activeSection} />
-      <section className={styles['c-hero']} ref={sectionRefs[0]}>
-        <button onClick={() => console.log(sectionRefs, activeSection)} className={styles['scrollspy-button']}>a</button>
+      <section id="ACCUEIL" className={styles['c-hero']} ref={sectionRefs[0]}>
         <div className={styles['c-hero__content']}>
           <div className={styles['c-hero__logo']}>
             <svg viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +44,7 @@ const Home = () => {
             </svg>
           </div>
           <div className={styles['c-hero__title']}>
-            <h1>LÉA MANCINI</h1>
+            <h1 ref={sectionRefs[1]}>LÉA MANCINI</h1>
             <hr></hr>
             <h2>Avocate au Barreau de Tours</h2>
           </div>
@@ -61,7 +61,8 @@ const Home = () => {
           </Link>
         </div>
       </section>
-      <section id='COMPÉTENCES' className={styles['skill']} ref={sectionRefs[1]}>
+      <section id='COMPÉTENCES' className={styles['skill']}>
+        <h2>COMPÉTENCES</h2>
         <hr />
         <div className={styles['c-skillcard__container']}>
           {skillList.map((skill) => (
@@ -69,7 +70,17 @@ const Home = () => {
           ))}
         </div>
       </section>
-      <section className={styles['sectionsb']}></section>
+      <section className={styles['c-intersection']}>
+          <div className={styles['c-intersection__contact-info']}>
+            <span>06.43.36.21.36</span>
+            <span>contact@lea.com</span>
+          </div>
+          <img className={styles['c-intersection__background-image']}></img>
+          <div className={styles['c-intersection__schedule-info']}>
+
+          </div>
+      </section>
+      <section className={styles['sectionsb']} ref={sectionRefs[2]}></section>
     </>
   )
 };

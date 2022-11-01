@@ -43,18 +43,21 @@
     width: 100%;
     padding: 8rem 0;
     background-color: var(--grey);
+    border-left: 1px solid rgb(102, 102, 105);
 }
 .c-menu__sections {
     list-style: none;
     width: 100%;
     text-align: center;
+    border-bottom: solid white 1px;
 }
 .c-menu__sections-link a {
     display: block;
-    padding: 1rem;
+    padding: 2rem;
     width: 100%;
     text-decoration: none;
     color: white;
+    border-top: solid white 1px;
 }
 .c-menu__sections-link:hover {
     background-color: rgb(79, 79, 82);
