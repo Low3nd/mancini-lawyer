@@ -212,6 +212,73 @@
 
 
 .c-bio {
-    height: 25rem;
+    padding: 4rem 8rem;
     background-color: var(--grey);
+    color: white;
+}
+.c-bio > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+.c-bio hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    margin-bottom: 6rem;
+}
+.c-bio__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:    "a b"
+                            "a c"
+                            "a d";
+    gap: 3rem;
+}
+.c-bio__content-img {
+    grid-area: a;
+    align-self: center;
+}
+.c-bio__content-title {
+    grid-area: b;
+    align-self: center;
+    font-size: 2rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+.c-bio__content-description {
+    grid-area: c;
+    font-size: 1.8rem;
+    font-weight: 400;
+    column-count: 2;
+    column-fill: auto;
+    column-gap: 3rem;
+    letter-spacing: 0.05rem;
+    line-height: 2.3rem;
+    text-align: justify;
+    width: auto;
+}
+.c-bio__link {
+    display: flex;
+    justify-content: space-around;
+    gap: 6rem;
+}
+.c-bio__link a {
+    height: 4rem;
+    width: 15rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: raleway;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: var(--green);
+    border: none;
+}
+.c-bio__link a:hover {
+    cursor: pointer;
+}
+.c-bio__link a:active {
+    background-color: rgb(92, 117, 106);
 }
