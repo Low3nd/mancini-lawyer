@@ -163,16 +163,16 @@
 
 
 .c-intersection {
-    height: 50rem;
-    margin: 6rem 0;
-    background: linear-gradient(to bottom, lightblue 50%, var(--grey) 50%);
+    height: 45rem;
+    padding: 7.5rem 8rem;
+    background: linear-gradient(to bottom, white 50%, var(--grey) 50%);
     position: relative;
 }
-.c-intersection__contact-info {
+.c-intersection__label {
     display: flex;
     flex-flow: column;
-    gap: 2rem;
-    padding: 4rem;
+    justify-content: space-around;
+    padding: 3rem 3.5rem;
     width: 30rem;
     height: 15rem;
     font-size: 2rem;
@@ -180,13 +180,38 @@
     letter-spacing: 0.05em;
     font-feature-settings: 'pnum' on, 'lnum' on;
     text-align: center;
-    background-color: var(--yellow);
-    top: -7.5rem;
-    right: 4rem;
     position: absolute;
 }
+.c-intersection__contact {
+    background-color: var(--yellow);
+    top: 0;
+    right: 8rem;
+}
+.c-intersection__contact-info {
+    display: flex;
+    gap: 1rem;
+}
+.c-intersection__schedule {
+    color: white;
+    background-color: var(--green);
+    bottom: 0;
+    left: 8rem;
+}
+.c-intersection__image {
+    height: 100%;
+    width: 100%;
+    background-image: url(../public/img/intersection.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.c-intersection__anchor {
+    position: absolute;
+    top: 50%;
+}
 
-.sectionsb {
+
+.c-bio {
     height: 25rem;
-    background-color: lightsalmon;
+    background-color: var(--grey);
 }

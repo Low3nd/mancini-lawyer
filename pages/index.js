@@ -9,6 +9,7 @@ import skill from '../data/component.JSON';
 import menuIds from '../data/menu.json';
 import { useRef, useState } from 'react';
 import useScrollSpy from 'react-use-scrollspy';
+import testSymbol from '../public/icon/logo-nocircle.svg'
 
 const Home = () => {
   
@@ -71,16 +72,34 @@ const Home = () => {
         </div>
       </section>
       <section className={styles['c-intersection']}>
-          <div className={styles['c-intersection__contact-info']}>
-            <span>06.43.36.21.36</span>
-            <span>contact@lea.com</span>
+          <div className={`${styles['c-intersection__label']} ${styles['c-intersection__contact']}`}>
+            <span className={styles['c-intersection__contact-info']}>
+              <Image 
+                src={testSymbol}
+                alt='A phone symbol'
+                height={24}
+                width={24}
+              />
+              <p>06.43.36.21.36</p>
+            </span>
+            <span className={styles['c-intersection__contact-info']}>
+              <Image 
+                src={testSymbol}
+                alt='A phone symbol'
+                height={24}
+                width={24}
+              />
+              <p>contact@lea.com</p>
+            </span>
           </div>
-          <img className={styles['c-intersection__background-image']}></img>
-          <div className={styles['c-intersection__schedule-info']}>
-
+          <div className={styles['c-intersection__image']}><a className={styles['c-intersection__anchor']} ref={sectionRefs[2]}></a></div>
+          <div className={`${styles['c-intersection__label']} ${styles['c-intersection__schedule']}`}>
+            <p>Du Lundi au Vendredi</p>
+            <p>8h-12h</p>
+            <p>14h-19h</p>
           </div>
       </section>
-      <section className={styles['sectionsb']} ref={sectionRefs[2]}></section>
+      <section className={styles['c-bio']}></section>
     </>
   )
 };
