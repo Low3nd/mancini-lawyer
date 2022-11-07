@@ -1,6 +1,7 @@
 .c-footer {
     font-size: 20px;
     padding: 4rem 8rem 4rem;
+    z-index: 1;
 }
 
 .c-footer__contact-schedule-container {

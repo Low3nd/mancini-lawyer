@@ -195,6 +195,7 @@
     color: white;
     background-color: var(--green);
     bottom: 0;
+    font-weight: 400;
     left: 8rem;
 }
 .c-intersection__image {
@@ -208,6 +209,15 @@
 .c-intersection__anchor {
     position: absolute;
     top: 50%;
+}
+@media screen and (max-width: 45rem) {
+    .c-intersection {
+        height: 0;
+        padding: 0rem 8rem;
+    }
+    .c-intersection__label {
+        display: none;
+    }
 }
 
 
@@ -230,25 +240,30 @@
 .c-bio__content {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-areas:    "a b"
-                            "a c"
+    grid-template-rows: max-content;
+    grid-template-areas:    "a c"
                             "a d";
     gap: 3rem;
 }
 .c-bio__content-img {
     grid-area: a;
-    align-self: center;
+}
+.c-bio__content-img hr {
+    border: none;
+    border-top: 1px solid white;
+    margin: 2rem 0 0;
 }
 .c-bio__content-title {
+    text-align: justify;
+    margin-top: 0.5rem;
     grid-area: b;
     align-self: center;
-    font-size: 2rem;
-    font-weight: 500;
-    text-decoration: underline;
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 .c-bio__content-description {
     grid-area: c;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 400;
     column-count: 2;
     column-fill: auto;
@@ -256,14 +271,15 @@
     letter-spacing: 0.05rem;
     line-height: 2.3rem;
     text-align: justify;
-    width: auto;
 }
 .c-bio__link {
     display: flex;
+    align-items: center;
     justify-content: space-around;
     gap: 6rem;
 }
 .c-bio__link a {
+    grid-area: d;
     height: 4rem;
     width: 15rem;
     padding: 1rem;
@@ -281,4 +297,21 @@
 }
 .c-bio__link a:active {
     background-color: rgb(92, 117, 106);
+}
+@media screen and (max-width: 45rem) {
+    .c-bio__content {
+        grid-template-areas:    "b"
+                                "a"
+                                "c"
+                                "d";
+        grid-template-columns: 1fr;
+    }
+    .c-bio__content-description {
+        column-count: 1;
+    }
+    .c-bio__link {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
 }

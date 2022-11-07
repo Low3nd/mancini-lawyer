@@ -28,13 +28,14 @@ const Home = () => {
     sectionElementRefs: sectionRefs,
     offsetPx: -81,
   });
+  console.log(activeSection)
 
   return (
     <>
       <Head>
         <title>Maître MANCINI - Avocate à Tours</title>
       </Head>
-      <Navbar sectionIds={menuIds.sectionIds} sectionTheme={activeSection} />
+      <Navbar sectionIds={menuIds.sectionIds} currentSection={activeSection} />
       <section id="ACCUEIL" className={styles['c-hero']} ref={sectionRefs[0]}>
         <div className={styles['c-hero__content']}>
           <div className={styles['c-hero__logo']}>
@@ -96,11 +97,11 @@ const Home = () => {
           <div className={styles['c-intersection__image']}><a className={styles['c-intersection__anchor']} ref={sectionRefs[2]}></a></div>
           <div className={`${styles['c-intersection__label']} ${styles['c-intersection__schedule']}`}>
             <p>Du Lundi au Vendredi</p>
-            <p>8h-12h</p>
-            <p>14h-19h</p>
+            <p>8h - 12h</p>
+            <p>14h - 19h</p>
           </div>
       </section>
-      <section className={styles['c-bio']}>
+      <section id="À PROPOS" className={styles['c-bio']}>
         <h2>À PROPOS</h2>
         <hr/>
         <div className={styles['c-bio__content']}>
@@ -111,8 +112,9 @@ const Home = () => {
               layout='responsive'
               objectFit='contain' 
             />
+            <hr />
+            <figcaption className={styles['c-bio__content-title']}>Maître Léa MANSINI, avocat au barreau de Tours et près de la Cour d’Appel d’Orléans</figcaption>
           </div>
-          <h3 className={styles['c-bio__content-title']}>Maître Léa MANSINI, avocat au barreau de Tours et près de la Cour d’Appel d’Orléans</h3>
           <p className={styles['c-bio__content-description']}>Originaire du Cher, région à laquelle je suis très attachée, je me suis installée à TOURS au gré de mes expériences professionnelles. Diplômée d’un Master 1 Carrières Judiciaires et Sciences Criminelles, d’un Master 2 Droit et Justice (procédures en droit privé) avec obtention de l’examen d’entrée à l’Ecole des Avocats dans le même temps, j’ai prêté serment en novembre 2013 après avoir suivi la formation de l’Ecole du Centre Ouest des Avocats. Je me suis forgée sept années d’expérience au sein de cabinets d’Avocats individuels, généralistes, j’interviens à titre personnel principalement dans le domaine du droit de la famille (divorce, séparation), ainsi qu’en droit pénal et en droit civil. Je suis fondamentalement soucieuse d’apporter écoute et rigueur à mes clients, et de mettre à leur profit l’ensemble de mes compétences, de mon énergie et de ma pugnacité. Je suis également encline à proposer le recours à la médiation ou aux modes alternatifs de règlement des conflits lorsque la situation s’y prête (hors cas obligatoires).</p>
           <div className={styles['c-bio__link']}>
             <Link href='honoraires'><a>Honoraires</a></Link>
