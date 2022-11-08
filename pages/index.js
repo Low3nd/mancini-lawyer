@@ -10,7 +10,7 @@ import menuIds from '../data/menu.json';
 import { useRef, useState } from 'react';
 import useScrollSpy from 'react-use-scrollspy';
 import testSymbol from '../public/icon/logo-nocircle.svg'
-import bioPic from '../public/img/bio-pic.jpg'
+import bioPic from '../public/img/bio-pic2.jpg'
 
 const Home = () => {
   
@@ -38,7 +38,7 @@ const Home = () => {
       <Navbar sectionIds={menuIds.sectionIds} currentSection={activeSection} />
       <section id="ACCUEIL" className={styles['c-hero']} ref={sectionRefs[0]}>
         <div className={styles['c-hero__content']}>
-          <div className={styles['c-hero__logo']}>
+          <div className={styles['c-hero__logo']} ref={sectionRefs[1]}>
             <svg viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
               <symbol id="test" width="102" height="102" viewBox="0 0 102 102"></symbol>
                 <path d="M51 101C78.6142 101 101 78.6142 101 51C101 23.3858 78.6142 1 51 1C23.3858 1 1 23.3858 1 51C1 78.6142 23.3858 101 51 101Z" stroke="currentcolor" strokeMiterlimit="10"/>
@@ -47,7 +47,7 @@ const Home = () => {
             </svg>
           </div>
           <div className={styles['c-hero__title']}>
-            <h1 ref={sectionRefs[1]}>LÉA MANCINI</h1>
+            <h1>LÉA MANCINI</h1>
             <hr></hr>
             <h2>Avocate au Barreau de Tours</h2>
           </div>
@@ -96,7 +96,7 @@ const Home = () => {
           </div>
           <div className={styles['c-intersection__image']}><a className={styles['c-intersection__anchor']} ref={sectionRefs[2]}></a></div>
           <div className={`${styles['c-intersection__label']} ${styles['c-intersection__schedule']}`}>
-            <p>Du Lundi au Vendredi</p>
+            <p><b>Du Lundi au Vendredi</b></p>
             <p>8h - 12h</p>
             <p>14h - 19h</p>
           </div>
@@ -110,7 +110,7 @@ const Home = () => {
               alt='Une photo de Maitre Lea Mancini'
               src={bioPic}
               layout='responsive'
-              objectFit='contain' 
+              objectFit='contain'
             />
             <hr />
             <figcaption className={styles['c-bio__content-title']}>Maître Léa MANSINI, avocat au barreau de Tours et près de la Cour d’Appel d’Orléans</figcaption>

@@ -84,20 +84,28 @@
     display: none;
     z-index: 100;
 }
+.c-nav__hamburger-menu--hero-theme {
+    color: black;
+}
+@media screen and (max-width: 45rem) {
+    .c-nav__hamburger-menu--hero-theme {
+        color: white;
+    }
+}
+.c-nav__hamburger-menu--light-theme {
+    color: black;
+}
+.c-nav__hamburger-menu--dark-theme {
+    color: white;
+}
 
-@media (max-width: 45rem) {
+@media screen and (max-width: 92.5rem) {
     .c-nav__menu {
         display: none;
     }
     .c-nav__hamburger-menu {
         display: initial;
         height: 5rem;
-    }
-    .c-nav__hamburger-menu--is-black {
-        color: black;
-    }
-    .c-nav__hamburger-menu--is-white {
-        color: white;
     }
     .c-nav__hamburger-menu:hover {
         cursor: pointer;

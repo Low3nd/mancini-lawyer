@@ -241,12 +241,15 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: max-content;
-    grid-template-areas:    "a c"
-                            "a d";
+    grid-template-areas:    "a b"
+                            "a c";
     gap: 3rem;
 }
 .c-bio__content-img {
     grid-area: a;
+    max-width: 35rem;
+    align-self: center;
+    justify-self: center;
 }
 .c-bio__content-img hr {
     border: none;
@@ -256,13 +259,12 @@
 .c-bio__content-title {
     text-align: justify;
     margin-top: 0.5rem;
-    grid-area: b;
     align-self: center;
     font-size: 1.6rem;
     font-weight: bold;
 }
 .c-bio__content-description {
-    grid-area: c;
+    grid-area: b;
     font-size: 1.6rem;
     font-weight: 400;
     column-count: 2;
@@ -273,13 +275,13 @@
     text-align: justify;
 }
 .c-bio__link {
+    grid-area: c;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     gap: 6rem;
 }
 .c-bio__link a {
-    grid-area: d;
     height: 4rem;
     width: 15rem;
     padding: 1rem;
@@ -298,20 +300,54 @@
 .c-bio__link a:active {
     background-color: rgb(92, 117, 106);
 }
-@media screen and (max-width: 45rem) {
+@media screen and (min-width: 103rem) {
     .c-bio__content {
-        grid-template-areas:    "b"
-                                "a"
-                                "c"
-                                "d";
-        grid-template-columns: 1fr;
+        margin: 0 auto;
+        grid-template-areas:
+            "a b"
+            "a c";
+        grid-template-columns: auto 0.75fr;
+        column-gap: 4rem;
+        row-gap: 0;
+    }
+    .c-bio__content-description {
+        justify-self: center;
+        column-count: 1;
+    }
+    .c-bio__content-img {
+        justify-self: end;
+        align-self: start;
+    }
+    .c-bio__link {
+        align-items: start;
+    }
+}
+@media screen and (max-width: 63rem) {
+    .c-bio__content {
+        grid-template-columns: 1fr 2fr;
     }
     .c-bio__content-description {
         column-count: 1;
     }
     .c-bio__link {
-        flex-direction: column;
         align-items: center;
         gap: 3rem;
+    }
+}
+@media screen and (max-width: 50rem) {
+    .c-bio__content {
+        grid-template-areas:
+            "a"
+            "b"
+            "c";
+        grid-template-columns: 1fr;
+    }
+    .c-bio__content-img {
+        justify-self: center;
+    }
+}
+@media screen and (max-width: 32rem) {
+    .c-bio__link {
+        flex-direction: column;
     }
 }
