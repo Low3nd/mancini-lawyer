@@ -15,10 +15,10 @@ html {
   scroll-padding-top: 8rem;
 }
 body {
+  position: relative;
+  top: -8rem;
   font-family: raleway;
 }
 section {
-  top: -8rem;
   padding: 3rem;
-  position: relative;
 }

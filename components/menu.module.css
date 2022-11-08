@@ -69,6 +69,7 @@
     height: 10rem;
     color: white;
 }
+
 @media screen and (max-height: 650px) {
     .c-menu__logo {
         height: 5rem;
@@ -76,6 +77,25 @@
 }
 @media screen and (max-height: 600px) {
     .c-menu__logo {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 45rem) {
+    .c-menu {
+        width: 35%;
+    }
+}
+@media screen and (min-width: 65rem) {
+    .c-menu {
+        
+    }
+}
+@media screen and (min-width: 92.5rem) {
+    .c-menu {
+        display: none;
+    }
+    .c-menu__blur {
         display: none;
     }
 }

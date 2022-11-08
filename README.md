@@ -20,3 +20,7 @@ SVG : check all svg file size to decide between inline svg or separate svg file
 
 -If we need SVG(s) for backgrounds but they are > than 5k each:
     .bg { background: url('images/file.svg'); }
+
+## Known bug
+
+    - On small sizes, the scrollspy doesn't react properly causing overlap of the navbar text and the hero text

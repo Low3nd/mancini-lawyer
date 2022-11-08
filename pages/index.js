@@ -2,7 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
-import Navbar from '../components/navbar'
+import Navbar from '../components/navbar';
+import Footer from '../components/footer'
 import styles from '../styles/index.module.css';
 import Skillcard from '../components/skillcard';
 import skill from '../data/component.JSON';
@@ -14,6 +15,12 @@ import bioPic from '../public/img/bio-pic2.jpg'
 
 const Home = () => {
   
+  const slugId = [];
+  const sluggifyId = menuIds.sectionIds.map((id) => {
+      slugId.push(id.replace(/ /g, '_').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
+  });
+  console.log(slugId);
+
   const skillList = [];
   const skillcardConstructor = Object.values(skill).forEach(skillcard => {
     skillList.push([skillcard.title, skillcard.bullet, skillcard.description])
@@ -35,7 +42,7 @@ const Home = () => {
       <Head>
         <title>Maître MANCINI - Avocate à Tours</title>
       </Head>
-      <Navbar sectionIds={menuIds.sectionIds} currentSection={activeSection} />
+      <Navbar sectionIds={menuIds.sectionIds} currentSection={activeSection} slugId={slugId} />
       <section id="ACCUEIL" className={styles['c-hero']} ref={sectionRefs[0]}>
         <div className={styles['c-hero__content']}>
           <div className={styles['c-hero__logo']} ref={sectionRefs[1]}>
@@ -122,6 +129,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Footer sectionIds={menuIds.sectionIds} />
     </>
   )
 };

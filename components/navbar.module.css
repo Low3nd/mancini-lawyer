@@ -34,7 +34,6 @@
     color: white;
 }
 
-
 .c-nav__logo {
     display: flex;
     align-items: center;
@@ -94,12 +93,30 @@
 }
 .c-nav__hamburger-menu--light-theme {
     color: black;
+    transition: 0.5s;
 }
 .c-nav__hamburger-menu--dark-theme {
     color: white;
+    transition: 0.5s;
+}
+.c-nav__hamburger-menu--is-active {
+    display: initial;
+    height: 5rem;
 }
 
 @media screen and (max-width: 92.5rem) {
+    .c-nav__menu--hero-theme {
+        display: none;
+    }
+    .c-nav__hamburger-menu--hero-theme {
+        display: initial;
+        height: 5rem;
+    }
+    .c-nav__hamburger-menu:hover {
+        cursor: pointer;
+    }
+}
+@media screen and (max-width: 65.5rem) {
     .c-nav__menu {
         display: none;
     }
@@ -107,7 +124,8 @@
         display: initial;
         height: 5rem;
     }
-    .c-nav__hamburger-menu:hover {
-        cursor: pointer;
-    }
+}
+.c-nav__menu--menu-is-active {
+    /* This needs to be kept at the bottom of the style sheet. It fixes a small bug where user would open the menu, then resize the window to a specific width, wich in turn cause both navmenu and ham-menu to be displayed at the same time, breaking the design */
+    display: none;
 }

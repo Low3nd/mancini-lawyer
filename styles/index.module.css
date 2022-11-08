@@ -4,6 +4,7 @@
     font-size: 1.8rem;
     padding: 8rem;
     height: 100vh;
+    position: relative;
     background: url("../public/img/hero.jpg") no-repeat center / cover;
 }
 .c-hero__content {
@@ -76,7 +77,7 @@
     .c-hero__content {
         align-items: center;
         justify-content: space-around;
-        gap: 2rem;
+        gap: 1rem;
         width: 100%;
         padding: 2rem 3rem 10rem;
     }
@@ -105,13 +106,10 @@
         white-space: nowrap;
     }
     .c-hero__logo {
-        display: none;
+        visibility: hidden;
+        height: 0;
         order: 1;
         color: white;
-    }
-    .c-hero__logo > svg {
-        height: 7.5rem;
-        width: 7.5rem;
     }
     .c-hero__scroll-arrow {
         top: calc(100% - 6rem);
@@ -222,7 +220,7 @@
 
 
 .c-bio {
-    padding: 4rem 8rem;
+    padding: 3rem 8rem;
     background-color: var(--grey);
     color: white;
 }

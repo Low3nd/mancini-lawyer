@@ -53,9 +53,9 @@ const Footer = ({sectionIds}) => {
             <hr />
             <ul className={styles['c-footer__sitemap']}>
                 {sectionIds.map((id) => (
-                    <li key={`c-footer__sitemap-${id}`}>
+                    <li key={`c-footer__sitemap-${id}`} className={styles['c-footer__sitemap-link']}>
                         <Link href={`#${id}`}>
-                            <a className={styles['c-footer__sitemap-link']}>{id}</a>
+                            <a>{id}</a>
                         </Link>
                     </li>
                 ))}

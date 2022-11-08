@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import styles from './navbar.module.css';
 import { useState } from 'react';
 
-const Navbar = ({sectionIds, currentSection}) => {
+const Navbar = ({sectionIds, currentSection, slugId}) => {
     const [activeID, setActiveID] = useState('ACCUEIL');
     const [menuState, setmenuState] = useState(0);
     const menuActivation = () => {
@@ -28,10 +28,14 @@ const Navbar = ({sectionIds, currentSection}) => {
                     <h3>MANCINI<br />AVOCATE</h3>
                 </a>
             </Link>
-            <ul className={styles['c-nav__menu']}>
+            <ul className={clsx(
+                styles['c-nav__menu'],
+                currentSection === 0 && styles['c-nav__menu--hero-theme'],
+                menuState === 1 && styles['c-nav__menu--menu-is-active']
+            )}>
                 {sectionIds.map((id) => (
                     <li key={`c-nav__menu-item${id}`} className={styles['c-nav__menu-item']}>
-                        <Link href={`#${id}`}>
+                        <Link href={`#${slugId[sectionIds.indexOf(id)]}`}>
                             <a onClick={() => setActiveID(`${id}`)} className={clsx(
                             // TODO: onClick is to be removed when implementing scrollSpy
                                 styles['c-nav__menu-link'],
@@ -47,7 +51,9 @@ const Navbar = ({sectionIds, currentSection}) => {
                 styles['c-nav__hamburger-menu'],
                 currentSection === 0 && styles['c-nav__hamburger-menu--hero-theme'],
                 currentSection === 1 && styles['c-nav__hamburger-menu--dark-theme'],
-                currentSection === 2 && styles['c-nav__hamburger-menu--light-theme']
+                currentSection === 2 && styles['c-nav__hamburger-menu--light-theme'],
+                menuState === 1 && styles['c-nav__hamburger-menu--dark-theme'],
+                menuState === 1 && styles['c-nav__hamburger-menu--is-active']
             )}
             onClick={() => menuActivation()} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">{/* Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}<path fill="currentcolor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
             <Menu sectionIds={sectionIds} menuState={menuState} menuActivation={menuActivation} />

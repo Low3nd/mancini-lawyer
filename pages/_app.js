@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Layout from '../components/layout';
 import '../styles/globals.css';
+import menuIds from '../data/menu.json'
 
 const MyApp = ({ Component, pageProps }) => {
-  
+
   return (
     <>
       <Head>
