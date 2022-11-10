@@ -2,7 +2,7 @@
     padding: 4rem 8rem 4rem;
     font-size: 20px;
     position: relative;
-    z-index: -1;
+    z-index: 0;
 }
 
 .c-footer__contact-summary {

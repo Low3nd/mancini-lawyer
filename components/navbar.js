@@ -4,8 +4,7 @@ import clsx from 'clsx';
 import styles from './navbar.module.css';
 import { useState } from 'react';
 
-const Navbar = ({sectionIds, currentSection, slugId}) => {
-    const [activeID, setActiveID] = useState('ACCUEIL');
+const Navbar = ({sectionName, currentSection, slugId}) => {
     const [menuState, setmenuState] = useState(0);
     const menuActivation = () => {
         menuState === 0 ? setmenuState(1) : setmenuState(0);
@@ -19,7 +18,7 @@ const Navbar = ({sectionIds, currentSection, slugId}) => {
             currentSection === 2 && styles['c-nav--light-theme']
         )}>
         {/* TODO: className is not final. To be modified when implementing scrollSpy */}
-            <Link href="">
+            <Link href="#accueil">
                 <a className={styles['c-nav__logo']}>
                     <svg className={styles['c-nav__logo-image']} viewBox="0 0 64 38" xmlns="http://www.w3.org/2000/svg">
                         <path fill="" d="M63.4 0.0999985V1.2C62.2 1.2 61.3 1.4 60.7001 1.6C60.1001 1.8 59.7 2.3 59.5 2.9C59.3 3.5 59.2001 4.5 59.2001 5.8V32.1C59.2001 33.4 59.3 34.3 59.5 35C59.7 35.7 60.1001 36.1 60.7001 36.3C61.3 36.5 62.2 36.7 63.4 36.7V37.8C62.6 37.7 61.6 37.7 60.4 37.7C59.2 37.7 58 37.7 56.7001 37.7C55.3 37.7 54 37.7 52.8 37.7C51.6 37.7 50.6 37.8 49.9 37.8V36.7C51.1 36.6 52.0001 36.5 52.6001 36.3C53.2001 36.1 53.6 35.7 53.8 35C54 34.4 54.1001 33.4 54.1001 32.1V2.9L54.3 3.1L41.3 38H40.5L27.2001 3.5V19.3H26V5.7C26 4.4 25.9001 3.4 25.7001 2.8C25.5001 2.2 25.1 1.8 24.5 1.5C23.9 1.3 23 1.1 21.8 1.1V0C22.4 0 23.2 0.0999985 24.1 0.0999985C25 0.0999985 25.9 0.200001 26.8 0.200001C27.6 0.200001 28.4001 0.199998 29.2001 0.0999985C30.0001 0.0999985 30.7 0 31.3 0L43.3 31.7L42.4 32.1L54.3 0.0999985C54.7001 0.0999985 55.1 0.0999985 55.5 0.0999985C55.9 0.0999985 56.3 0.0999985 56.7001 0.0999985C57.9001 0.0999985 59.2 0.1 60.4 0C61.6 0.2 62.6 0.199998 63.4 0.0999985Z"/>
@@ -33,14 +32,16 @@ const Navbar = ({sectionIds, currentSection, slugId}) => {
                 currentSection === 0 && styles['c-nav__menu--hero-theme'],
                 menuState === 1 && styles['c-nav__menu--menu-is-active']
             )}>
-                {sectionIds.map((id) => (
+                {sectionName.map((id) => (
                     <li key={`c-nav__menu-item${id}`} className={styles['c-nav__menu-item']}>
-                        <Link href={`#${slugId[sectionIds.indexOf(id)]}`}>
-                            <a onClick={() => setActiveID(`${id}`)} className={clsx(
-                            // TODO: onClick is to be removed when implementing scrollSpy
-                                styles['c-nav__menu-link'],
-                                id === activeID && styles['c-nav__menu-link--is-active']
-                            )}>
+                        <Link href={`#${slugId[sectionName.indexOf(id)]}`}>
+                            <a
+                                className={clsx(
+                                    // TODO: onClick is to be removed when implementing scrollSpy
+                                        styles['c-nav__menu-link'],
+                                        currentSection === sectionName.indexOf(id) && styles['c-nav__menu-link--is-current'],
+                                )}
+                            >
                                 {id}
                             </a>
                         </Link>
@@ -56,7 +57,7 @@ const Navbar = ({sectionIds, currentSection, slugId}) => {
                 menuState === 1 && styles['c-nav__hamburger-menu--is-active']
             )}
             onClick={() => menuActivation()} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">{/* Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}<path fill="currentcolor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-            <Menu sectionIds={sectionIds} menuState={menuState} menuActivation={menuActivation} />
+            <Menu slugId={slugId} sectionName={sectionName} menuState={menuState} menuActivation={menuActivation} />
         </nav>
     )
 };

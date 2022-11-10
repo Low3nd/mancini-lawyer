@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from './footer.module.css';
 
-const Footer = ({sectionIds}) => {
+const Footer = ({sectionName}) => {
     return (
         <footer className={styles['c-footer']}>
             <div className={styles['c-footer__contact-summary']}>
@@ -52,12 +52,12 @@ const Footer = ({sectionIds}) => {
             </div>
             <hr />
             <ul className={styles['c-footer__sitemap']}>
-                {sectionIds.map((id) => (
-                    <li key={`c-footer__sitemap-${id}`} className={styles['c-footer__sitemap-link']}>
+                {sectionName.map((id) => (
+                    <span key={`c-footer__sitemap-${id}`} className={styles['c-footer__sitemap-link']}>
                         <Link href={`#${id}`}>
                             <a>{id}</a>
                         </Link>
-                    </li>
+                    </span>
                 ))}
             </ul>
             <div className={styles['c-footer__social-media']}>

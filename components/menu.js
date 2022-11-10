@@ -3,7 +3,7 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import styles from './menu.module.css';
 
-const Menu = ({sectionIds, menuState, menuActivation}) => {
+const Menu = ({sectionName, slugId, menuState, menuActivation}) => {
     return (
         <>
             <div
@@ -23,11 +23,11 @@ const Menu = ({sectionIds, menuState, menuActivation}) => {
                 <div className={styles['c-menu__container']}>
                     <h3>MANCINI<br />AVOCATE</h3>
                     <ul className={styles['c-menu__sections']}>
-                        {sectionIds.map((id)=> (
+                        {slugId.map((id)=> (
                             <div key={id}>
                                 <li className={styles['c-menu__sections-link']}>
                                     <Link href={`#${id}`}>
-                                        <a onClick={menuActivation}>{id}</a>
+                                        <a onClick={menuActivation}>{sectionName[slugId.indexOf(id)]}</a>
                                     </Link>
                                 </li>
                             </div>

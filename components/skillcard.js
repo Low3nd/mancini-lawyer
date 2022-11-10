@@ -7,6 +7,7 @@ const Skillcard = ({title, bullet, description}) => {
     const [cardState, setCardState] = useState(0);
     const cardClick = () => cardState === 0 ? setCardState(1):setCardState(0);
     const imgPath = "/icon/skillcard_icon/" + title.toLowerCase().split(" ").join("-") + "-icon.svg";
+    
     return (
         <div className={styles["c-skillcard"]}>
             <div className={clsx(
