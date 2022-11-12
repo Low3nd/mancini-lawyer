@@ -7,11 +7,12 @@ import Footer from '../components/footer'
 import styles from '../styles/index.module.css';
 import Skillcard from '../components/skillcard';
 import skill from '../data/component.JSON';
-import section from '../data/section.json';
+import section from '../data/section.JSON';
+import testimonies from '../data/testimonies.JSON';
 import { useRef, useState } from 'react';
 import useScrollSpy from 'react-use-scrollspy';
 import testSymbol from '../public/icon/logo-nocircle.svg'
-import bioPic from '../public/img/bio-pic3.jpg'
+import bioPic from '../public/img/bio-pic2.jpg'
 
 const Home = () => {
   const slugId = []
@@ -25,6 +26,8 @@ const Home = () => {
   })
 
   const sectionRefs = [
+    useRef(null),
+    useRef(null),
     useRef(null),
     useRef(null),
     useRef(null)
@@ -68,8 +71,6 @@ const Home = () => {
         </div>
       </section>
       <section id='competences' className={styles['skill']}>
-        <h2>COMPÉTENCES</h2>
-        <hr />
         <div className={styles['c-skillcard__container']}>
           {skillList.map((skill) => (
             <Skillcard key={`${skill[0]}`} title={skill[0]} bullet={skill[1]} description={skill[2]} />
@@ -115,11 +116,54 @@ const Home = () => {
             />
           </div>
           <div className={styles['c-bio__content-title']}>
-            <h3>Maître Léa MANSINI</h3>
+            <h3>MAÎTRE MANCINI</h3>
             <h4>Avocat au barreau de Tours et près de la Cour d’Appel d’Orléans</h4>
           </div>
           <p className={styles['c-bio__content-description']}>Originaire du Cher, région à laquelle je suis très attachée, je me suis installée à TOURS au gré de mes expériences professionnelles. Diplômée d’un Master 1 Carrières Judiciaires et Sciences Criminelles, d’un Master 2 Droit et Justice (procédures en droit privé) avec obtention de l’examen d’entrée à l’Ecole des Avocats dans le même temps, j’ai prêté serment en novembre 2013 après avoir suivi la formation de l’Ecole du Centre Ouest des Avocats. Je me suis forgée sept années d’expérience au sein de cabinets d’Avocats individuels, généralistes, j’interviens à titre personnel principalement dans le domaine du droit de la famille (divorce, séparation), ainsi qu’en droit pénal et en droit civil. Je suis fondamentalement soucieuse d’apporter écoute et rigueur à mes clients, et de mettre à leur profit l’ensemble de mes compétences, de mon énergie et de ma pugnacité. Je suis également encline à proposer le recours à la médiation ou aux modes alternatifs de règlement des conflits lorsque la situation s’y prête (hors cas obligatoires).</p>
         </div>
+      </section>
+      {/* <section id='testimonies' className={styles['c-testimonies']}>
+        <h3 className={styles['c-testimonies__title']}>What People Say</h3>
+        {testimonies.data.map((testimony) => (
+          <div key={`comment${testimony.id}`} className={styles['c-testimonies__container']}>
+            <p className={styles['c-testimonies__comment']}>{testimony.comment}</p>
+            <div>
+              <h4 className={styles['c-testimonies__name']}>{testimony.name[0].toUpperCase() + testimony.name.slice(1) + ' ' + testimony.surname[0].toUpperCase() + testimony.surname.slice(1)}</h4>
+              <div className={styles['c-testimonies__pic']}>
+                <Image 
+                  alt='The picture of a user who left a positive comment on the work of Lea Mancini'
+                  src={testimony.userPic}
+                  height={50}
+                  width={50}
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </section> */}
+      <section id='honoraires' className={styles['c-pricing']} ref={sectionRefs[3]}>
+        <div className={styles['c-pricing__card-container']}>
+          <div className={`${styles['c-pricing__card']} ${styles['c-pricing__card-pen']}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">{/* Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}<path opacity="1" fill="currentcolor" d="M384 32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H320 128c-17.7 0-32-14.3-32-32s14.3-32 32-32H288V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32H256c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zM125.8 177.3L51.1 320H204.9L130.2 177.3c-.4-.8-1.3-1.3-2.2-1.3s-1.7 .5-2.2 1.3zM128 128c18.8 0 36 10.4 44.7 27l77.8 148.5c3.1 5.8 6.1 14 5.5 23.8c-.7 12.1-4.8 35.2-24.8 55.1C210.9 402.6 178.2 416 128 416s-82.9-13.4-103.2-33.5c-20-20-24.2-43-24.8-55.1c-.6-9.8 2.5-18 5.5-23.8L83.3 155c8.7-16.6 25.9-27 44.7-27zm384 48c-.9 0-1.7 .5-2.2 1.3L435.1 320H588.9L514.2 177.3c-.4-.8-1.3-1.3-2.2-1.3zm-44.7-21c8.7-16.6 25.9-27 44.7-27s36 10.4 44.7 27l77.8 148.5c3.1 5.8 6.1 14 5.5 23.8c-.7 12.1-4.8 35.2-24.8 55.1C594.9 402.6 562.2 416 512 416s-82.9-13.4-103.2-33.5c-20-20-24.2-43-24.8-55.1c-.6-9.8 2.5-18 5.5-23.8L467.3 155z"/></svg>
+            <span>CONSULTATION ÉCRITE</span>
+            <span>100 euros</span>
+          </div>
+          <div className={`${styles['c-pricing__card']} ${styles['c-pricing__card-phone']}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">{/* Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}<path opacity="1" fill="currentcolor" d="M384 32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H320 128c-17.7 0-32-14.3-32-32s14.3-32 32-32H288V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32H256c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zM125.8 177.3L51.1 320H204.9L130.2 177.3c-.4-.8-1.3-1.3-2.2-1.3s-1.7 .5-2.2 1.3zM128 128c18.8 0 36 10.4 44.7 27l77.8 148.5c3.1 5.8 6.1 14 5.5 23.8c-.7 12.1-4.8 35.2-24.8 55.1C210.9 402.6 178.2 416 128 416s-82.9-13.4-103.2-33.5c-20-20-24.2-43-24.8-55.1c-.6-9.8 2.5-18 5.5-23.8L83.3 155c8.7-16.6 25.9-27 44.7-27zm384 48c-.9 0-1.7 .5-2.2 1.3L435.1 320H588.9L514.2 177.3c-.4-.8-1.3-1.3-2.2-1.3zm-44.7-21c8.7-16.6 25.9-27 44.7-27s36 10.4 44.7 27l77.8 148.5c3.1 5.8 6.1 14 5.5 23.8c-.7 12.1-4.8 35.2-24.8 55.1C594.9 402.6 562.2 416 512 416s-82.9-13.4-103.2-33.5c-20-20-24.2-43-24.8-55.1c-.6-9.8 2.5-18 5.5-23.8L467.3 155z"/></svg>
+            <span>CONSULTATION TÉLÉPHONIQUE</span>
+            <span>100 euros</span>
+          </div>
+          <div className={`${styles['c-pricing__card']} ${styles['c-pricing__card-desk']}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">{/* Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */}<path opacity="1" fill="currentcolor" d="M384 32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H320 128c-17.7 0-32-14.3-32-32s14.3-32 32-32H288V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32H256c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zM125.8 177.3L51.1 320H204.9L130.2 177.3c-.4-.8-1.3-1.3-2.2-1.3s-1.7 .5-2.2 1.3zM128 128c18.8 0 36 10.4 44.7 27l77.8 148.5c3.1 5.8 6.1 14 5.5 23.8c-.7 12.1-4.8 35.2-24.8 55.1C210.9 402.6 178.2 416 128 416s-82.9-13.4-103.2-33.5c-20-20-24.2-43-24.8-55.1c-.6-9.8 2.5-18 5.5-23.8L83.3 155c8.7-16.6 25.9-27 44.7-27zm384 48c-.9 0-1.7 .5-2.2 1.3L435.1 320H588.9L514.2 177.3c-.4-.8-1.3-1.3-2.2-1.3zm-44.7-21c8.7-16.6 25.9-27 44.7-27s36 10.4 44.7 27l77.8 148.5c3.1 5.8 6.1 14 5.5 23.8c-.7 12.1-4.8 35.2-24.8 55.1C594.9 402.6 562.2 416 512 416s-82.9-13.4-103.2-33.5c-20-20-24.2-43-24.8-55.1c-.6-9.8 2.5-18 5.5-23.8L467.3 155z"/></svg>
+            <span>CONSULTATION CABINET</span>
+            <span>100 euros</span>
+          </div>
+        </div>
+        <p className={styles['c-pricing__description']}>La première consultation est facturée, et déduite des honoraires appliqués en cas de poursuite d’une procédure. Une convention d’honoraires est régularisée au préalable, déterminant l’honoraire fonction de la procédure, de la difficulté prévisible et des critères réglementant cette fixation.<br />En cas de couverture par une assurance protection juridique, celle-ci peut prendre en charge tout ou partie des honoraires prévus.<br />Si la situation financière et personnelle le permet, une demande d’aide juridictionnelle sera déposée (hormis en présence d’un dossier complexe, le Cabinet se réservant alors la possibilité de ne pas intervenir à l’aide juridictionnelle). Enfin, la pratique de l’honoraire de résultat en complément d’un honoraire fixe est possible dans certaines matières. Toute modification donne lieu à un avenant à la convention d’honoraires.</p>
+        <button className={styles['c-pricing__contact-button']}>CONTACT</button>
+      </section>
+      <section id='contact' className={styles['c-contact']} ref={sectionRefs[4]}>
+
       </section>
       <Footer sectionName={section.name} />
     </>

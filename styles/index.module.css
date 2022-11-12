@@ -230,16 +230,18 @@
     grid-template-rows: max-content;
     grid-template-areas:    "a b"
                             "a c";
-    gap: 3rem;
+    row-gap: 1rem;
+    column-gap: 3rem;
 }
 .c-bio__content-img {
     grid-area: a;
     width: 100%;
-    max-width: 35rem;
+    max-width: 40rem;
     align-self: center;
     justify-self: center;
     border-radius: 3%;
     box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+    z-index: 2;
 }
 .c-bio__content-img img {
     border-radius: 3%;
@@ -249,17 +251,29 @@
     border-top: 1px solid white;
     margin: 2rem 0 0;
 }
+.c-bio__content-title::before {
+    content: "";
+    height: calc(100% + 1.5rem);
+    width: 200vw;
+    background-color: var(--yellow);
+    position: absolute;
+    top: -0.5rem;
+    left: -100%;
+    z-index: -1;
+}
 .c-bio__content-title {
     grid-area: b;
-    margin-top: 0.5rem;
     align-self: center;
     font-size: 1.6rem;
-    font-weight: bold;
+    /* font-weight: bold; */
+    position: relative;
+    z-index: 1;
 }
 .c-bio__content-title h3 {
-    font-size: 4.8rem;
-    margin-bottom: 1rem;
+    font-size: 4.2rem;
     letter-spacing: 0.5rem;
+    font-family: 'Playfair display';
+    font-weight: 400;
 }
 .c-bio__content-title h4 {
     font-size: 2rem;
@@ -277,6 +291,9 @@
     line-height: 2.3rem;
     text-align: justify;
 }
+.c-bio__content-description p {
+    line-height: 110%;
+}
 @media screen and (min-width: 103rem) {
     .c-bio__content-description {
         justify-self: center;
@@ -290,6 +307,7 @@
             "c c";
         grid-template-columns: 2fr 1.25fr;
         column-gap: 4rem;
+        row-gap: 3rem;
     }
     .c-bio__content-description {
         column-count: 1;
@@ -317,4 +335,104 @@
     .c-bio__content-title h4 {
         font-size: 1.8rem;
     }
+}
+
+/* .c-testimonies {
+    gap: 2rem;
+    padding: 8rem;
+}
+.c-testimonies h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.c-testimonies__container {
+    padding: 3rem;
+    font-size: 1.6rem;
+    background-color: ;
+}
+.c-testimonies__pic {
+    height: 5rem;
+    width: 5rem;
+}
+.c-testimonies__comment {
+    padding: 4rem;
+}
+.c-testimonies__name {
+    
+} */
+
+
+.c-pricing {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 8rem;
+}
+.c-pricing__card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8rem;
+}
+.c-pricing__card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 22rem;
+    height: 30rem;
+    padding: 0 4rem;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    background-blend-mode: multiply;
+}
+.c-pricing__card svg {
+    height: 6rem;
+    width: 6rem;
+}
+.c-pricing__card-pen {
+    background: url("../public/img/fees_pen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(58, 58, 60, 0.3);
+}
+.c-pricing__card-phone {
+    background: url("../public/img/fees_phone.jpg");
+    background-size: cover;
+    background-color: rgba(58, 58, 60, 0.1);
+
+}
+.c-pricing__card-desk {
+    background: url("../public/img/fees_desk.jpg");
+    background-size: cover;
+    background-color: rgba(58, 58, 60, 0.2);
+}
+.c-pricing__description {
+    font-size: 1.8rem;
+    text-align: justify;
+    max-width: 90rem;
+}
+.c-pricing__contact-button {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    font-family: raleway;
+    color: white;
+    background-color: var(--green);
+    border: none;
+}
+.c-pricing__contact-button:hover {
+    background-color: rgb(68, 97, 84);
+}
+.c-pricing__contact-button:active {
+    background-color: var(--green);
+}
+
+.c-contact {
+    height: 20rem;
+    background-color: var(--grey);
 }

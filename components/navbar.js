@@ -15,9 +15,10 @@ const Navbar = ({sectionName, currentSection, slugId}) => {
             styles['c-nav'],
             currentSection === 0 && styles['c-nav--hero-theme'],
             currentSection === 1 && styles['c-nav--dark-theme'],
-            currentSection === 2 && styles['c-nav--light-theme']
+            currentSection === 2 && styles['c-nav--light-theme'],
+            currentSection === 3 && styles['c-nav--dark-theme'],
+            currentSection === 4 && styles['c-nav--light-theme']
         )}>
-        {/* TODO: className is not final. To be modified when implementing scrollSpy */}
             <Link href="#accueil">
                 <a className={styles['c-nav__logo']}>
                     <svg className={styles['c-nav__logo-image']} viewBox="0 0 64 38" xmlns="http://www.w3.org/2000/svg">
@@ -53,6 +54,8 @@ const Navbar = ({sectionName, currentSection, slugId}) => {
                 currentSection === 0 && styles['c-nav__hamburger-menu--hero-theme'],
                 currentSection === 1 && styles['c-nav__hamburger-menu--dark-theme'],
                 currentSection === 2 && styles['c-nav__hamburger-menu--light-theme'],
+                currentSection === 3 && styles['c-nav__hamburger-menu--light-theme'],
+                currentSection === 4 && styles['c-nav__hamburger-menu--light-theme'],
                 menuState === 1 && styles['c-nav__hamburger-menu--dark-theme'],
                 menuState === 1 && styles['c-nav__hamburger-menu--is-active']
             )}
