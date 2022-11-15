@@ -431,8 +431,3 @@
 .c-pricing__contact-button:active {
     background-color: var(--green);
 }
-
-.c-contact {
-    height: 20rem;
-    background-color: var(--grey);
-}

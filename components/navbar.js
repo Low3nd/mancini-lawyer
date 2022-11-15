@@ -17,7 +17,8 @@ const Navbar = ({sectionName, currentSection, slugId}) => {
             currentSection === 1 && styles['c-nav--dark-theme'],
             currentSection === 2 && styles['c-nav--light-theme'],
             currentSection === 3 && styles['c-nav--dark-theme'],
-            currentSection === 4 && styles['c-nav--light-theme']
+            currentSection === 4 && styles['c-nav--light-theme'],
+            currentSection === 5 && styles['c-nav--dark-theme']
         )}>
             <Link href="#accueil">
                 <a className={styles['c-nav__logo']}>

@@ -1,0 +1,18 @@
+{
+    "data" : [
+        {
+            "id": 0,
+            "name": "john",
+            "surname": "doe",
+            "comment": "Lea Mancini est une professionnelle dont les compétences ne sauraient être mise en cause. Le juge demandait la perpétuité, Maître Mancini a obtenu un sursis de deux mois !",
+            "userPic": "/../public/img/userPicTest/user1.jpeg"
+        },
+        {
+            "id": 1,
+            "name": "marie",
+            "surname": "rené",
+            "comment": "C'est un peu cher pour ce que c'est",
+            "userPic": "/../public/img/userPicTest/user2.jpeg"
+        }
+    ]
+}
