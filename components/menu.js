@@ -23,15 +23,29 @@ const Menu = ({sectionName, slugId, menuState, menuActivation}) => {
                 <div className={styles['c-menu__container']}>
                     <h3>MANCINI<br />AVOCATE</h3>
                     <ul className={styles['c-menu__sections']}>
-                        {slugId.map((id)=> (
-                            <div key={id}>
-                                <li className={styles['c-menu__sections-link']}>
-                                    <Link href={`#${id}`}>
-                                        <a onClick={menuActivation}>{sectionName[slugId.indexOf(id)]}</a>
-                                    </Link>
-                                </li>
-                            </div>
-                        ))}
+                        {slugId.map((id)=> {
+                            if (id != 'contact') {
+                                return (
+                                    <div key={id}>
+                                        <li className={styles['c-menu__sections-link']}>
+                                            <Link href={`/#${id}`}>
+                                                <a onClick={menuActivation}>{sectionName[slugId.indexOf(id)]}</a>
+                                            </Link>
+                                        </li>
+                                    </div>
+                                )
+                            } else {
+                                return (
+                                    <div key={id}>
+                                        <li className={styles['c-menu__sections-link']}>
+                                            <Link href={id}>
+                                                <a onClick={menuActivation}>{sectionName[slugId.indexOf(id)]}</a>
+                                            </Link>
+                                        </li>
+                                    </div>
+                                )
+                            }
+                        })}
                     </ul>
                     <svg className={styles['c-menu__logo']} viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <symbol id="test" width="102" height="102" viewBox="0 0 102 102"></symbol>

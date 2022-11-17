@@ -12,7 +12,7 @@ import testimonies from '../data/testimonies.JSON';
 import { useRef, useState } from 'react';
 import useScrollSpy from 'react-use-scrollspy';
 import testSymbol from '../public/icon/logo-nocircle.svg'
-import bioPic from '../public/img/bio-pic2.jpg'
+import bioPic from '../public/img/bio-pic3.jpg'
 
 const Home = () => {
   const slugId = []

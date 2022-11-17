@@ -34,21 +34,43 @@ const Navbar = ({sectionName, currentSection, slugId}) => {
                 currentSection === 0 && styles['c-nav__menu--hero-theme'],
                 menuState === 1 && styles['c-nav__menu--menu-is-active']
             )}>
-                {sectionName.map((id) => (
-                    <li key={`c-nav__menu-item${id}`} className={styles['c-nav__menu-item']}>
-                        <Link href={`#${slugId[sectionName.indexOf(id)]}`}>
-                            <a
-                                className={clsx(
-                                    // TODO: onClick is to be removed when implementing scrollSpy
-                                        styles['c-nav__menu-link'],
-                                        currentSection === sectionName.indexOf(id) && styles['c-nav__menu-link--is-current'],
-                                )}
-                            >
-                                {id}
-                            </a>
-                        </Link>
-                    </li>
-                ))}
+                {sectionName.map((id) => {
+                    if (id != 'CONTACT') {
+                        return (
+                            <li key={`c-nav__menu-item${id}`} className={styles['c-nav__menu-item']}>
+                                <Link href={`/#${slugId[sectionName.indexOf(id)]}`}>
+                                    <a
+                                        className={clsx(
+                                            // TODO: onClick is to be removed when implementing scrollSpy
+                                                styles['c-nav__menu-link'],
+                                                currentSection === sectionName.indexOf(id) && styles['c-nav__menu-link--is-current'],
+                                        )}
+                                        draggable="false"
+                                    >
+                                        {id}
+                                    </a>
+                                </Link>
+                            </li>
+                        )
+                    } else {
+                        return (
+                            <li key={`c-nav__menu-item${id}`} className={styles['c-nav__menu-item']}>
+                                <Link href={slugId[sectionName.indexOf(id)]}>
+                                    <a
+                                        className={clsx(
+                                            // TODO: onClick is to be removed when implementing scrollSpy
+                                                styles['c-nav__menu-link'],
+                                                currentSection === 5 && styles['c-nav__menu-link--is-current'],
+                                        )}
+                                        draggable="false"
+                                    >
+                                        {id}
+                                    </a>
+                                </Link>
+                            </li>
+                        )
+                    }
+                })}
             </ul>
             <svg className={clsx(
                 styles['c-nav__hamburger-menu'],

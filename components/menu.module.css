@@ -29,6 +29,9 @@
     z-index: 9;
     background-color: var(--grey);
 }
+.c-menu h3 {
+    color: white;
+}
 .c-menu--is-active {
     transform: translateX(0%);
 }

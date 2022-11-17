@@ -220,7 +220,7 @@
 
 
 .c-bio {
-    padding: 8rem 8rem;
+    padding: 8rem;
     background-color: var(--grey);
     color: white;
 }
@@ -265,7 +265,6 @@
     grid-area: b;
     align-self: center;
     font-size: 1.6rem;
-    /* font-weight: bold; */
     position: relative;
     z-index: 1;
 }
@@ -430,4 +429,13 @@
 }
 .c-pricing__contact-button:active {
     background-color: var(--green);
+}
+
+@media screen and (max-width: 57rem) {
+    .c-bio {
+        padding: 8rem 4rem;
+    }
+    .c-pricing {
+        padding: 8rem 4rem;
+    }
 }
