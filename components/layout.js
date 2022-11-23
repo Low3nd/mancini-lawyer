@@ -1,7 +1,11 @@
+import styles from '../styles/layout.module.css'
+
 const Layout = ({children}) => {
     return (
         <>
-            <main>{children}</main>
+            <div className={styles['mobile-wrapper']}>
+                <main>{children}</main>
+            </div>
         </>
     )
 };

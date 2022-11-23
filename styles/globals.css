@@ -1,5 +1,5 @@
 :root {
-  --yellow: rgb(160, 99, 43);
+  --yellow: rgb(197, 112, 34);
   --green: rgba(107, 144, 128, 1);
   --grey: rgba(58, 58, 60, 1);
 }
@@ -10,9 +10,8 @@
 }
 html {
   font-size: 10px;
-  overflow-x: hidden;
   scroll-behavior: smooth;
-  scroll-padding-top: 8rem;
+  scroll-padding-top: 6rem;
 }
 body {
   position: relative;

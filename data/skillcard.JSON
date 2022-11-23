@@ -1,7 +1,7 @@
 {
     "skillcard0" : {
-        "title": "Droit de la famille",
-        "bullet": ["chazamm", "hocus", "pocus"],
+        "title": "Droit pénal",
+        "bullet": ["Garde à vue", "Instruction criminelle", "Instruction correctionelle"],
         "description" : "Texte très long qui décrit en détails une catégorie de compétence particulière"
     },
     "skillcard1": {

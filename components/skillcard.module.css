@@ -46,7 +46,7 @@
     height: fit-content;
     width: fit-content;
 }
-.c-skillcard__front-icon img {
+.c-skillcard__front-icon svg {
     height: 5rem;
     width: 5rem;
 }
