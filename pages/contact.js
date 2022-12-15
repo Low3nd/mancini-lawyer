@@ -44,15 +44,15 @@ const Contact = () => {
                 <div className={styles['c-contact__contact-info']}>
                     <div className={`${styles['c-contact__contact-adress']} ${styles['c-contact__container']}`}>
                         <FontAwesomeIcon icon={faLocationDot} />
-                        <p>9 rue Rabelais 37160 Descartes</p>
+                        <p>31 rue George Sand 37300 Tours</p>
                     </div>
                     <div className={`${styles['c-contact__contact-phone']} ${styles['c-contact__container']}`}>
                         <FontAwesomeIcon icon={faPhone} />
-                        <p>06.98.52.21.25</p>
+                        <p>06.16.88.45.41</p>
                     </div>
                     <div className={`${styles['c-contact__contact-email']} ${styles['c-contact__container']}`}>
                         <FontAwesomeIcon icon={faEnvelope} />
-                        <p>lea@avocat.com</p>
+                        <p>contact@mancini-avocat.fr</p>
                     </div>
                     <div className={`${styles['c-contact__contact-schedule']} ${styles['c-contact__container']}`}>
                         <FontAwesomeIcon icon={faClock} />

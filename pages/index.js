@@ -58,12 +58,12 @@ const Home = () => {
             <hr></hr>
             <h2>Avocate au Barreau de Tours</h2>
           </div>
-          <Link href='#contact'>
+          <Link href='#contact' scroll={false} legacyBehavior>
             <a>CONTACT</a>
           </Link>
         </div>
         <div className={styles['c-hero__scroll-arrow']}>
-          <Link href='#competences'>
+          <Link href='#competences' legacyBehavior>
             <svg width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M36.2261 16.5L20 35.2362L3.77395 16.5L36.2261 16.5Z" stroke="currentcolor"/>
               <path d="M20 26.6667L2.6795 6.66669L37.3205 6.66669L20 26.6667Z" fill="currentcolor"/>
@@ -160,8 +160,20 @@ const Home = () => {
             <span>100 euros</span>
           </div>
         </div>
-        <p className={styles['c-pricing__description']}>La première consultation est facturée, et déduite des honoraires appliqués en cas de poursuite d’une procédure. Une convention d’honoraires est régularisée au préalable, déterminant l’honoraire fonction de la procédure, de la difficulté prévisible et des critères réglementant cette fixation.<br />En cas de couverture par une assurance protection juridique, celle-ci peut prendre en charge tout ou partie des honoraires prévus.<br />Si la situation financière et personnelle le permet, une demande d’aide juridictionnelle sera déposée (hormis en présence d’un dossier complexe, le Cabinet se réservant alors la possibilité de ne pas intervenir à l’aide juridictionnelle). Enfin, la pratique de l’honoraire de résultat en complément d’un honoraire fixe est possible dans certaines matières. Toute modification donne lieu à un avenant à la convention d’honoraires.</p>
-        <button className={styles['c-pricing__contact-button']}>CONTACT</button>
+        <p className={styles['c-pricing__description']}>Les honoraires d’avocat sont fonction, notamment, de chacun des éléments suivants conformément aux usages :</p>
+        <ul className={styles['c-pricing__description-bullet']}>
+          <li>Le temps consacré à l’affaire</li>
+          <li>Le travail de recherche</li>
+          <li>La nature et la difficulté de l'affaire</li>
+          <li>L'importance des intérêts en cause</li>
+          <li>L'incidence des frais et charges du cabinet auquel il appartient</li>
+          <li>Sa notoriété, ses titres, son ancienneté, son expérience et la spécialisation dont il est titulaire</li>
+          <li>Les avantages et le résultat obtenus au profit du client par son travail, ainsi que le service rendu à celui-ci</li>
+          <li>La situation de fortune du client</li>
+        </ul>
+        <p className={styles['c-pricing__description']}><b>Une convention d’honoraires est systématiquement conclue afin d’apporter transparence et clarté sur la question des honoraires, et ce, dès l’issue du premier rendez-vous.</b></p>
+        <p className={styles['c-pricing__description']}>L’aide juridictionnelle est acceptée. Le cabinet peut également accorder des facilités de paiement.<br />Page pour réserver et payer directement le RDV : https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html</p>
+        <Link href={'/contact'}><button className={styles['c-pricing__contact-button']}>CONTACT</button></Link>
       </section>
       <Footer sectionName={section.name} />
     </>

@@ -20,7 +20,7 @@ const Navbar = ({sectionName, currentSection, slugId}) => {
             currentSection === 4 && styles['c-nav--light-theme'],
             currentSection === 5 && styles['c-nav--dark-theme']
         )}>
-            <Link href="/#accueil">
+            <Link href="/#accueil" scroll={false} legacyBehavior>
                 <a className={styles['c-nav__logo']}>
                     <svg className={styles['c-nav__logo-image']} viewBox="0 0 64 38" xmlns="http://www.w3.org/2000/svg">
                         <path fill="" d="M63.4 0.0999985V1.2C62.2 1.2 61.3 1.4 60.7001 1.6C60.1001 1.8 59.7 2.3 59.5 2.9C59.3 3.5 59.2001 4.5 59.2001 5.8V32.1C59.2001 33.4 59.3 34.3 59.5 35C59.7 35.7 60.1001 36.1 60.7001 36.3C61.3 36.5 62.2 36.7 63.4 36.7V37.8C62.6 37.7 61.6 37.7 60.4 37.7C59.2 37.7 58 37.7 56.7001 37.7C55.3 37.7 54 37.7 52.8 37.7C51.6 37.7 50.6 37.8 49.9 37.8V36.7C51.1 36.6 52.0001 36.5 52.6001 36.3C53.2001 36.1 53.6 35.7 53.8 35C54 34.4 54.1001 33.4 54.1001 32.1V2.9L54.3 3.1L41.3 38H40.5L27.2001 3.5V19.3H26V5.7C26 4.4 25.9001 3.4 25.7001 2.8C25.5001 2.2 25.1 1.8 24.5 1.5C23.9 1.3 23 1.1 21.8 1.1V0C22.4 0 23.2 0.0999985 24.1 0.0999985C25 0.0999985 25.9 0.200001 26.8 0.200001C27.6 0.200001 28.4001 0.199998 29.2001 0.0999985C30.0001 0.0999985 30.7 0 31.3 0L43.3 31.7L42.4 32.1L54.3 0.0999985C54.7001 0.0999985 55.1 0.0999985 55.5 0.0999985C55.9 0.0999985 56.3 0.0999985 56.7001 0.0999985C57.9001 0.0999985 59.2 0.1 60.4 0C61.6 0.2 62.6 0.199998 63.4 0.0999985Z"/>
@@ -38,7 +38,7 @@ const Navbar = ({sectionName, currentSection, slugId}) => {
                     if (id != 'CONTACT') {
                         return (
                             <li key={`c-nav__menu-item${id}`} className={styles['c-nav__menu-item']}>
-                                <Link href={`/#${slugId[sectionName.indexOf(id)]}`}>
+                                <Link href={`/#${slugId[sectionName.indexOf(id)]}`} scroll={false} legacyBehavior>
                                     <a
                                         className={clsx(
                                             // TODO: onClick is to be removed when implementing scrollSpy
@@ -55,7 +55,7 @@ const Navbar = ({sectionName, currentSection, slugId}) => {
                     } else {
                         return (
                             <li key={`c-nav__menu-item${id}`} className={styles['c-nav__menu-item']}>
-                                <Link href={slugId[sectionName.indexOf(id)]}>
+                                <Link href={slugId[sectionName.indexOf(id)]} scroll={false} legacyBehavior>
                                     <a
                                         className={clsx(
                                             // TODO: onClick is to be removed when implementing scrollSpy
@@ -77,7 +77,7 @@ const Navbar = ({sectionName, currentSection, slugId}) => {
                 currentSection === 0 && styles['c-nav__hamburger-menu--hero-theme'],
                 currentSection === 1 && styles['c-nav__hamburger-menu--dark-theme'],
                 currentSection === 2 && styles['c-nav__hamburger-menu--light-theme'],
-                currentSection === 3 && styles['c-nav__hamburger-menu--light-theme'],
+                currentSection === 3 && styles['c-nav__hamburger-menu--dark-theme'],
                 currentSection === 4 && styles['c-nav__hamburger-menu--light-theme'],
                 menuState === 1 && styles['c-nav__hamburger-menu--dark-theme'],
                 menuState === 1 && styles['c-nav__hamburger-menu--is-active']

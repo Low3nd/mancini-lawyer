@@ -27,15 +27,15 @@ const Footer = ({sectionName}) => {
                         <h3>Léa Mancini</h3>
                         <div className={styles['c-footer__contact-detail']}>
                             <FontAwesomeIcon icon={faPhone} />
-                            <p>02.45.32.23.56</p>
+                            <p>06.16.88.45.41</p>
                         </div>
                         <div className={styles['c-footer__contact-detail']}>
                             <FontAwesomeIcon icon={faEnvelope} />
-                            <p>lea@superavocat.fr</p>
+                            <p>contact@mancini-avocat.fr</p>
                         </div>
                         <div className={styles['c-footer__contact-detail']}>
                             <FontAwesomeIcon icon={faLocationDot} />
-                            <p>5 rue du Général Moncul 37300 Tours</p>
+                            <p>31 rue George Sand 37000 Tours</p>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ const Footer = ({sectionName}) => {
             <ul className={styles['c-footer__sitemap']}>
                 {sectionName.map((id) => (
                     <span key={`c-footer__sitemap-${id}`} className={styles['c-footer__sitemap-link']}>
-                        <Link href={`#${id}`}>
+                        <Link href={`#${id}`} scroll={false} legacyBehavior>
                             <a>{id}</a>
                         </Link>
                     </span>
@@ -59,7 +59,7 @@ const Footer = ({sectionName}) => {
                 </svg>
             </div> */}
             <div className={styles['c-footer__legal-link']}>
-                <Link href="">
+                <Link href="" scroll={false} legacyBehavior>
                     <a>Mentions Légales</a>
                 </Link>
                 <p>© Boolean Design</p>

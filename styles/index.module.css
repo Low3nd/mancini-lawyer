@@ -431,7 +431,19 @@
 .c-pricing__contact-button:active {
     background-color: var(--green);
 }
-
+.c-pricing__description-bullet {
+    font-size: 1.6rem;
+}
+.c-pricing__description-bullet {
+    padding: 0 2rem;
+}
+.c-pricing__description-bullet li {
+    margin-bottom: 1rem;
+}
+.link {
+    text-decoration: none;
+    color: inherit;
+}
 @media screen and (max-width: 57rem) {
     .c-bio {
         padding: 8rem 4rem;
