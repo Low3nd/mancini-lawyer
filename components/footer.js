@@ -35,7 +35,7 @@ const Footer = ({sectionName}) => {
                         </div>
                         <div className={styles['c-footer__contact-detail']}>
                             <FontAwesomeIcon icon={faLocationDot} />
-                            <p>31 rue George Sand 37000 Tours</p>
+                            <p>31 rue George Sand<br />37000 Tours</p>
                         </div>
                     </div>
                 </div>

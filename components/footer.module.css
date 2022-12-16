@@ -51,10 +51,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 .c-footer__contact-detail p {
-    width: 20rem;
+    width: 25rem;
+    text-align: center;
 }
 .c-footer__contact-detail svg {
     height: 2rem;

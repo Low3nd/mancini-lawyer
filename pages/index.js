@@ -63,7 +63,7 @@ const Home = () => {
           </Link>
         </div>
         <div className={styles['c-hero__scroll-arrow']}>
-          <Link href='#competences' legacyBehavior>
+          <Link href='#competences' scroll={false} legacyBehavior>
             <svg width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M36.2261 16.5L20 35.2362L3.77395 16.5L36.2261 16.5Z" stroke="currentcolor"/>
               <path d="M20 26.6667L2.6795 6.66669L37.3205 6.66669L20 26.6667Z" fill="currentcolor"/>

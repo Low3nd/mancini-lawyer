@@ -67,6 +67,14 @@
 .c-hero__scroll-arrow:hover {
     cursor: pointer;
 }
+@media screen and (max-width: 62.5rem) {
+    .c-hero {
+        background: url("../public/img/hero.jpg") no-repeat 30% 0 / cover;
+    }
+    .c-hero__scroll-arrow {
+        color: white;
+    }
+}
 @media screen and (max-width: 45rem) {
     .c-hero {
         align-items: flex-end;
@@ -116,10 +124,6 @@
         left: calc(50% - 1.5rem);
         color: white;
         width: 3rem;
-    }
-    .c-hero__scroll-arrow svg {
-        height: 100%;
-        width: 100%;
     }
 }
 
