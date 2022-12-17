@@ -7,8 +7,7 @@ import Footer from '../components/footer'
 import styles from '../styles/index.module.css'
 import Skillcard from '../components/skillcard'
 import skill from '../data/skillcard.JSON'
-import section from '../data/section.JSON'
-import testimonies from '../data/testimonies.JSON'
+// import testimonies from '../data/testimonies.JSON'
 import { useRef, useState } from 'react'
 import useScrollSpy from 'react-use-scrollspy'
 import testSymbol from '../public/icon/logo-nocircle.svg'
@@ -16,17 +15,13 @@ import bioPic from '../public/img/bio-pic3.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPen, faPhone, faBuilding } from '@fortawesome/free-solid-svg-icons'
 
-const Home = () => {
-  const slugId = []
-  const sluggifyId = section.name.map((id) => {
-      slugId.push(id.replace(/ /g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
-  })
+
+const Home = ({slugId, sectionName}) => {
 
   const skillList = [];
   const skillcardConstructor = Object.values(skill).map(skillcard => {
     skillList.push([skillcard.title, skillcard.bullet, skillcard.description, skillcard.icon])
   })
-
   const sectionRefs = [
     useRef(null),
     useRef(null),
@@ -43,7 +38,7 @@ const Home = () => {
       <Head>
         <title>Maître MANCINI - Avocate à Tours</title>
       </Head>
-      <Navbar sectionName={section.name} currentSection={activeSection} slugId={slugId} />
+      <Navbar currentSection={activeSection} sectionName={sectionName} slugId={slugId} />
       <section id="accueil" className={styles['c-hero']} ref={sectionRefs[0]}>
         <div className={styles['c-hero__content']}>
           <div className={styles['c-hero__logo']} ref={sectionRefs[1]}>
@@ -74,7 +69,7 @@ const Home = () => {
       <section id='competences' className={styles['skill']}>
         <div className={styles['c-skillcard__container']}>
           {skillList.map((skill) => (
-            <Skillcard key={`${skill[0]}`} title={skill[0]} bullet={skill[1]} description={skill[2]} />
+            <Skillcard key={`${skill[0]}`} title={skill[0]} bullet={skill[1]} description={skill[2]} icon={skill[3]} />
           ))}
         </div>
       </section>
@@ -87,7 +82,7 @@ const Home = () => {
                 height={24}
                 width={24}
               />
-              <p>06.43.36.21.36</p>
+              <p>06.16.88.45.41</p>
             </span>
             <span className={styles['c-intersection__contact-info']}>
               <Image 
@@ -96,7 +91,7 @@ const Home = () => {
                 height={24}
                 width={24}
               />
-              <p>contact@lea.com</p>
+              <p>contact@lea-avocat.com</p>
             </span>
           </div>
           <div className={styles['c-intersection__image']}><a className={styles['c-intersection__anchor']} ref={sectionRefs[2]}></a></div>
@@ -118,7 +113,7 @@ const Home = () => {
           </div>
           <div className={styles['c-bio__content-title']}>
             <h3>MAÎTRE MANCINI</h3>
-            <h4>Avocat au barreau de Tours et près de la Cour d’Appel d’Orléans</h4>
+            <h4>Avocat au barreau de Tours et près de la Cour d&apos;Appel d&apos;Orléans</h4>
           </div>
           <p className={styles['c-bio__content-description']}>Originaire du Cher, région à laquelle je suis très attachée, je me suis installée à TOURS au gré de mes expériences professionnelles. Diplômée d’un Master 1 Carrières Judiciaires et Sciences Criminelles, d’un Master 2 Droit et Justice (procédures en droit privé) avec obtention de l’examen d’entrée à l’Ecole des Avocats dans le même temps, j’ai prêté serment en novembre 2013 après avoir suivi la formation de l’Ecole du Centre Ouest des Avocats. Je me suis forgée sept années d’expérience au sein de cabinets d’Avocats individuels, généralistes, j’interviens à titre personnel principalement dans le domaine du droit de la famille (divorce, séparation), ainsi qu’en droit pénal et en droit civil. Je suis fondamentalement soucieuse d’apporter écoute et rigueur à mes clients, et de mettre à leur profit l’ensemble de mes compétences, de mon énergie et de ma pugnacité. Je suis également encline à proposer le recours à la médiation ou aux modes alternatifs de règlement des conflits lorsque la situation s’y prête (hors cas obligatoires).</p>
         </div>
@@ -157,25 +152,25 @@ const Home = () => {
           <div className={`${styles['c-pricing__card']} ${styles['c-pricing__card-desk']}`}>
             <FontAwesomeIcon icon={faBuilding} />
             <span>CONSULTATION CABINET</span>
-            <span>100 euros</span>
+            <span>50 euros</span>
           </div>
         </div>
-        <p className={styles['c-pricing__description']}>Les honoraires d’avocat sont fonction, notamment, de chacun des éléments suivants conformément aux usages :</p>
+        <p className={styles['c-pricing__description']}>Les honoraires d&apos;avocat sont fonction, notamment, de chacun des éléments suivants conformément aux usages :</p>
         <ul className={styles['c-pricing__description-bullet']}>
-          <li>Le temps consacré à l’affaire</li>
+          <li>Le temps consacré à l&apos;affaire</li>
           <li>Le travail de recherche</li>
-          <li>La nature et la difficulté de l'affaire</li>
-          <li>L'importance des intérêts en cause</li>
-          <li>L'incidence des frais et charges du cabinet auquel il appartient</li>
+          <li>La nature et la difficulté de l&apos;affaire</li>
+          <li>L&apos;importance des intérêts en cause</li>
+          <li>L&apos;incidence des frais et charges du cabinet auquel il appartient</li>
           <li>Sa notoriété, ses titres, son ancienneté, son expérience et la spécialisation dont il est titulaire</li>
           <li>Les avantages et le résultat obtenus au profit du client par son travail, ainsi que le service rendu à celui-ci</li>
           <li>La situation de fortune du client</li>
         </ul>
-        <p className={styles['c-pricing__description']}><b>Une convention d’honoraires est systématiquement conclue afin d’apporter transparence et clarté sur la question des honoraires, et ce, dès l’issue du premier rendez-vous.</b></p>
-        <p className={styles['c-pricing__description']}>L’aide juridictionnelle est acceptée. Le cabinet peut également accorder des facilités de paiement.<br />Page pour réserver et payer directement le RDV : https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html</p>
+        <p className={styles['c-pricing__description']}><b>Une convention d&apos;honoraires est systématiquement conclue afin d&apos;apporter transparence et clarté sur la question des honoraires, et ce, dès l&apos;issue du premier rendez-vous.</b></p>
+        <p className={styles['c-pricing__description']}>L&apos;aide juridictionnelle est acceptée. Le cabinet peut également accorder des facilités de paiement.<br />Page pour réserver et payer directement le RDV : https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html</p>
         <Link href={'/contact'}><button className={styles['c-pricing__contact-button']}>CONTACT</button></Link>
       </section>
-      <Footer sectionName={section.name} />
+      <Footer sectionName={sectionName} slugId={slugId} />
     </>
   )
 };

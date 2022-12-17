@@ -2,31 +2,37 @@
     "skillcard0" : {
         "title": "Droit pénal",
         "bullet": ["Garde à vue", "Instruction criminelle", "Instruction correctionelle"],
-        "description" : "Texte très long qui décrit en détails une catégorie de compétence particulière"
+        "description" : "Texte très long qui décrit en détails une catégorie de compétence particulière",
+        "icon" : "gavel"
     },
     "skillcard1": {
-        "title": "Droit des entreprises",
-        "bullet": ["etiam", "erat", "velit"],
-        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière"
+        "title": "Droit des étrangers",
+        "bullet": ["Recours contre les OQTF", "Demande de titre de séjour", "Recours devant le juge"],
+        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière",
+        "icon" : "earth-europe"
     },
     "skillcard2": {
-        "title": "Test 3",
-        "bullet": ["erat", "etiam", "velit and company and more company"],
-        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière"
+        "title": "Droit de la consommation",
+        "bullet": ["etiam", "erat", "velit"],
+        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière",
+        "icon" : "cart-shopping"
     },
     "skillcard3": {
-        "title": "Test 4",
-        "bullet": ["velit", "etiam", "erat"],
-        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière"
+        "title": "Droit du travail",
+        "bullet": ["Contestation de licenciement", "Harcèlement", "Exécution du contrat de travail"],
+        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière",
+        "icon" : "helmet-safety"
     },
     "skillcard4": {
-        "title": "Test 5",
-        "bullet": ["etiam", "erat", "velit"],
-        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière"
+        "title": "Droit des enfants et de la famille",
+        "bullet": ["Divorce", "Conflit parental", "Assistance éducative"],
+        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière",
+        "icon" : "person-breastfeeding"
     },
     "skillcard5": {
-        "title": "Test 6",
-        "bullet": ["vilora", "erat", "sabon"],
-        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière"
+        "title": "Droit des contrats et de la responsabilité",
+        "bullet": ["Vices cachés", "Conflit de voisinage", "Inexécution ou défaut d'éxecution contractuel"],
+        "description": "Texte très long qui décrit en détails une catégorie de compétence particulière",
+        "icon" : "file-signature"
     }        
 }

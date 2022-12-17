@@ -94,6 +94,7 @@
 }
 .c-contact__container p {
     width: 27rem;
+    letter-spacing: 0.1rem;
 }
 .c-contact__contact-info svg {
     width: 4rem;

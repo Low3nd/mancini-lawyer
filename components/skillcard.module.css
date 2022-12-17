@@ -21,8 +21,8 @@
 .c-skillcard__front {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
+    /* justify-content: space-between; */
+    gap: 1.5rem;
     padding: 1.5rem;
     border: 1px solid black;
     width: 100%;
@@ -85,4 +85,11 @@
 .c-skillcard__back h4 {
     font-size: 2rem;
     margin-bottom: 1rem;
+}
+.c-skillcard__plus-button {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 1rem;
+    bottom : 1rem;
 }

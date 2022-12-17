@@ -55,7 +55,7 @@ const Navbar = ({sectionName, currentSection, slugId}) => {
                     } else {
                         return (
                             <li key={`c-nav__menu-item${id}`} className={styles['c-nav__menu-item']}>
-                                <Link href={slugId[sectionName.indexOf(id)]} scroll={false} legacyBehavior>
+                                <Link href={slugId[sectionName.indexOf(id)]} scroll={true} legacyBehavior>
                                     <a
                                         className={clsx(
                                             // TODO: onClick is to be removed when implementing scrollSpy

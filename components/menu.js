@@ -38,7 +38,7 @@ const Menu = ({sectionName, slugId, menuState, menuActivation}) => {
                                 return (
                                     <div key={id}>
                                         <li className={styles['c-menu__sections-link']}>
-                                            <Link href={id} scroll={false} legacyBehavior>
+                                            <Link href={id} scroll={true} legacyBehavior>
                                                 <a onClick={menuActivation}>{sectionName[slugId.indexOf(id)]}</a>
                                             </Link>
                                         </li>

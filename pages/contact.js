@@ -44,7 +44,7 @@ const Contact = () => {
                 <div className={styles['c-contact__contact-info']}>
                     <div className={`${styles['c-contact__contact-adress']} ${styles['c-contact__container']}`}>
                         <FontAwesomeIcon icon={faLocationDot} />
-                        <p>31 rue George Sand 37300 Tours</p>
+                        <p>31 rue George Sand<br />37300 Tours</p>
                     </div>
                     <div className={`${styles['c-contact__contact-phone']} ${styles['c-contact__container']}`}>
                         <FontAwesomeIcon icon={faPhone} />
@@ -68,7 +68,7 @@ const Contact = () => {
             <div className={styles['c-contact__map']}>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12483.416973010995!2d0.6781618347239642!3d47.38826406648961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fcd5c82ae43695%3A0x401e355cc2783894!2s31%20Rue%20George%20Sand%2C%2037000%20Tours!5e0!3m2!1sfr!2sfr!4v1668692300950!5m2!1sfr!2sfr" frameBorder="0" width="100%" height="100%" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <Footer sectionName={section.name} loading='lazy' />
+            <Footer sectionName={section.name} slugId={slugId} loading='lazy' />
         </>
     )
 }

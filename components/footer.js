@@ -3,7 +3,7 @@ import styles from './footer.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
-const Footer = ({sectionName}) => {
+const Footer = ({sectionName, slugId}) => {
     return (
         <footer className={styles['c-footer']}>
             <div className={styles['c-footer__contact-summary']}>
@@ -42,13 +42,25 @@ const Footer = ({sectionName}) => {
             </div>
             <hr />
             <ul className={styles['c-footer__sitemap']}>
-                {sectionName.map((id) => (
-                    <span key={`c-footer__sitemap-${id}`} className={styles['c-footer__sitemap-link']}>
-                        <Link href={`#${id}`} scroll={false} legacyBehavior>
-                            <a>{id}</a>
-                        </Link>
-                    </span>
-                ))}
+                {sectionName.map((id) => {
+                    if (id != 'CONTACT') {
+                        return (
+                            <span key={`c-footer__sitemap-${id}`} className={styles['c-footer__sitemap-link']}>
+                                <Link href={`/#${slugId[sectionName.indexOf(id)]}`} scroll={false} legacyBehavior>
+                                    <a>{id}</a>
+                                </Link>
+                            </span>
+                        )
+                    } else {
+                        return (
+                            <span key={`c-footer__sitemap-${id}`} className={styles['c-footer__sitemap-link']}>
+                                <Link href={'/contact'} scroll={true} legacyBehavior>
+                                    <a>{id}</a>
+                                </Link>
+                            </span>
+                        )
+                    }
+                })}
             </ul>
             {/* <div className={styles['c-footer__social-media']}>
                 <FontAwesomeIcon icon={faLinkedin} />
@@ -59,7 +71,7 @@ const Footer = ({sectionName}) => {
                 </svg>
             </div> */}
             <div className={styles['c-footer__legal-link']}>
-                <Link href="" scroll={false} legacyBehavior>
+                <Link href="/legal" scroll={true} legacyBehavior>
                     <a>Mentions Légales</a>
                 </Link>
                 <p>© Boolean Design</p>
