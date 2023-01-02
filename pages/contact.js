@@ -2,6 +2,7 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import styles from '../styles/contact.module.css';
 import section from '../data/section.JSON';
+import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
@@ -17,7 +18,7 @@ const Contact = () => {
         <>
             <Navbar sectionName={section.name} currentSection={5} slugId={slugId} />
             <section className={styles['c-contact']}>
-                <form className={styles['c-contact__form']}>
+                <form className={styles['c-contact__form']} action='https://formspree.io/f/xjvdvkjp' method='POST'>
                     <h2>FORMULAIRE DE CONTACT</h2>
                     <div className={`${styles['c-contact__form-name']} ${styles['c-contact__input-container']}`}>
                         <label htmlFor='name'>Nom</label>
@@ -48,11 +49,11 @@ const Contact = () => {
                     </div>
                     <div className={`${styles['c-contact__contact-phone']} ${styles['c-contact__container']}`}>
                         <FontAwesomeIcon icon={faPhone} />
-                        <p>06.16.88.45.41</p>
+                        <Link href={'tel:+33616884541'}>06.16.88.45.41</Link>
                     </div>
                     <div className={`${styles['c-contact__contact-email']} ${styles['c-contact__container']}`}>
                         <FontAwesomeIcon icon={faEnvelope} />
-                        <p>contact@mancini-avocat.fr</p>
+                        <Link href={'mailto:contact@mancini-avocat.fr?subject=Demande de rendez-vous'}>contact@mancini-avocat.fr</Link>
                     </div>
                     <div className={`${styles['c-contact__contact-schedule']} ${styles['c-contact__container']}`}>
                         <FontAwesomeIcon icon={faClock} />

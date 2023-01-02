@@ -1,6 +1,6 @@
 .c-contact {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap-reverse;
     justify-content: space-around;
     gap: 4rem;
     padding: 10rem 8rem 4rem;
@@ -96,29 +96,29 @@
     width: 27rem;
     letter-spacing: 0.1rem;
 }
+.c-contact__container a {
+    width: 27rem;
+    letter-spacing: 0.1rem;
+
+    text-decoration: none;
+    color: black;
+}
 .c-contact__contact-info svg {
     width: 4rem;
     height: 4rem;
     color: var(--yellow);
 }
-.c-contact__contact-phone {
-    /* color: white; */
-    /* background-color: var(--green); */
-}
+
 .c-contact__contact-schedule {
     font-size: 1.6rem;
     border-bottom: none;
-    /* color: white; */
-    /* background-color: var(--green); */
 }
 .c-contact__contact-schedule-text {
     display: flex;
     flex-flow: column;
     gap: 1rem;
     text-align: center;
-    width: 27rem;
 }
-
 
 .c-contact__map {
     margin: 4rem auto;

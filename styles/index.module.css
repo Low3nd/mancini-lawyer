@@ -172,7 +172,7 @@
     flex-flow: column;
     justify-content: space-around;
     padding: 3rem 3.5rem;
-    width: 37rem;
+    width: 41.5rem;
     height: 15rem;
     font-size: 2rem;
     font-weight: bold;
@@ -189,6 +189,10 @@
 .c-intersection__contact-info {
     display: flex;
     gap: 1rem;
+}
+.c-intersection__contact-info p {
+    width: 100%;
+    text-align: center;
 }
 .c-intersection__schedule {
     color: white;
@@ -228,10 +232,10 @@
 .c-bio__content {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: max-content;
+    grid-template-rows: min-content;
     grid-template-areas:    "a b"
                             "a c";
-    row-gap: 1rem;
+    row-gap: 2rem;
     column-gap: 3rem;
 }
 .c-bio__content-img {
@@ -256,7 +260,7 @@
     content: "";
     height: calc(100% + 2rem);
     width: 200vw;
-    background-color: var(--yellow);
+    background-color: rgb(180, 103, 30);
     position: absolute;
     top: -1rem;
     left: -100%;
@@ -303,9 +307,9 @@
 @media screen and (max-width: 63rem) {
     .c-bio__content {
         grid-template-areas:
-            "b a"
-            "c c";
-        grid-template-columns: 2fr 1.25fr;
+            "b b"
+            "c a";
+        grid-template-columns: 1fr 0.80fr;
         column-gap: 4rem;
         row-gap: 3rem;
     }
@@ -364,7 +368,7 @@
 
 .c-pricing {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
     gap: 5rem;
     padding: 4rem 8rem;
@@ -416,6 +420,9 @@
     font-size: 1.8rem;
     text-align: justify;
     max-width: 90rem;
+}
+.c-pricing__description a {
+    color: black;
 }
 .c-pricing__contact-button {
     margin: 0 auto;

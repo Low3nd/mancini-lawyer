@@ -7,13 +7,12 @@ import Footer from '../components/footer'
 import styles from '../styles/index.module.css'
 import Skillcard from '../components/skillcard'
 import skill from '../data/skillcard.JSON'
-// import testimonies from '../data/testimonies.JSON'
 import { useRef, useState } from 'react'
 import useScrollSpy from 'react-use-scrollspy'
 import testSymbol from '../public/icon/logo-nocircle.svg'
 import bioPic from '../public/img/bio-pic3.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPen, faPhone, faBuilding } from '@fortawesome/free-solid-svg-icons'
+import { faPen, faPhone, faBuilding, faMail } from '@fortawesome/free-solid-svg-icons'
 
 
 const Home = ({slugId, sectionName}) => {
@@ -76,22 +75,12 @@ const Home = ({slugId, sectionName}) => {
       <section className={styles['c-intersection']}>
           <div className={`${styles['c-intersection__label']} ${styles['c-intersection__contact']}`}>
             <span className={styles['c-intersection__contact-info']}>
-              <Image 
-                src={testSymbol}
-                alt='A phone symbol'
-                height={24}
-                width={24}
-              />
+              <FontAwesomeIcon icon={['fas', 'phone']} />
               <p>06.16.88.45.41</p>
             </span>
             <span className={styles['c-intersection__contact-info']}>
-              <Image 
-                src={testSymbol}
-                alt=''
-                height={24}
-                width={24}
-              />
-              <p>contact@lea-avocat.com</p>
+              <FontAwesomeIcon icon={['fas', 'envelope']} />
+              <p>contact@mancini-avocat.com</p>
             </span>
           </div>
           <div className={styles['c-intersection__image']}><a className={styles['c-intersection__anchor']} ref={sectionRefs[2]}></a></div>
@@ -113,7 +102,7 @@ const Home = ({slugId, sectionName}) => {
           </div>
           <div className={styles['c-bio__content-title']}>
             <h3>MAÎTRE MANCINI</h3>
-            <h4>Avocat au barreau de Tours et près de la Cour d&apos;Appel d&apos;Orléans</h4>
+            <h4>Avocate au barreau de Tours</h4>
           </div>
           <p className={styles['c-bio__content-description']}>Originaire du Cher, région à laquelle je suis très attachée, je me suis installée à TOURS au gré de mes expériences professionnelles. Diplômée d’un Master 1 Carrières Judiciaires et Sciences Criminelles, d’un Master 2 Droit et Justice (procédures en droit privé) avec obtention de l’examen d’entrée à l’Ecole des Avocats dans le même temps, j’ai prêté serment en novembre 2013 après avoir suivi la formation de l’Ecole du Centre Ouest des Avocats. Je me suis forgée sept années d’expérience au sein de cabinets d’Avocats individuels, généralistes, j’interviens à titre personnel principalement dans le domaine du droit de la famille (divorce, séparation), ainsi qu’en droit pénal et en droit civil. Je suis fondamentalement soucieuse d’apporter écoute et rigueur à mes clients, et de mettre à leur profit l’ensemble de mes compétences, de mon énergie et de ma pugnacité. Je suis également encline à proposer le recours à la médiation ou aux modes alternatifs de règlement des conflits lorsque la situation s’y prête (hors cas obligatoires).</p>
         </div>
@@ -167,7 +156,8 @@ const Home = ({slugId, sectionName}) => {
           <li>La situation de fortune du client</li>
         </ul>
         <p className={styles['c-pricing__description']}><b>Une convention d&apos;honoraires est systématiquement conclue afin d&apos;apporter transparence et clarté sur la question des honoraires, et ce, dès l&apos;issue du premier rendez-vous.</b></p>
-        <p className={styles['c-pricing__description']}>L&apos;aide juridictionnelle est acceptée. Le cabinet peut également accorder des facilités de paiement.<br />Page pour réserver et payer directement le RDV : https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html</p>
+        <p className={styles['c-pricing__description']}>L&apos;aide juridictionnelle est acceptée. Le cabinet peut également accorder des facilités de paiement.</p>
+        <p className={styles['c-pricing__description']}>Il vous est également possible de prendre rendez-vous directement en ligne sur le site du <Link href={'https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html'}>barreau de Tours</Link>.</p>
         <Link href={'/contact'}><button className={styles['c-pricing__contact-button']}>CONTACT</button></Link>
       </section>
       <Footer sectionName={sectionName} slugId={slugId} />

@@ -1,6 +1,5 @@
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
-import section from '../data/section.JSON'
 import styles from '../styles/legal.module.css'
 
 
@@ -12,9 +11,6 @@ const Legal = ({sectionName, slugId}) => {
                 <h2>MENTION LÉGALES</h2>
                 <div className={styles['c-legal__administration']}>
                     <h3>Informations légales, sociales et administrative</h3>
-                </div>
-                <div className={styles['c-legal__administration']}>
-                    
                 </div>
                 <div className={styles['c-legal__lawyer']}>
                     <h3></h3>
