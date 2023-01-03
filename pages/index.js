@@ -101,7 +101,7 @@ const Home = ({slugId, sectionName}) => {
             />
           </div>
           <div className={styles['c-bio__content-title']}>
-            <h3>MAÎTRE MANCINI</h3>
+            <h3>MAÎTREsse MANCINI</h3>
             <h4>Avocate au barreau de Tours</h4>
           </div>
           <p className={styles['c-bio__content-description']}>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
