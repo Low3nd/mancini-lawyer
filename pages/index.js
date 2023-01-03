@@ -104,7 +104,16 @@ const Home = ({slugId, sectionName}) => {
             <h3>MAÎTRE MANCINI</h3>
             <h4>Avocate au barreau de Tours</h4>
           </div>
-          <p className={styles['c-bio__content-description']}>Originaire du Cher, région à laquelle je suis très attachée, je me suis installée à TOURS au gré de mes expériences professionnelles. Diplômée d’un Master 1 Carrières Judiciaires et Sciences Criminelles, d’un Master 2 Droit et Justice (procédures en droit privé) avec obtention de l’examen d’entrée à l’Ecole des Avocats dans le même temps, j’ai prêté serment en novembre 2013 après avoir suivi la formation de l’Ecole du Centre Ouest des Avocats. Je me suis forgée sept années d’expérience au sein de cabinets d’Avocats individuels, généralistes, j’interviens à titre personnel principalement dans le domaine du droit de la famille (divorce, séparation), ainsi qu’en droit pénal et en droit civil. Je suis fondamentalement soucieuse d’apporter écoute et rigueur à mes clients, et de mettre à leur profit l’ensemble de mes compétences, de mon énergie et de ma pugnacité. Je suis également encline à proposer le recours à la médiation ou aux modes alternatifs de règlement des conflits lorsque la situation s’y prête (hors cas obligatoires).</p>
+          <p className={styles['c-bio__content-description']}>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
+          <ul className={styles['c-bio__content-bullet']}>
+            <h4>Parcours professionnel</h4>
+            <li>Licence de Droit fondamental</li>
+            <li>Diplôme Universitaire de Sciences Criminelles</li>
+            <li>Master 1 Carrière judiciaire et droit pénal</li>
+            <li>Master 2 Contentieux privé</li>
+            <li>Chargée d&apos;enseignement en Droit de la famille à l&apos;Université du Mans</li>
+            <li>Juriste Contentieux du Droit de séjour auprès de la préfecture de la Vienne</li>
+          </ul>
         </div>
       </section>
       {/* <section id='testimonies' className={styles['c-testimonies']}>
@@ -144,21 +153,25 @@ const Home = ({slugId, sectionName}) => {
             <span>50 euros</span>
           </div>
         </div>
-        <p className={styles['c-pricing__description']}>Les honoraires d&apos;avocat sont fonction, notamment, de chacun des éléments suivants conformément aux usages :</p>
-        <ul className={styles['c-pricing__description-bullet']}>
-          <li>Le temps consacré à l&apos;affaire</li>
-          <li>Le travail de recherche</li>
-          <li>La nature et la difficulté de l&apos;affaire</li>
-          <li>L&apos;importance des intérêts en cause</li>
-          <li>L&apos;incidence des frais et charges du cabinet auquel il appartient</li>
-          <li>Sa notoriété, ses titres, son ancienneté, son expérience et la spécialisation dont il est titulaire</li>
-          <li>Les avantages et le résultat obtenus au profit du client par son travail, ainsi que le service rendu à celui-ci</li>
-          <li>La situation de fortune du client</li>
-        </ul>
-        <p className={styles['c-pricing__description']}><b>Une convention d&apos;honoraires est systématiquement conclue afin d&apos;apporter transparence et clarté sur la question des honoraires, et ce, dès l&apos;issue du premier rendez-vous.</b></p>
-        <p className={styles['c-pricing__description']}>L&apos;aide juridictionnelle est acceptée. Le cabinet peut également accorder des facilités de paiement.</p>
-        <p className={styles['c-pricing__description']}>Il vous est également possible de prendre rendez-vous directement en ligne sur le site du <Link href={'https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html'}>barreau de Tours</Link>.</p>
-        <Link href={'/contact'}><button className={styles['c-pricing__contact-button']}>CONTACT</button></Link>
+        <div className={styles['c-pricing__text']}>
+          <p className={styles['c-pricing__description']}>Les honoraires d&apos;avocat sont fonction, notamment, de chacun des éléments suivants conformément aux usages :</p>
+          <ul className={styles['c-pricing__description-bullet']}>
+            <li>Le temps consacré à l&apos;affaire</li>
+            <li>Le travail de recherche</li>
+            <li>La nature et la difficulté de l&apos;affaire</li>
+            <li>L&apos;importance des intérêts en cause</li>
+            <li>L&apos;incidence des frais et charges du cabinet auquel il appartient</li>
+            <li>Sa notoriété, ses titres, son ancienneté, son expérience et la spécialisation dont il est titulaire</li>
+            <li>Les avantages et le résultat obtenus au profit du client par son travail, ainsi que le service rendu à celui-ci</li>
+            <li>La situation de fortune du client</li>
+          </ul>
+          <p className={styles['c-pricing__description']}><b>Une convention d&apos;honoraires est systématiquement conclue afin d&apos;apporter transparence et clarté sur la question des honoraires, et ce, dès l&apos;issue du premier rendez-vous.</b></p>
+          <p className={styles['c-pricing__description']}>L&apos;aide juridictionnelle est acceptée. Le cabinet peut également accorder des facilités de paiement.</p>
+          <p className={styles['c-pricing__description']}>Il vous est également possible de prendre rendez-vous directement en ligne sur le site du <Link href={'https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html'}>barreau de Tours</Link>.</p>
+          <div className={styles['c-pricing__button-wrapper']}>
+            <Link href={'/contact'}><button className={styles['c-pricing__contact-button']}>CONTACT</button></Link>
+          </div>
+        </div>
       </section>
       <Footer sectionName={sectionName} slugId={slugId} />
     </>

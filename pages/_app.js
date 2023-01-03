@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
 import section from '../data/section.JSON'
+import styles from '../styles/globals.css'
 import '../styles/globals.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 // import { library } from '@fortawesome/fontawesome-svg-core'
@@ -20,9 +21,11 @@ const MyApp = ({ Component, pageProps }) => {
       <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Layout>
-        <Component {...pageProps} sectionName={section.name} slugId={slugId} />
-      </Layout>
+      <div className={styles['content-wrapper']}>
+        <Layout>
+          <Component {...pageProps} sectionName={section.name} slugId={slugId} />
+        </Layout>
+      </div>
     </>
   )
 }

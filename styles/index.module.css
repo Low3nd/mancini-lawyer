@@ -231,11 +231,11 @@
 }
 .c-bio__content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content;
-    grid-template-areas:    "a b"
-                            "a c";
-    row-gap: 2rem;
+    grid-template-areas:    "a b b"
+                            "a c d";
+    row-gap: 4rem;
     column-gap: 3rem;
 }
 .c-bio__content-img {
@@ -286,17 +286,33 @@
 }
 .c-bio__content-description {
     grid-area: c;
+    align-self: center;
     font-size: 1.6rem;
     font-weight: 400;
-    column-count: 2;
-    column-fill: auto;
-    column-gap: 3rem;
     letter-spacing: 0.05rem;
     line-height: 2.3rem;
     text-align: justify;
 }
 .c-bio__content-description p {
     line-height: 110%;
+}
+.c-bio__content-bullet {
+    grid-area: d;
+    align-self: center;
+    height: max-content;
+    padding: 2rem;
+    border: 1px double white;
+    font-size: 1.6rem;
+    list-style-position: outside;
+    text-align: justify;
+}
+.c-bio__content-bullet h4 {
+    margin: 0 2rem 2rem;
+    text-align: center;
+}
+.c-bio__content-bullet li {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
 }
 @media screen and (min-width: 103rem) {
     .c-bio__content-description {
@@ -416,16 +432,29 @@
     background-size: cover;
     background-color: rgba(58, 58, 60, 0.2);
 }
+.c-pricing__text {
+    max-width: fit-content;
+    margin: 0 auto;
+}
 .c-pricing__description {
     font-size: 1.8rem;
     text-align: justify;
     max-width: 90rem;
+    margin: 3rem;
 }
 .c-pricing__description a {
     color: black;
 }
-.c-pricing__contact-button {
+.c-pricing__description-bullet {
+    list-style: inside;
+    margin-left: 1.2rem;
+}
+.c-pricing__button-wrapper {
+    width: fit-content;
     margin: 0 auto;
+}
+.c-pricing__contact-button {
+    margin: 2rem auto;
     padding: 1rem 2rem;
     font-size: 1.8rem;
     font-family: raleway;
