@@ -10,7 +10,7 @@ import skill from '../data/skillcard.JSON'
 import { useRef, useState } from 'react'
 import useScrollSpy from 'react-use-scrollspy'
 import testSymbol from '../public/icon/logo-nocircle.svg'
-import bioPic from '../public/img/bio-pic3.jpg'
+import bioPic from '../public/img/bio-pic5.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPen, faPhone, faBuilding, faMail } from '@fortawesome/free-solid-svg-icons'
 
@@ -101,12 +101,16 @@ const Home = ({slugId, sectionName}) => {
             />
           </div>
           <div className={styles['c-bio__content-title']}>
-            <h3>MAÎTREsse MANCINI</h3>
+            <h3>MAÎTRE <b>LEA MANCINI</b></h3>
             <h4>Avocate au barreau de Tours</h4>
+            <hr />
+            <p>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
+            <p>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
+            <p>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
+            <p>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
           </div>
-          <p className={styles['c-bio__content-description']}>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
           <ul className={styles['c-bio__content-bullet']}>
-            <h4>Parcours professionnel</h4>
+            <h4>FORMATION</h4>
             <li>Licence de Droit fondamental</li>
             <li>Diplôme Universitaire de Sciences Criminelles</li>
             <li>Master 1 Carrière judiciaire et droit pénal</li>

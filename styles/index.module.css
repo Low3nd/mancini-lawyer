@@ -225,38 +225,38 @@
 
 
 .c-bio {
-    padding: 4rem 8rem;
+    padding: 6rem 8rem 4rem;
     background-color: var(--grey);
     color: white;
 }
 .c-bio__content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.4fr 1fr;
     grid-template-rows: min-content;
-    grid-template-areas:    "a b b"
-                            "a c d";
-    row-gap: 4rem;
+    grid-template-areas:    "a b"
+                            "d b";
+    row-gap: 2rem;
     column-gap: 3rem;
 }
 .c-bio__content-img {
     grid-area: a;
     width: 100%;
-    max-width: 40rem;
+    max-width: 27.5rem;
     align-self: center;
     justify-self: center;
-    border-radius: 2%;
-    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100%;
+    /* box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25); */
     z-index: 2;
 }
 .c-bio__content-img img {
-    border-radius: 2%;
+    border-radius: 100%;
 }
 .c-bio__content-img hr {
     border: none;
     border-top: 1px solid white;
     margin: 2rem 0 0;
 }
-.c-bio__content-title::before {
+/* .c-bio__content-title::before {
     content: "";
     height: calc(100% + 2rem);
     width: 200vw;
@@ -265,11 +265,13 @@
     top: -1rem;
     left: -100%;
     z-index: -1;
-}
+} */
 .c-bio__content-title {
     grid-area: b;
-    align-self: center;
+    margin: 4rem;
+    /* align-self: center; */
     font-size: 1.6rem;
+    max-width: 88.5rem;
     position: relative;
     z-index: 1;
 }
@@ -278,33 +280,41 @@
     letter-spacing: 0.5rem;
     /* font-family: 'Playfair display'; */
     font-weight: 500;
+    margin-bottom: 1rem;
 }
 .c-bio__content-title h4 {
     font-size: 2rem;
     font-weight: 400;
     letter-spacing: 0.2rem;
 }
-.c-bio__content-description {
+.c-bio__content-title hr {
+    border: none;
+    border-bottom: 1px solid white;
+    margin: 2rem 0 4rem;
+}
+.c-bio__content-title p {
     grid-area: c;
     align-self: center;
     font-size: 1.6rem;
     font-weight: 400;
-    letter-spacing: 0.05rem;
-    line-height: 2.3rem;
+    letter-spacing: 0.14rem;
+    line-height: 2.5rem;
     text-align: justify;
-}
-.c-bio__content-description p {
-    line-height: 110%;
+    text-indent: 2rem;
+    margin: 1rem 0;
 }
 .c-bio__content-bullet {
     grid-area: d;
-    align-self: center;
+    justify-self: center;
+    width: fit-content;
+    max-width: 50rem;
     height: max-content;
-    padding: 2rem;
-    border: 1px double white;
+    padding: 1rem 2rem;
+    border: 1px solid white;
     font-size: 1.6rem;
     list-style-position: outside;
     text-align: justify;
+    max-width: 37rem;
 }
 .c-bio__content-bullet h4 {
     margin: 0 2rem 2rem;
