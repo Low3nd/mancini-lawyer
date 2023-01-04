@@ -15,6 +15,8 @@ const MyApp = ({ Component, pageProps }) => {
   const sluggifyId = section.name.map((id) => {
       slugId.push(id.replace(/ /g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
   })
+
+  const emailCypher = 'Y29udGFjdEBtYW5jaW5pLWF2b2NhdC5mcg=='
   
   return (
     <>
@@ -23,7 +25,7 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <div className={styles['content-wrapper']}>
         <Layout>
-          <Component {...pageProps} sectionName={section.name} slugId={slugId} />
+          <Component {...pageProps} sectionName={section.name} slugId={slugId} emailEncryption={emailCypher} />
         </Layout>
       </div>
     </>

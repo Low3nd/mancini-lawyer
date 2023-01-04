@@ -1,7 +1,7 @@
 import Menu from './menu.js'
 import Link from 'next/link';
 import clsx from 'clsx';
-import styles from './navbar.module.css';
+import styles from '../styles/components/navbar.module.css';
 import { useState } from 'react';
 
 const Navbar = ({sectionName, currentSection, slugId}) => {

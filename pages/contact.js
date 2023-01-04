@@ -1,7 +1,7 @@
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 import ContactForm from '../components/contactForm'
-import styles from '../styles/contact.module.css'
+import styles from '../styles/pages/contact.module.css'
 import section from '../data/section.JSON'
 import Link from "next/link"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,12 +9,13 @@ import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-
 import { faClock } from '@fortawesome/free-regular-svg-icons'
 
 
-const Contact = () => {
+const Contact = (emailCypher) => {
     const slugId = []
     const sluggifyId = section.name.map((id) => {
         slugId.push(id.replace(/ /g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
     })
     
+
     return (
         <>
             <Navbar sectionName={section.name} currentSection={5} slugId={slugId} />
@@ -31,7 +32,7 @@ const Contact = () => {
                     </div>
                     <div className={`${styles['c-contact__contact-email']} ${styles['c-contact__container']}`}>
                         <FontAwesomeIcon icon={faEnvelope} />
-                        <Link href={'mailto:contact@mancini-avocat.fr?subject=Demande de rendez-vous'}>contact@mancini-avocat.fr</Link>
+                        <Link href='mailTo:contact@mancini-avocat.fr'>contact@mancini-avocat.fr</Link>
                     </div>
                     <div className={`${styles['c-contact__contact-schedule']} ${styles['c-contact__container']}`}>
                         <FontAwesomeIcon icon={faClock} />

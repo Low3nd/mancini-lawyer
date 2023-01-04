@@ -4,7 +4,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
-import styles from '../styles/index.module.css'
+import styles from '../styles/pages/index.module.css'
 import Skillcard from '../components/skillcard'
 import skill from '../data/skillcard.JSON'
 import { useRef, useState } from 'react'
@@ -80,7 +80,7 @@ const Home = ({slugId, sectionName}) => {
             </span>
             <span className={styles['c-intersection__contact-info']}>
               <FontAwesomeIcon icon={['fas', 'envelope']} />
-              <p>contact@mancini-avocat.com</p>
+              <Link href='mailTo:contact@mancini-avocat.fr'>contact@mancini-avocat.fr</Link>
             </span>
           </div>
           <div className={styles['c-intersection__image']}><a className={styles['c-intersection__anchor']} ref={sectionRefs[2]}></a></div>

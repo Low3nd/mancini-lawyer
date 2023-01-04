@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from './footer.module.css'
+import styles from '../styles/components/footer.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
@@ -31,7 +31,7 @@ const Footer = ({sectionName, slugId}) => {
                         </div>
                         <div className={styles['c-footer__contact-detail']}>
                             <FontAwesomeIcon icon={faEnvelope} />
-                            <p>contact@mancini-avocat.fr</p>
+                            <Link href='mailTo:contact@mancini-avocat.fr'>contact@mancini-avocat.fr</Link>
                         </div>
                         <div className={styles['c-footer__contact-detail']}>
                             <FontAwesomeIcon icon={faLocationDot} />

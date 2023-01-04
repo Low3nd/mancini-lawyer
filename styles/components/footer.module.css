@@ -57,6 +57,10 @@
     width: 25rem;
     text-align: center;
 }
+.c-footer__contact-detail a {
+    text-decoration: none;
+    color: black;
+}
 .c-footer__contact-detail svg {
     height: 2rem;
     width: 2rem;

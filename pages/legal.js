@@ -1,6 +1,6 @@
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
-import styles from '../styles/legal.module.css'
+import styles from '../styles/pages/legal.module.css'
 
 
 const Legal = ({sectionName, slugId}) => {

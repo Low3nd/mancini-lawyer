@@ -5,7 +5,7 @@
     padding: 8rem;
     height: 100vh;
     position: relative;
-    background: url("../public/img/hero.jpg") no-repeat center / cover;
+    background: url(../../public/img/hero.jpg) no-repeat center / cover;
 }
 .c-hero__content {
     display: flex;
@@ -69,7 +69,7 @@
 }
 @media screen and (max-width: 62.5rem) {
     .c-hero {
-        background: url("../public/img/hero.jpg") no-repeat 30% 0 / cover;
+        background: url(../../public/img/hero.jpg) no-repeat 30% 0 / cover;
     }
 }
 @media screen and (max-width: 45rem) {
@@ -77,7 +77,7 @@
         align-items: flex-end;
         justify-content: center;
         padding: 0;
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), transparent 40%), url("../public/img/hero-mobile.jpg");
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), transparent 40%), url(../../public/img/hero-mobile.jpg);
     }
     .c-hero__content {
         align-items: center;
@@ -126,7 +126,7 @@
 
 
 .skill {
-    background: url("../public/icon/scale-balanced-solid.svg");
+    background: url(../../public/icon/scale-balanced-solid.svg);
     background-repeat: no-repeat;
     background-size: 80vh 50vw;
     background-position: calc(150% - 4rem) calc(100% - 4rem);
@@ -190,9 +190,11 @@
     display: flex;
     gap: 1rem;
 }
-.c-intersection__contact-info p {
+.c-intersection__contact-info p, .c-intersection__contact-info a {
     width: 100%;
     text-align: center;
+    text-decoration: none;
+    color: black;
 }
 .c-intersection__schedule {
     color: white;
@@ -204,7 +206,7 @@
 .c-intersection__image {
     height: 100%;
     width: 100%;
-    background-image: url(../public/img/intersection.jpg);
+    background-image: url(../../public/img/intersection.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -421,19 +423,19 @@
     width: 6rem;
 }
 .c-pricing__card-pen {
-    background: url("../public/img/fees_pen.jpg");
+    background: url(../../public/img/fees_pen.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(58, 58, 60, 0.3);
 }
 .c-pricing__card-phone {
-    background: url("../public/img/fees_phone.jpg");
+    background: url(../../public/img/fees_phone.jpg);
     background-size: cover;
     background-color: rgba(58, 58, 60, 0.1);
 
 }
 .c-pricing__card-desk {
-    background: url("../public/img/fees_desk.jpg");
+    background: url(../../public/img/fees_desk.jpg);
     background-size: cover;
     background-color: rgba(58, 58, 60, 0.2);
 }

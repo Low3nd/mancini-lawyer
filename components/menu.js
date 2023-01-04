@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
-import styles from './menu.module.css';
+import styles from '../styles/components/menu.module.css';
 
 const Menu = ({sectionName, slugId, menuState, menuActivation}) => {
     return (
