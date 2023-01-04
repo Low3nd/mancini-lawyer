@@ -10,7 +10,7 @@ import skill from '../data/skillcard.JSON'
 import { useRef, useState } from 'react'
 import useScrollSpy from 'react-use-scrollspy'
 import testSymbol from '../public/icon/logo-nocircle.svg'
-import bioPic from '../public/img/bio-pic3.jpg'
+import bioPic from '../public/img/bio-pic5.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPen, faPhone, faBuilding, faMail } from '@fortawesome/free-solid-svg-icons'
 
@@ -92,6 +92,17 @@ const Home = ({slugId, sectionName}) => {
       </section>
       <section id="a-propos" className={styles['c-bio']}>
         <div className={styles['c-bio__content']}>
+          <div className={styles['c-bio__content-title']}>
+            <h3>MAÎTRE <b>LEA MANCINI</b></h3>
+            <h4>Avocate au barreau de Tours</h4>
+            <hr />
+          </div>
+          <div className={styles['c-bio__content-description']}>
+            <p>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
+            <p>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
+            <p>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
+            <p>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
+          </div>
           <div className={styles['c-bio__content-img']}>
             <Image
               alt='Une photo de Maitre Lea Mancini'
@@ -100,13 +111,8 @@ const Home = ({slugId, sectionName}) => {
               objectFit='contain'
             />
           </div>
-          <div className={styles['c-bio__content-title']}>
-            <h3>MAÎTRE MANCINI</h3>
-            <h4>Avocate au barreau de Tours</h4>
-          </div>
-          <p className={styles['c-bio__content-description']}>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
           <ul className={styles['c-bio__content-bullet']}>
-            <h4>Parcours professionnel</h4>
+            <h4>FORMATION</h4>
             <li>Licence de Droit fondamental</li>
             <li>Diplôme Universitaire de Sciences Criminelles</li>
             <li>Master 1 Carrière judiciaire et droit pénal</li>
@@ -140,12 +146,12 @@ const Home = ({slugId, sectionName}) => {
           <div className={`${styles['c-pricing__card']} ${styles['c-pricing__card-pen']}`}>
             <FontAwesomeIcon icon={faPen} />
             <span>CONSULTATION ÉCRITE</span>
-            <span>100 euros</span>
+            <span>180 euros</span>
           </div>
           <div className={`${styles['c-pricing__card']} ${styles['c-pricing__card-phone']}`}>
             <FontAwesomeIcon icon={faPhone} />
             <span>CONSULTATION TÉLÉPHONIQUE</span>
-            <span>100 euros</span>
+            <span>50 euros</span>
           </div>
           <div className={`${styles['c-pricing__card']} ${styles['c-pricing__card-desk']}`}>
             <FontAwesomeIcon icon={faBuilding} />
