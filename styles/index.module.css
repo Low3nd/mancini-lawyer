@@ -445,7 +445,7 @@
     font-size: 1.8rem;
     text-align: justify;
     max-width: 90rem;
-    margin: 3rem;
+    margin: 3rem 0;
 }
 .c-pricing__description a {
     color: black;

@@ -1,8 +1,9 @@
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
-import styles from '../styles/contact.module.css';
-import section from '../data/section.JSON';
-import Link from "next/link";
+import Navbar from "../components/navbar"
+import Footer from "../components/footer"
+import ContactForm from '../components/contactForm'
+import styles from '../styles/contact.module.css'
+import section from '../data/section.JSON'
+import Link from "next/link"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
@@ -18,30 +19,7 @@ const Contact = () => {
         <>
             <Navbar sectionName={section.name} currentSection={5} slugId={slugId} />
             <section className={styles['c-contact']}>
-                <form className={styles['c-contact__form']} action='https://formspree.io/f/xjvdvkjp' method='POST'>
-                    <h2>FORMULAIRE DE CONTACT</h2>
-                    <div className={`${styles['c-contact__form-name']} ${styles['c-contact__input-container']}`}>
-                        <label htmlFor='name'>Nom</label>
-                        <input name='name' type='text' placeholder=''></input>
-                    </div>
-                    <div className={`${styles['c-contact__form-surname']} ${styles['c-contact__input-container']}`}>
-                        <label htmlFor='surname'>Prénom</label>
-                        <input name='surname' type='text' placeholder=''></input>
-                    </div>
-                    <div className={`${styles['c-contact__form-email']} ${styles['c-contact__input-container']}`}>
-                        <label htmlFor='email'>Email</label>
-                        <input name='email' type='email' placeholder=''></input>
-                    </div>
-                    <div className={`${styles['c-contact__form-phone']} ${styles['c-contact__input-container']}`}>
-                        <label htmlFor='phone'>Téléphone</label>
-                        <input name='phone' type='tel' placeholder=''></input>
-                    </div>
-                    <div className={`${styles['c-contact__form-message']} ${styles['c-contact__input-container']}`}>
-                        <label htmlFor='message'>Votre Message</label>
-                        <textarea name='message' type='text' placeholder=''></textarea>
-                    </div>
-                <button className={styles['c-contact__form-submit']} type='submit'>Envoyez votre message</button>
-                </form>
+                <ContactForm />
                 <div className={styles['c-contact__contact-info']}>
                     <div className={`${styles['c-contact__contact-adress']} ${styles['c-contact__container']}`}>
                         <FontAwesomeIcon icon={faLocationDot} />
