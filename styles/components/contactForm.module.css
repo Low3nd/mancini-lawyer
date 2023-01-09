@@ -71,6 +71,9 @@
     .c-contact__form {
         width: 100%;
     }
+    .c-contact__form h2 {
+    text-align: center;
+    }
 }
 @media screen and (max-width: 31.5rem) {
     .c-contact__input-container {

@@ -7,13 +7,16 @@ const Legal = ({sectionName, slugId}) => {
     return (
         <>
             <Navbar currentSection={2} sectionName={sectionName} slugId={slugId} />
+            <div className={styles['title']}>
+            <h1>MENTION LÉGALES</h1>
+            <hr />
+            </div>
             <section className={styles['c-legal']}>
-                <h2>MENTION LÉGALES</h2>
                 <div className={styles['c-legal__administration']}>
-                    <h3>Informations légales, sociales et administrative</h3>
+                    <h2>Informations légales, sociales et administrative</h2>
                 </div>
                 <div className={styles['c-legal__lawyer']}>
-                    <h3></h3>
+                    <h2></h2>
                     <p>L&apos;avocat qui ouvre ou modifie substantiellement un site Internet doit en informer le conseil de l&apos;Ordre sans délai et lui communiquer les noms de domaine qui permettent d&apos;y accéder.</p>
                     <p>Le nom de domaine doit comporter le nom de l&apos;avocat ou la dénomination du cabinet en totalité ou en abrégé, qui peut être suivi ou précédé du mot « avocat ».</p>
                     <p>L&apos;avocat doit, dans toute communication, veiller au respect des principes essentiels de la profession, faire état de sa qualité et permettre, quel que soit le support utilisé, de l&apos;identifier, de le localiser, de le joindre, de connaître le barreau auquel il est inscrit, la structure d&apos;exercice à laquelle il appartient et, le cas échéant, le réseau dont il est membre.</p>

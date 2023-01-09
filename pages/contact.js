@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 import ContactForm from '../components/contactForm'
@@ -18,7 +19,15 @@ const Contact = (emailCypher) => {
 
     return (
         <>
+            <Head>
+                <title>Maître MANCINI - Contact et rendez-vous</title>*
+                <meta name="descrition" content="Maître Léa Mancini, avocate du barreau de Tours, vous accompagne et vous conseille dans vos démarches juridiques, procès, ou dans la médiation de vos conflits." />
+            </Head>
             <Navbar sectionName={section.name} currentSection={5} slugId={slugId} />
+            <div className={styles['title']}>
+                <h1>CONTACT ET PRISE DE RENDEZ-VOUS</h1>
+                <hr></hr>
+            </div>
             <section className={styles['c-contact']}>
                 <ContactForm />
                 <div className={styles['c-contact__contact-info']}>
@@ -42,11 +51,16 @@ const Contact = (emailCypher) => {
                             <p>14h - 18h</p>
                         </div>
                     </div>
-                    
                 </div>
             </section>
             <div className={styles['c-contact__map']}>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12483.416973010995!2d0.6781618347239642!3d47.38826406648961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fcd5c82ae43695%3A0x401e355cc2783894!2s31%20Rue%20George%20Sand%2C%2037000%20Tours!5e0!3m2!1sfr!2sfr!4v1668692300950!5m2!1sfr!2sfr" frameBorder="0" width="100%" height="100%" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    width="100%"
+                    height="100%"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12483.416973010995!2d0.6781618347239642!3d47.38826406648961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fcd5c82ae43695%3A0x401e355cc2783894!2s31%20Rue%20George%20Sand%2C%2037000%20Tours!5e0!3m2!1sfr!2sfr!4v1668692300950!5m2!1sfr!2sfr"></iframe>
             </div>
             <Footer sectionName={section.name} slugId={slugId} loading='lazy' />
         </>

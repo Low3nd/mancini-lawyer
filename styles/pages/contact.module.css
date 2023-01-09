@@ -1,17 +1,29 @@
+.title {
+    padding: 10rem 0 4rem;
+}
+.title h1 {
+    font-size: 2.4rem;
+    text-align: center;
+}
+.title hr {
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 2rem 8rem;
+}
 .c-contact {
+    padding: 0 8rem 4rem;
     display: flex;
     flex-flow: row wrap-reverse;
     justify-content: space-around;
     align-items: center;
     gap: 4rem;
-    padding: 10rem 8rem 4rem;
-    background: url("../public/icon/scale-balanced-solid.svg");
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: 150% -100% ;
 }
 .c-contact__contact-info {
     width: calc(50% - 2rem);
+    background: url(../../public/icon/scale-balanced-solid.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 .c-contact__contact-info svg {
     width: 10rem;
@@ -65,12 +77,19 @@
 }
 
 @media screen and (max-width: 65.5rem) {
+    .c-contact {
+        gap: 8rem;
+    }
     .c-contact__contact-info {
         width: 100%;
     }
 }
 @media screen and (max-width: 57rem) {
+    .title hr {
+    margin: 2rem 4rem;
+    }
     .c-contact {
-        padding: 12rem 4rem 0;
+        padding: 0 4rem 0;
+        gap: 6rem;
     }
 }

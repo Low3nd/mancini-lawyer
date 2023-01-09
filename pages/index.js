@@ -36,6 +36,7 @@ const Home = ({slugId, sectionName}) => {
     <>
       <Head>
         <title>Maître MANCINI - Avocate à Tours</title>
+        <meta name="descrition" content="Maître Léa Mancini, avocate du barreau de Tours, vous accompagne et vous conseille dans vos démarches juridiques, procès, ou dans la médiation de vos conflits." />
       </Head>
       <Navbar currentSection={activeSection} sectionName={sectionName} slugId={slugId} />
       <section id="accueil" className={styles['c-hero']} ref={sectionRefs[0]}>
@@ -107,8 +108,6 @@ const Home = ({slugId, sectionName}) => {
             <Image
               alt='Une photo de Maitre Lea Mancini'
               src={bioPic}
-              layout='responsive'
-              objectFit='contain'
             />
           </div>
           <ul className={styles['c-bio__content-bullet']}>
