@@ -17,7 +17,7 @@ const ContactForm = () => {
                     Nom
                 </label>
                 <input
-                    id='name'
+                    id='Nom'
                     name='Nom'
                     type='text'
                     placeholder='' 
@@ -28,7 +28,7 @@ const ContactForm = () => {
                     Prénom
                 </label>
                 <input
-                    id='surname'
+                    id='Prenom'
                     name='Prenom'
                     type='text'
                     placeholder=''
@@ -39,7 +39,7 @@ const ContactForm = () => {
                     Email
                 </label>
                 <input
-                    id='email'
+                    id='Email'
                     name='Email'
                     type='email'
                     placeholder=''
@@ -55,7 +55,7 @@ const ContactForm = () => {
                     Téléphone
                 </label>
                 <input
-                    id='phone'
+                    id='Telephone'
                     name='Telephone'
                     type='tel'
                     placeholder=''
@@ -66,6 +66,7 @@ const ContactForm = () => {
                     Votre Message
                 </label>
                 <textarea
+                    id="Message"
                     name='Message'
                     type='text'
                     placeholder=''

@@ -41,7 +41,6 @@ const Navbar = ({sectionName, currentSection, slugId}) => {
                                 <Link href={`/#${slugId[sectionName.indexOf(id)]}`} scroll={false} legacyBehavior>
                                     <a
                                         className={clsx(
-                                            // TODO: onClick is to be removed when implementing scrollSpy
                                                 styles['c-nav__menu-link'],
                                                 currentSection === sectionName.indexOf(id) && styles['c-nav__menu-link--is-current'],
                                         )}

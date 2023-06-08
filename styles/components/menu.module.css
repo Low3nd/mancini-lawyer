@@ -89,11 +89,6 @@
         width: 35%;
     }
 }
-@media screen and (min-width: 65rem) {
-    .c-menu {
-        
-    }
-}
 @media screen and (min-width: 92.5rem) {
     .c-menu {
         display: none;

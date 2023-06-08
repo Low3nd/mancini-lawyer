@@ -39,6 +39,9 @@
     color: black;
     border: 1px solid black;
 }
+.c-hero__content > a:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+}
 .c-hero__logo > svg {
     margin-bottom: 2rem;
     height: 15rem;

@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from '../styles/pages/legal.module.css'
@@ -7,8 +8,13 @@ const Legal = ({sectionName, slugId}) => {
     return (
         <>
             <Navbar currentSection={2} sectionName={sectionName} slugId={slugId} />
+            <Head>
+                <title>Maître MANCINI - Mentions Légales</title>
+                <meta name="description" content="Sur cette page, vous trouverez les mentions légales qui régissent le site internet mancini-avocat.fr" />
+                <link rel="canonical" href="https://www.mancini-avocat.fr/legal" />
+            </Head>
             <div className={styles['title']}>
-            <h1>MENTION LÉGALES</h1>
+            <h1>MENTIONS LÉGALES</h1>
             <hr />
             </div>
             <section className={styles['c-legal']}>

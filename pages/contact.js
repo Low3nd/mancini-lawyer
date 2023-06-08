@@ -21,7 +21,8 @@ const Contact = (emailCypher) => {
         <>
             <Head>
                 <title>Maître MANCINI - Contact et rendez-vous</title>*
-                <meta name="descrition" content="Maître Léa Mancini, avocate du barreau de Tours, vous accompagne et vous conseille dans vos démarches juridiques, procès, ou dans la médiation de vos conflits." />
+                <meta name="description" content="Maître Léa Mancini, avocate du barreau de Tours, vous accompagne et vous conseille dans vos démarches juridiques, procès, ou dans la médiation de vos conflits. Prenez contact sur cette page." />
+                <link rel="canonical" href="https://www.mancini-avocat.fr/contact" />
             </Head>
             <Navbar sectionName={section.name} currentSection={5} slugId={slugId} />
             <div className={styles['title']}>

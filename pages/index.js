@@ -10,7 +10,7 @@ import skill from '../data/skillcard.JSON'
 import { useRef, useState } from 'react'
 import useScrollSpy from 'react-use-scrollspy'
 import testSymbol from '../public/icon/logo-nocircle.svg'
-import bioPic from '../public/img/bio-pic5.jpg'
+import bioPic from '../public/img/bio-pic3.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPen, faPhone, faBuilding, faMail } from '@fortawesome/free-solid-svg-icons'
 
@@ -36,7 +36,8 @@ const Home = ({slugId, sectionName}) => {
     <>
       <Head>
         <title>Maître MANCINI - Avocate à Tours</title>
-        <meta name="descrition" content="Maître Léa Mancini, avocate du barreau de Tours, vous accompagne et vous conseille dans vos démarches juridiques, procès, ou dans la médiation de vos conflits." />
+        <meta name="description" content="Maître Léa Mancini, avocate du barreau de Tours, vous accompagne et vous conseille dans vos démarches juridiques, procès, ou dans la médiation de vos conflits." />
+        <link rel="canonical" href="https://www.mancini-avocat.fr" />
       </Head>
       <Navbar currentSection={activeSection} sectionName={sectionName} slugId={slugId} />
       <section id="accueil" className={styles['c-hero']} ref={sectionRefs[0]}>
@@ -53,7 +54,7 @@ const Home = ({slugId, sectionName}) => {
             <hr></hr>
             <h2>Avocate au Barreau de Tours</h2>
           </div>
-          <Link href='#contact' scroll={false} legacyBehavior>
+          <Link href={'/contact'} scroll={false} legacyBehavior>
             <a>CONTACT</a>
           </Link>
         </div>
@@ -121,26 +122,8 @@ const Home = ({slugId, sectionName}) => {
           </ul>
         </div>
       </section>
-      {/* <section id='testimonies' className={styles['c-testimonies']}>
-        <h3 className={styles['c-testimonies__title']}>What People Say</h3>
-        {testimonies.data.map((testimony) => (
-          <div key={`comment${testimony.id}`} className={styles['c-testimonies__container']}>
-            <p className={styles['c-testimonies__comment']}>{testimony.comment}</p>
-            <div>
-              <h4 className={styles['c-testimonies__name']}>{testimony.name[0].toUpperCase() + testimony.name.slice(1) + ' ' + testimony.surname[0].toUpperCase() + testimony.surname.slice(1)}</h4>
-              <div className={styles['c-testimonies__pic']}>
-                <Image 
-                  alt='The picture of a user who left a positive comment on the work of Lea Mancini'
-                  src={testimony.userPic}
-                  height={50}
-                  width={50}
-                />
-              </div>
-            </div>
-          </div>
-        ))}
-      </section> */}
       <section id='honoraires' className={styles['c-pricing']} ref={sectionRefs[3]}>
+      
         <div className={styles['c-pricing__card-container']}>
           <div className={`${styles['c-pricing__card']} ${styles['c-pricing__card-pen']}`}>
             <FontAwesomeIcon icon={faPen} />
@@ -184,3 +167,23 @@ const Home = ({slugId, sectionName}) => {
 };
 
 export default Home;
+
+{/* <section id='testimonies' className={styles['c-testimonies']}>
+        <h3 className={styles['c-testimonies__title']}>What People Say</h3>
+        {testimonies.data.map((testimony) => (
+          <div key={`comment${testimony.id}`} className={styles['c-testimonies__container']}>
+            <p className={styles['c-testimonies__comment']}>{testimony.comment}</p>
+            <div>
+              <h4 className={styles['c-testimonies__name']}>{testimony.name[0].toUpperCase() + testimony.name.slice(1) + ' ' + testimony.surname[0].toUpperCase() + testimony.surname.slice(1)}</h4>
+              <div className={styles['c-testimonies__pic']}>
+                <Image 
+                  alt='The picture of a user who left a positive comment on the work of Lea Mancini'
+                  src={testimony.userPic}
+                  height={50}
+                  width={50}
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </section> */}

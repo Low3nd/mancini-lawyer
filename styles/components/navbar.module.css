@@ -52,7 +52,7 @@
     font-size: 2rem;
     letter-spacing: 0.1rem;
     font-family: 'Playfair display';
-    font-weight: 400;
+    font-weight: 500;
 }
 .c-nav__menu {
     display: flex;
@@ -125,7 +125,11 @@
         height: 5rem;
     }
 }
+
+/* This needs to be kept at the bottom of the style sheet.
+It fixes a small bug where user would open the menu, then resize the window
+to a specific width, wich in turn cause both navmenu and ham-menu to be displayed
+at the same time, breaking the design */
 .c-nav__menu--menu-is-active {
-    /* This needs to be kept at the bottom of the style sheet. It fixes a small bug where user would open the menu, then resize the window to a specific width, wich in turn cause both navmenu and ham-menu to be displayed at the same time, breaking the design */
     display: none;
 }
