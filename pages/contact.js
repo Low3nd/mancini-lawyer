@@ -10,7 +10,7 @@ import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-
 import { faClock } from '@fortawesome/free-regular-svg-icons'
 
 
-const Contact = (emailCypher) => {
+const Contact = () => {
     const slugId = []
     const sluggifyId = section.name.map((id) => {
         slugId.push(id.replace(/ /g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
@@ -24,7 +24,7 @@ const Contact = (emailCypher) => {
                 <meta name="description" content="Maître Léa Mancini, avocate du barreau de Tours, vous accompagne et vous conseille dans vos démarches juridiques, procès, ou dans la médiation de vos conflits. Prenez contact sur cette page." />
                 <link rel="canonical" href="https://www.mancini-avocat.fr/contact" />
             </Head>
-            <Navbar sectionName={section.name} currentSection={5} slugId={slugId} />
+            <Navbar sectionName={section.name} currentSection={4} slugId={slugId} forceDarkMode={true} />
             <div className={styles['title']}>
                 <h1>CONTACT ET PRISE DE RENDEZ-VOUS</h1>
                 <hr></hr>
@@ -34,7 +34,7 @@ const Contact = (emailCypher) => {
                 <div className={styles['c-contact__contact-info']}>
                     <div className={`${styles['c-contact__contact-adress']} ${styles['c-contact__container']}`}>
                         <FontAwesomeIcon icon={faLocationDot} />
-                        <p>31 rue George Sand<br />37300 Tours</p>
+                        <p>31 rue George Sand<br />37000 Tours</p>
                     </div>
                     <div className={`${styles['c-contact__contact-phone']} ${styles['c-contact__container']}`}>
                         <FontAwesomeIcon icon={faPhone} />

@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import styles from '../styles/components/navbar.module.css';
 import { useState } from 'react';
 
-const Navbar = ({sectionName, currentSection, slugId}) => {
+const Navbar = ({sectionName, currentSection, slugId, forceDarkMode}) => {
     const [menuState, setmenuState] = useState(0);
     const menuActivation = () => {
         menuState === 0 ? setmenuState(1) : setmenuState(0);
@@ -18,7 +18,8 @@ const Navbar = ({sectionName, currentSection, slugId}) => {
             currentSection === 2 && styles['c-nav--light-theme'],
             currentSection === 3 && styles['c-nav--dark-theme'],
             currentSection === 4 && styles['c-nav--light-theme'],
-            currentSection === 5 && styles['c-nav--dark-theme']
+            currentSection === 5 && styles['c-nav--dark-theme'],
+            forceDarkMode === true && styles['c-nav--dark-theme']
         )}>
             <Link href="/#accueil" scroll={false} legacyBehavior>
                 <a className={styles['c-nav__logo']}>
@@ -35,10 +36,10 @@ const Navbar = ({sectionName, currentSection, slugId}) => {
                 menuState === 1 && styles['c-nav__menu--menu-is-active']
             )}>
                 {sectionName.map((id) => {
-                    if (id != 'CONTACT') {
+                    if (id != 'À PROPOS' && id != 'ACCUEIL') {
                         return (
                             <li key={`c-nav__menu-item${id}`} className={styles['c-nav__menu-item']}>
-                                <Link href={`/#${slugId[sectionName.indexOf(id)]}`} scroll={false} legacyBehavior>
+                                <Link href={slugId[sectionName.indexOf(id)]} scroll={true} legacyBehavior>
                                     <a
                                         className={clsx(
                                                 styles['c-nav__menu-link'],
@@ -54,12 +55,12 @@ const Navbar = ({sectionName, currentSection, slugId}) => {
                     } else {
                         return (
                             <li key={`c-nav__menu-item${id}`} className={styles['c-nav__menu-item']}>
-                                <Link href={slugId[sectionName.indexOf(id)]} scroll={true} legacyBehavior>
+                                <Link href={`/#${slugId[sectionName.indexOf(id)]}`} scroll={true} legacyBehavior>
                                     <a
                                         className={clsx(
                                             // TODO: onClick is to be removed when implementing scrollSpy
                                                 styles['c-nav__menu-link'],
-                                                currentSection === 5 && styles['c-nav__menu-link--is-current'],
+                                                currentSection === sectionName.indexOf(id) && styles['c-nav__menu-link--is-current'],
                                         )}
                                         draggable="false"
                                     >

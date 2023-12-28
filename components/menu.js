@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import styles from '../styles/components/menu.module.css';
 
 const Menu = ({sectionName, slugId, menuState, menuActivation}) => {
+    
     return (
         <>
             <div
@@ -24,11 +25,11 @@ const Menu = ({sectionName, slugId, menuState, menuActivation}) => {
                     <h3>MANCINI<br />AVOCATE</h3>
                     <ul className={styles['c-menu__sections']}>
                         {slugId.map((id)=> {
-                            if (id != 'contact') {
+                            if (id != 'accueil' && id != 'a-propos') {
                                 return (
                                     <div key={id}>
                                         <li className={styles['c-menu__sections-link']}>
-                                            <Link href={`/#${id}`} scroll={false} legacyBehavior>
+                                            <Link href={id} scroll={true} legacyBehavior>
                                                 <a onClick={menuActivation}>{sectionName[slugId.indexOf(id)]}</a>
                                             </Link>
                                         </li>
@@ -38,7 +39,7 @@ const Menu = ({sectionName, slugId, menuState, menuActivation}) => {
                                 return (
                                     <div key={id}>
                                         <li className={styles['c-menu__sections-link']}>
-                                            <Link href={id} scroll={true} legacyBehavior>
+                                            <Link href={`/#${id}`} scroll={false} legacyBehavior>
                                                 <a onClick={menuActivation}>{sectionName[slugId.indexOf(id)]}</a>
                                             </Link>
                                         </li>

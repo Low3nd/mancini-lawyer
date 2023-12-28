@@ -82,6 +82,7 @@
 .c-nav__hamburger-menu {
     display: none;
     z-index: 100;
+    width: 3rem;
 }
 .c-nav__hamburger-menu--hero-theme {
     color: black;

@@ -17,3 +17,16 @@ body {
   position: relative;
   font-family: raleway;
 }
+section {
+  padding: 4rem;
+}
+@media screen and (max-width: 800px) {
+  section {
+    padding: 4rem 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  section {
+    padding: 4rem 1rem;
+  }
+}

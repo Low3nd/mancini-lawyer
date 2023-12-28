@@ -1,29 +1,26 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import clsx from 'clsx'
-import Navbar from '../components/navbar'
-import Footer from '../components/footer'
-import styles from '../styles/pages/index.module.css'
-import Skillcard from '../components/skillcard'
-import skill from '../data/skillcard.JSON'
-import { useRef, useState } from 'react'
-import useScrollSpy from 'react-use-scrollspy'
-import testSymbol from '../public/icon/logo-nocircle.svg'
-import bioPic from '../public/img/bio-pic3.jpg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPen, faPhone, faBuilding, faMail } from '@fortawesome/free-solid-svg-icons'
+import { useRef } from 'react';
+
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import useScrollSpy from 'react-use-scrollspy';
+
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
+import SkillMenu from '../components/SkillMenu';
+
+import styles from '../styles/pages/index.module.css';
+
+import bioPic from '../public/img/bio-pic3.jpg';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPen, faPhone, faBuilding, faMail } from '@fortawesome/free-solid-svg-icons';
 
 
 const Home = ({slugId, sectionName}) => {
 
-  const skillList = [];
-  const skillcardConstructor = Object.values(skill).map(skillcard => {
-    skillList.push([skillcard.title, skillcard.bullet, skillcard.description, skillcard.icon])
-  })
   const sectionRefs = [
-    useRef(null),
-    useRef(null),
     useRef(null),
     useRef(null),
     useRef(null)
@@ -32,6 +29,9 @@ const Home = ({slugId, sectionName}) => {
     sectionElementRefs: sectionRefs,
     offsetPx: -81,
   })
+
+  console.log(activeSection)
+
   return (
     <>
       <Head>
@@ -59,7 +59,7 @@ const Home = ({slugId, sectionName}) => {
           </Link>
         </div>
         <div className={styles['c-hero__scroll-arrow']}>
-          <Link href='#competences' scroll={false} legacyBehavior>
+          <Link href='#a-propos' scroll={false} legacyBehavior>
             <svg width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M36.2261 16.5L20 35.2362L3.77395 16.5L36.2261 16.5Z" stroke="currentcolor"/>
               <path d="M20 26.6667L2.6795 6.66669L37.3205 6.66669L20 26.6667Z" fill="currentcolor"/>
@@ -67,11 +67,34 @@ const Home = ({slugId, sectionName}) => {
           </Link>
         </div>
       </section>
-      <section id='competences' className={styles['skill']}>
-        <div className={styles['c-skillcard__container']}>
-          {skillList.map((skill) => (
-            <Skillcard key={`${skill[0]}`} title={skill[0]} bullet={skill[1]} description={skill[2]} icon={skill[3]} />
-          ))}
+      <section id="a-propos">
+      <div className={styles['c-bio__content']}>
+          <div className={styles['c-bio__content-title']}>
+            <h3>MAÎTRE <b>LEA MANCINI</b></h3>
+            <h4>Avocate au barreau de Tours</h4>
+            <hr />
+          </div>
+          <div className={styles['c-bio__content-description']}>
+            <p>Diplômée d&apos;un Master I en <b>Droit pénal et carrières judiciaires</b> à l&apos;Université de Bordeaux, et d&apos;un Master II en <b>Contentieux privé</b> à l&apos;Université du Maine, Maître Léa Mancini a ensuite étudié à l&apos;École du Centre Ouest des Avocats afin de mettre en pratique son savoir.</p>
+            <p>En parallèle, elle a effectué des stages pour se former auprès des professionnels de la Justice et du droit. Elle a effectué de nombreux stages auprès d&apos;avocats expérimentés. Elle a également travaillé en tant qu&apos;<b>assistante de justice</b> au tribunal du Mans, <b>juriste en droit des étrangers</b> en préfecture, ou encore comme <b>enseignante en droit de la famille</b>. Forte de son apprentissage et de son expérience, elle est devenue avocate indépendante et collaboratrice de la société Delhommais Morin.</p>
+            <p><b>Disponibilité</b>, <b>réactivité</b> et <b>humanité</b> sont les maîtres mots de cette avocate au Barreau de Tours, qui met ses compétences au service de ses clients dans les domaines du <b>droit pénal</b>, du <b>droit des étrangers</b>, du <b>droit de la consommation</b>, du <b>droit des contrats et de la responsabilité</b>, ainsi que du <b>droit des enfants et de la famille</b>.</p>
+            <p>Maître Mancini est une avocate à l&apos;écoute, dans la bienveillance et le respect, de ses clients. Elle veille à vous <b>accompagner tout au long de la procédure</b>, avec efficacité et transparence.  Que ce soit en phase amiable ou contentieuse, <b>elle défendra vos intérêts, avec conviction et professionnalisme</b>.</p>
+          </div>
+          <div className={styles['c-bio__content-img']}>
+            <Image
+              alt='Une photo de Maitre Lea Mancini'
+              src={bioPic}
+            />
+          </div>
+          <ul className={styles['c-bio__content-bullet']}>
+            <h4>FORMATION</h4>
+            <li>Licence de Droit fondamental</li>
+            <li>Diplôme Universitaire de Sciences Criminelles</li>
+            <li>Master 1 Carrière judiciaire et droit pénal</li>
+            <li>Master 2 Contentieux privé</li>
+            <li>Chargée d&apos;enseignement en Droit de la famille à l&apos;Université du Mans</li>
+            <li>Juriste Contentieux du Droit de séjour auprès de la préfecture de la Vienne</li>
+          </ul>
         </div>
       </section>
       <section className={styles['c-intersection']}>
@@ -92,34 +115,11 @@ const Home = ({slugId, sectionName}) => {
             <p>14h - 19h</p>
           </div>
       </section>
-      <section id="a-propos" className={styles['c-bio']}>
-        <div className={styles['c-bio__content']}>
-          <div className={styles['c-bio__content-title']}>
-            <h3>MAÎTRE <b>LEA MANCINI</b></h3>
-            <h4>Avocate au barreau de Tours</h4>
-            <hr />
-          </div>
-          <div className={styles['c-bio__content-description']}>
-            <p>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
-            <p>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
-            <p>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
-            <p>Avocate au Barreau de Tours, Maître Léa MANCINI met ses compétences au service de ses clients dans les domaines du Droit pénal, Droit des étrangers et de la nationalité et Droit de la famille, des personnes et de leur patrimoine.</p>
-          </div>
-          <div className={styles['c-bio__content-img']}>
-            <Image
-              alt='Une photo de Maitre Lea Mancini'
-              src={bioPic}
-            />
-          </div>
-          <ul className={styles['c-bio__content-bullet']}>
-            <h4>FORMATION</h4>
-            <li>Licence de Droit fondamental</li>
-            <li>Diplôme Universitaire de Sciences Criminelles</li>
-            <li>Master 1 Carrière judiciaire et droit pénal</li>
-            <li>Master 2 Contentieux privé</li>
-            <li>Chargée d&apos;enseignement en Droit de la famille à l&apos;Université du Mans</li>
-            <li>Juriste Contentieux du Droit de séjour auprès de la préfecture de la Vienne</li>
-          </ul>
+      <section className={styles['c-skill']}>
+        <h3>DOMAINES D&apos;INTERVENTION</h3>
+        <SkillMenu handleClick={() => console.log('competences')} colorScheme={'dark'} disabled={true} />
+        <div className={styles['c-skill__button-wrapper']}>
+        <Link href={'/competences'}><button className={styles['c-skill__link']}>En savoir plus</button></Link>
         </div>
       </section>
       <section id='honoraires' className={styles['c-pricing']} ref={sectionRefs[3]}>

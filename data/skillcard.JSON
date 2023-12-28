@@ -1,8 +1,8 @@
 {
     "skillcard0" : {
         "title": "Droit pénal",
-        "bullet": ["Garde à vue", "Instruction criminelle", "Instruction correctionelle"],
-        "description" : "Texte très long qui décrit en détails une catégorie de compétence particulière. Nb max de caractères = 279",
+        "bullet": ["Garde à vue - Dépot de plainte", "Crime - Délit - Contravention", "Auteur - Victime - Mineur"],
+        "description" : "Que vous soyez victime ou auteur d’une infraction, Maître MANCINI vous assiste dès le début de l’enquête et à tous les stades de la procédure. Du dépôt de plainte ou de la garde à vue, au renvoi devant le juridiction compétente, en passant par l’ouverture d’une information judiciaire devant le juge d’instruction, Maître MANCINI saura vous soutenir et établir la stratégie nécessaire au bon déroulé de votre affaire. Maître MANCINI est par ailleurs formée à l’accompagnement des mineurs devant les juridictions pénales.",
         "icon" : "gavel"
     },
     "skillcard1": {
