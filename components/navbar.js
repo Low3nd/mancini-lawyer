@@ -9,6 +9,7 @@ const Navbar = ({sectionName, currentSection, slugId, forceDarkMode}) => {
     const menuActivation = () => {
         menuState === 0 ? setmenuState(1) : setmenuState(0);
     }
+    console.log(currentSection)
 
     return (
         <nav className={clsx(
