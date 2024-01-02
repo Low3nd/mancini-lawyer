@@ -1,13 +1,14 @@
 import Link from "next/link";
+
 import Navbar from "../components/navbar";
 import Footer from '../components/footer';
+import ContactBanner from '../components/contactBanner';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPen,
   faPhone,
-  faBuilding,
-  faMail,
+  faBuilding
 } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../styles/pages/honoraires.module.css";
@@ -46,6 +47,7 @@ const Honoraires = ({ slugId, sectionName}) => {
             <span>50 euros</span>
           </div>
         </div>
+        <ContactBanner />
         <div className={styles["c-pricing__text"]}>
           <p className={styles["c-pricing__description"]}>
             Les honoraires d&apos;avocat sont fonction, notamment, de chacun des
@@ -83,22 +85,15 @@ const Honoraires = ({ slugId, sectionName}) => {
           </p>
           <p className={styles["c-pricing__description"]}>
             Il vous est également possible de prendre rendez-vous directement en
-            ligne sur le site du{" "}
-            <Link
-              href={
-                "https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html"
-              }
-            >
-              barreau de Tours
-            </Link>
+            ligne sur le site du barreau de Tours.
           </p>
-          <div className={styles["c-pricing__button-wrapper"]}>
-            <Link href={"/contact"}>
-              <button className={styles["c-pricing__contact-button"]}>
-                CONTACT
-              </button>
-            </Link>
-          </div>
+        </div>
+        <div className={styles["c-pricing__button-wrapper"]}>
+          <Link href={"/contact"}>
+            <button className={`${styles["c-pricing__contact-button"]} ${styles["alternate-link"]}`}>
+              PRENDRE RENDEZ-VOUS SUR LE SITE DU BARREAU DE TOURS
+            </button>
+          </Link>
         </div>
       </section>
       <Footer sectionName={sectionName} slugId={slugId} />

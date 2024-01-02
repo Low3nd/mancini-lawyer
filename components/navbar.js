@@ -18,6 +18,7 @@ const Navbar = ({sectionName, currentSection, slugId, forceDarkMode}) => {
             currentSection === 1 && styles['c-nav--dark-theme'],
             currentSection === 2 && styles['c-nav--light-theme'],
             currentSection === 3 && styles['c-nav--dark-theme'],
+            currentSection === 5 && styles['c-nav--dark-theme'],
             forceDarkMode === true && styles['c-nav--dark-theme']
         )}>
             <Link href="/#accueil" scroll={false} legacyBehavior>

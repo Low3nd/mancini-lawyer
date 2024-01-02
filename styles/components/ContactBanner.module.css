@@ -1,0 +1,53 @@
+.contact-banner {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    width: 100%;
+    padding: 4rem 1rem;
+    text-align: center;
+    align-content: center;
+}
+.contact-banner hr {
+    margin: 0rem 6rem;
+    border: none;
+    border-top: 1px solid black;
+}
+.contact-banner h4 {
+    font-size: 2.4rem;
+    margin-top: 2rem;
+}
+.contact-banner p {
+    font-size: 2rem;
+}
+.contact-banner svg {
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-right: 1rem;
+    color: var(--yellow);
+}
+.contact-banner a {
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--yellow);
+    font-variant-numeric: lining-nums;
+}
+.contact-banner button {
+    margin: 1rem auto 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    font-family: raleway;
+    color: white;
+    background-color: var(--yellow);
+    border: none;
+}
+.contact-banner button:hover {
+    background-color: rgb(160, 89, 23);
+    cursor: pointer;
+}
+.contact-banner button:active {
+    background-color: var(--yellow);
+}
+.phone-link {
+    margin-top: 2rem;
+}

@@ -93,3 +93,8 @@
         gap: 6rem;
     }
 }
+@media screen and (max-width: 400px) {
+    .c-contact__contact-schedule-text p {
+        width: auto;
+    }
+}

@@ -2,7 +2,7 @@
     display: flex;
     /* align-items: center; */
     flex-direction: column;
-    gap: 5rem;
+    gap: 2rem;
     padding: 4rem 8rem;
     font-feature-settings: 'pnum' on, 'lnum' on;
 }
@@ -63,7 +63,7 @@
     font-size: 1.8rem;
     text-align: justify;
     max-width: 90rem;
-    margin: 3rem 0;
+    margin: 0 0 3rem;
 }
 .c-pricing__description a {
     color: black;
@@ -77,20 +77,27 @@
     margin: 0 auto;
 }
 .c-pricing__contact-button {
-    margin: 2rem auto;
+    margin: 2rem auto 0;
     padding: 1rem 2rem;
     font-size: 1.8rem;
     font-family: raleway;
     color: white;
-    background-color: var(--green);
+    background-color: var(--yellow);
     border: none;
 }
 .c-pricing__contact-button:hover {
-    background-color: rgb(68, 97, 84);
+    background-color: rgb(160, 89, 23);
     cursor: pointer;
 }
 .c-pricing__contact-button:active {
     background-color: var(--green);
+}
+.alternate-link {
+    margin: 0rem auto;
+    background-color: var(--green);
+}
+.alternate-link:hover {
+    background-color: rgb(68, 92, 81);
 }
 .c-pricing__description-bullet {
     font-size: 1.6rem;

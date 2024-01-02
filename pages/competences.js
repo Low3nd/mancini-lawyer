@@ -1,13 +1,12 @@
 'use client'
 
-import { useEffect, useState } from "react";
-import { useParams } from 'next/navigation';
-import { useRouter } from 'next/router';
+import { useState } from "react";
 
 import Head from "next/head";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import SkillMenu from "../components/SkillMenu";
+import ContactBanner from "../components/contactBanner";
 
 import Image from "next/image";
 import tribunal from "../public/img/tribunal.jpg";
@@ -196,6 +195,7 @@ const Competences = ({ slugId, sectionName }) => {
           </div>
         </div>
       </section>
+      <ContactBanner />
       <Footer sectionName={sectionName} slugId={slugId} />
     </>
   );
