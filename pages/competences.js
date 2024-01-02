@@ -33,7 +33,7 @@ const Competences = ({ slugId, sectionName }) => {
         />
         <link rel="canonical" href="https://www.mancini-avocat.fr" />
       </Head>
-      <Navbar sectionName={sectionName} slugId={slugId} currentSection={1} forceDarkMode={true} />
+      <Navbar sectionName={sectionName} slugId={slugId} currentSection={2} forceDarkMode={true} />
       <section id="competences" className={styles["c-skill"]}>
         <h2>DOMAINES D&apos;INTERVENTION</h2>
         <SkillMenu activeSkill={activeSkill} handleClick={handleClick} />

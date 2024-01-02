@@ -18,8 +18,6 @@ const Navbar = ({sectionName, currentSection, slugId, forceDarkMode}) => {
             currentSection === 1 && styles['c-nav--dark-theme'],
             currentSection === 2 && styles['c-nav--light-theme'],
             currentSection === 3 && styles['c-nav--dark-theme'],
-            currentSection === 4 && styles['c-nav--light-theme'],
-            currentSection === 5 && styles['c-nav--dark-theme'],
             forceDarkMode === true && styles['c-nav--dark-theme']
         )}>
             <Link href="/#accueil" scroll={false} legacyBehavior>
@@ -80,6 +78,7 @@ const Navbar = ({sectionName, currentSection, slugId, forceDarkMode}) => {
                 currentSection === 2 && styles['c-nav__hamburger-menu--light-theme'],
                 currentSection === 3 && styles['c-nav__hamburger-menu--dark-theme'],
                 currentSection === 4 && styles['c-nav__hamburger-menu--light-theme'],
+                forceDarkMode === true && styles['c-nav__hamburger-menu--forced-dark-theme'],
                 menuState === 1 && styles['c-nav__hamburger-menu--dark-theme'],
                 menuState === 1 && styles['c-nav__hamburger-menu--is-active']
             )}
