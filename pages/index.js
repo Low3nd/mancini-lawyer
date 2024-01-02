@@ -30,8 +30,6 @@ const Home = ({slugId, sectionName}) => {
     offsetPx: -81,
   })
 
-  console.log(activeSection)
-
   return (
     <>
       <Head>
@@ -117,7 +115,7 @@ const Home = ({slugId, sectionName}) => {
       </section>
       <section className={styles['c-skill']}>
         <h3>DOMAINES D&apos;INTERVENTION</h3>
-        <SkillMenu handleClick={() => console.log('competences')} colorScheme={'dark'} disabled={true} />
+        <SkillMenu handleClick={null} colorScheme={'dark'} disabled={true} />
         <div className={styles['c-skill__button-wrapper']}>
         <Link href={'/competences'}><button className={styles['c-skill__link']}>En savoir plus</button></Link>
         </div>

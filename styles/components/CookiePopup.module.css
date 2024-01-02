@@ -1,0 +1,42 @@
+.cookie-popup {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 2rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+    font-size: 1.8rem;
+    text-align: justify;
+    color: white;
+    background-color: var(--grey);
+}
+.cookie-popup p {
+    max-width: 85%;
+}
+.cookie-popup a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+}
+.cookie-popup button {
+    max-height: 5rem;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    background-color: var(--green);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+    .cookie-popup {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+    .cookie-popup p {
+        max-width: 100%;
+    }
+}
