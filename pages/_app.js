@@ -14,14 +14,14 @@ library.add(fas)
 const MyApp = ({ Component, pageProps }) => {
 
   // Cookie consent popup. Enable it with CookiePopup component (in the layout) to activate the consent form
-  // const [cookieConsent, setCookieConsent] = useState('test');
-  // useCallback(() => {
-  //   setCookieConsent(localStorage.getItem('cookieConsent'))
-  // }, [setCookieConsent]);
-  // useEffect(() => (
-  //   setCookieConsent(localStorage.getItem('cookieConsent'))
-  // ), [cookieConsent]);
-  // console.log(cookieConsent);
+  const [cookieConsent, setCookieConsent] = useState();
+  useCallback(() => {
+    setCookieConsent(localStorage.getItem('cookieConsent'))
+  }, [setCookieConsent]);
+  useEffect(() => (
+    setCookieConsent(localStorage.getItem('cookieConsent'))
+  ), [cookieConsent]);
+  console.log(cookieConsent);
 
   const slugId = []
   const sluggifyId = section.name.map((id) => {
@@ -34,9 +34,8 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className={styles['content-wrapper']}>
-        {/* <Layout cookieConsent={cookieConsent} setCookieConsent={setCookieConsent}> */}
-        <Layout>
-          <Component {...pageProps} sectionName={section.name} slugId={slugId} />
+        <Layout cookieConsent={cookieConsent} setCookieConsent={setCookieConsent}>
+          <Component {...pageProps} cookieConsent={cookieConsent} sectionName={section.name} slugId={slugId} />
         </Layout>
       </div>
     </>

@@ -6,14 +6,22 @@ const CookiePopup = ({ setCookieConsent }) => {
     
     return (
         <div className={styles['cookie-popup']}>
-            <p>Ce site n&apos;utilise pas de cookies, mais nous collectons des données via notre formulaire de contact. En continuant, vous acceptez notre <Link href='/competences'>politique de confidentialité</Link>.</p>
+            <p>Ce site utilise des cookies tiers nécessaire à son bon fonctionnement et vous donne la possibilité de les refuser.</p>
             <button
                 onClick={() => {
                     localStorage.setItem('cookieConsent', 'true');
                     setCookieConsent(true);
                 }}
             >
-                OK
+                Accepter
+            </button>
+            <button
+                onClick={() => {
+                    localStorage.setItem('cookieConsent', 'false');
+                    setCookieConsent(false);
+                }}
+            >
+                Refuser
             </button>
         </div>
     )

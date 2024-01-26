@@ -8,7 +8,7 @@ const Layout = ({ children, cookieConsent, setCookieConsent }) => {
         <>
             <div className={styles['mobile-wrapper']}>
                 {/* <DevConsole cookieConsent={cookieConsent} /> */}
-                {/* {cookieConsent === null && <CookiePopup setCookieConsent={setCookieConsent} />} */}
+                {cookieConsent === null && <CookiePopup setCookieConsent={setCookieConsent} />}
                 <main>{children}</main>
             </div>
         </>

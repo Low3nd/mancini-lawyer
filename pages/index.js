@@ -9,6 +9,7 @@ import useScrollSpy from 'react-use-scrollspy';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import SkillMenu from '../components/SkillMenu';
+import ContactBanner from '../components/contactBanner';
 
 import styles from '../styles/pages/index.module.css';
 
@@ -95,6 +96,9 @@ const Home = ({slugId, sectionName}) => {
             <li>Chargée d&apos;enseignement en Droit de la famille à l&apos;Université du Mans</li>
             <li>Juriste Contentieux du Droit de séjour auprès de la préfecture de la Vienne</li>
           </ul>
+        </div>
+        <div className={styles['contact-banner']}>
+          <ContactBanner />
         </div>
       </section>
       <section className={styles['c-intersection']}>

@@ -311,6 +311,11 @@
         grid-template-columns: 1fr;
     }
 }
+@media screen and (min-width: 45rem) {
+    .contact-banner {
+        display: none;
+    }
+}
 /* @media screen and (max-width: 45rem) {
     .c-bio__content {
         grid-template-areas:
