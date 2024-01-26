@@ -32,7 +32,12 @@ const Competences = ({ slugId, sectionName }) => {
         />
         <link rel="canonical" href="https://www.mancini-avocat.fr" />
       </Head>
-      <Navbar sectionName={sectionName} slugId={slugId} currentSection={2} forceDarkMode={true} />
+      <Navbar
+        sectionName={sectionName}
+        slugId={slugId}
+        currentSection={2}
+        forceDarkMode={true}
+      />
       <section id="competences" className={styles["c-skill"]}>
         <h2>DOMAINES D&apos;INTERVENTION</h2>
         <SkillMenu activeSkill={activeSkill} handleClick={handleClick} />
@@ -52,16 +57,15 @@ const Competences = ({ slugId, sectionName }) => {
               </div>
               <div className={styles["skill-content"]}>
                 <p>
-                  Avant toute demande devant l&apos;autorité compétente, Maître
-                  MANCINI vous assiste et vous conseille dans la préparation de
-                  votre dossier. A ce stade, obtenir des conseils juridiques est
-                  primordial puisque les fondements juridiques choisis pour
-                  déposer votre demande conditionneront l&apos;obtention, ou
-                  non, d&apos;un visa ou d&apos;un titre de séjour.
-                  <br />A la suite d&apos;un refus de délivrance d&apos;un visa,
-                  d&apos;un titre de séjour, ou du rejet d&apos;une demande de
-                  naturalisation, Maître MANCINI agit à vos côtés devant la
-                  juridiction compétente afin de contester cette décision.{" "}
+                  Que vous soyez victime ou auteur d&apos;une infraction, Maître
+                  MANCINI vous assiste dès le début de l&apos;enquête et à tous les
+                  stades de la procédure. Du dépôt de plainte ou de la garde à
+                  vue, au renvoi devant le juridiction compétente, en passant
+                  par l&apos;ouverture d&apos;une information judiciaire devant le juge
+                  d&apos;instruction, Maître MANCINI saura vous soutenir et établir
+                  la stratégie nécessaire au bon déroulé de votre affaire.
+                  Maître MANCINI est par ailleurs formée à l&apos;accompagnement des
+                  mineurs devant les juridictions pénales.
                 </p>
                 <Image src={tribunal} alt="test" height={250} />
               </div>

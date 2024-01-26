@@ -21,7 +21,11 @@
     color: white;
     border-bottom: 1px solid white;
 }
-.cookie-popup button {
+.button {
+    display: flex;
+    gap: 2rem;
+}
+.button button {
     max-height: 5rem;
     padding: 1rem 2rem;
     border: none;

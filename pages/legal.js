@@ -88,7 +88,7 @@ const Legal = ({sectionName, slugId}) => {
             <h3>Consentement :</h3>
             <p>
               En utilisant notre formulaire de contact et en nous fournissant
-              vos informations, vous consentez à la collecte et à l'utilisation
+              vos informations, vous consentez à la collecte et à l&apos;utilisation
               de vos données conformément à cette politique de confidentialité.
             </p>
             <h3>Protection des données :</h3>
@@ -96,7 +96,7 @@ const Legal = ({sectionName, slugId}) => {
               Nous prenons des mesures de sécurité pour protéger vos données
               contre tout accès non autorisé, utilisation abusive ou
               divulgation. Cependant, aucune méthode de transmission sur
-              Internet ou de stockage électronique n'est totalement sécurisée et
+              Internet ou de stockage électronique n&apos;est totalement sécurisée et
               nous ne pouvons garantir une sécurité absolue.
             </p>
             <h3>Modifications de la politique de confidentialité :</h3>

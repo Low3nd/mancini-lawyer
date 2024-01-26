@@ -7,22 +7,24 @@ const CookiePopup = ({ setCookieConsent }) => {
     return (
         <div className={styles['cookie-popup']}>
             <p>Ce site utilise des cookies tiers nécessaire à son bon fonctionnement et vous donne la possibilité de les refuser.</p>
-            <button
-                onClick={() => {
-                    localStorage.setItem('cookieConsent', 'true');
-                    setCookieConsent(true);
-                }}
-            >
-                Accepter
-            </button>
-            <button
-                onClick={() => {
-                    localStorage.setItem('cookieConsent', 'false');
-                    setCookieConsent(false);
-                }}
-            >
-                Refuser
-            </button>
+            <div className={styles['button']}>
+                <button
+                    onClick={() => {
+                        localStorage.setItem('cookieConsent', 'true');
+                        setCookieConsent(true);
+                    }}
+                >
+                    Accepter
+                </button>
+                <button
+                    onClick={() => {
+                        localStorage.setItem('cookieConsent', 'false');
+                        setCookieConsent(false);
+                    }}
+                >
+                    Refuser
+                </button>
+            </div>
         </div>
     )
 
