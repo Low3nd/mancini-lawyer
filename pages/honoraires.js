@@ -89,7 +89,7 @@ const Honoraires = ({ slugId, sectionName}) => {
           </p>
         </div>
         <div className={styles["c-pricing__button-wrapper"]}>
-          <Link href={"/contact"}>
+          <Link href={"https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html"}>
             <button className={`${styles["c-pricing__contact-button"]} ${styles["alternate-link"]}`}>
               PRENDRE RENDEZ-VOUS SUR LE SITE DU BARREAU DE TOURS
             </button>

@@ -9,7 +9,13 @@ import SkillMenu from "../components/SkillMenu";
 import ContactBanner from "../components/contactBanner";
 
 import Image from "next/image";
-import tribunal from "../public/img/tribunal.jpg";
+import image_penal from "../public/img/image_penal.jpg";
+import image_etranger from "../public/img/image_etranger.jpg";
+import image_famille from "../public/img/image_famille.jpg";
+import image_civil from "../public/img/image_civil.jpg";
+import image_contrat from "../public/img/image_contrat.jpg";
+import image_travail from "../public/img/image_travail.jpg";
+
 
 import styles from "../styles/pages/competences.module.css";
 
@@ -67,7 +73,7 @@ const Competences = ({ slugId, sectionName }) => {
                   Maître MANCINI est par ailleurs formée à l&apos;accompagnement des
                   mineurs devant les juridictions pénales.
                 </p>
-                <Image src={tribunal} alt="test" height={250} />
+                <Image src={image_penal} alt="test" height={250} />
               </div>
             </div>
             <div id="etrangers" className={`${styles["skill"]}`}>
@@ -92,7 +98,7 @@ const Competences = ({ slugId, sectionName }) => {
                   naturalisation, Maître MANCINI agit à vos côtés devant la
                   juridiction compétente afin de contester cette décision.
                 </p>
-                <Image src={tribunal} alt="test" height={250} />
+                <Image src={image_etranger} alt="test" height={250} />
               </div>
             </div>
             <div id="famille" className={`${styles["skill"]}`}>
@@ -117,7 +123,7 @@ const Competences = ({ slugId, sectionName }) => {
                   action à bref délai ou de solliciter une ordonnance de
                   protection devant le juge aux affaires familiales.
                 </p>
-                <Image src={tribunal} alt="test" height={250} />
+                <Image src={image_famille} alt="test" height={250} />
               </div>
             </div>
             <div id="travail" className={`${styles["skill"]}`}>
@@ -142,7 +148,7 @@ const Competences = ({ slugId, sectionName }) => {
                   tribunal judiciaire, en cas de litige relatif à un arrêt ou à
                   un accident du travail, ou encore à votre mise en retraite.
                 </p>
-                <Image src={tribunal} alt="test" height={250} />
+                <Image src={image_travail} alt="test" height={250} />
               </div>
             </div>
             <div id="contrats" className={`${styles["skill"]}`}>
@@ -166,7 +172,7 @@ const Competences = ({ slugId, sectionName }) => {
                   expertise judiciaire et participera aux opérations
                   d&apos;expertise afin de faire valoir vos intérêts.
                 </p>
-                <Image src={tribunal} alt="test" height={250} />
+                <Image src={image_contrat} alt="test" height={250} />
               </div>
             </div>
             <div id="civile" className={`${styles["skill"]}`}>
@@ -193,7 +199,7 @@ const Competences = ({ slugId, sectionName }) => {
                   responsabilité civile et notamment en matière de troubles de
                   voisinage.
                 </p>
-                <Image src={tribunal} alt="test" height={250} />
+                <Image src={image_civil} alt="test" height={250} />
               </div>
             </div>
           </div>
