@@ -17,7 +17,7 @@
     max-width: 125rem;
     overflow: hidden;
     margin: 0 auto;
-    padding-top: 2rem;
+    padding-top: 12rem;
 }
 .skill-slideshow {
     display: flex;
@@ -61,9 +61,12 @@
     gap: 4rem;
     align-items: center;
 }
+.skill-content p {
+    /* text-indent: 2rem;   */
+}
 .skill-content img {
     width: calc(40% - 2rem);
-    height: auto;
+    height: 100%;
 }
 
 @media screen and (max-width: 1000px) {

@@ -25,13 +25,16 @@ const Honoraires = ({ slugId, sectionName}) => {
       <section id="honoraires" className={styles["c-pricing"]}>
         <h2>HONORAIRES</h2>
         <div className={styles["c-pricing__card-container"]}>
-          <div
-            className={`${styles["c-pricing__card"]} ${styles["c-pricing__card-pen"]}`}
-          >
-            <FontAwesomeIcon icon={faPen} />
-            <span>CONSULTATION ÉCRITE</span>
-            <span>180 euros</span>
-          </div>
+          <Link href="https://consultation.avocat.fr/consultation-juridique/forms.php?hashid=f94c03a1a7d32192bde8" target="_blank" rel="noopener noreferrer">
+            <div
+              className={`${styles["c-pricing__card"]} ${styles["c-pricing__card-pen"]}`}
+            >
+              <FontAwesomeIcon icon={faPen} />
+              <span>CONSULTATION ÉCRITE</span>
+              <span>180 euros</span>
+            </div>
+          </Link>
+          <Link href="https://consultation.avocat.fr/consultation-telephonique/forms.php?hashid=c1873a8bf88a83978551" target="_blank">
           <div
             className={`${styles["c-pricing__card"]} ${styles["c-pricing__card-phone"]}`}
           >
@@ -39,6 +42,8 @@ const Honoraires = ({ slugId, sectionName}) => {
             <span>CONSULTATION TÉLÉPHONIQUE</span>
             <span>50 euros</span>
           </div>
+          </Link>
+          <Link href="https://consultation.avocat.fr/consultation-cabinet/forms.php?hashid=356c28657a903b4672e9" target="_blank">
           <div
             className={`${styles["c-pricing__card"]} ${styles["c-pricing__card-desk"]}`}
           >
@@ -46,6 +51,7 @@ const Honoraires = ({ slugId, sectionName}) => {
             <span>CONSULTATION CABINET</span>
             <span>50 euros</span>
           </div>
+          </Link>
         </div>
         <ContactBanner />
         <div className={styles["c-pricing__text"]}>
@@ -85,13 +91,13 @@ const Honoraires = ({ slugId, sectionName}) => {
           </p>
           <p className={styles["c-pricing__description"]}>
             Il vous est également possible de prendre rendez-vous directement en
-            ligne sur le site du barreau de Tours.
+            ligne sur le site du conseil national des barreaux.
           </p>
         </div>
         <div className={styles["c-pricing__button-wrapper"]}>
           <Link href={"https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html"}>
             <button className={`${styles["c-pricing__contact-button"]} ${styles["alternate-link"]}`}>
-              PRENDRE RENDEZ-VOUS SUR LE SITE DU BARREAU DE TOURS
+              PRENDRE DIRECTEMENT RENDEZ-VOUS
             </button>
           </Link>
         </div>

@@ -93,6 +93,7 @@ const Home = ({slugId, sectionName}) => {
             <li>Diplôme Universitaire de Sciences Criminelles</li>
             <li>Master 1 Carrière judiciaire et droit pénal</li>
             <li>Master 2 Contentieux privé</li>
+            <li>Assistante de Justice au tribunal du Mans</li>
             <li>Chargée d&apos;enseignement en Droit de la famille à l&apos;Université du Mans</li>
             <li>Juriste Contentieux du Droit de séjour auprès de la préfecture de la Vienne</li>
           </ul>
@@ -115,7 +116,7 @@ const Home = ({slugId, sectionName}) => {
           <div className={styles['c-intersection__image']}><a className={styles['c-intersection__anchor']} ref={sectionRefs[2]}></a></div>
           <div className={`${styles['c-intersection__label']} ${styles['c-intersection__schedule']}`}>
             <p><b>Du Lundi au Vendredi</b></p>
-            <p>8h - 12h</p>
+            <p>9h - 12h</p>
             <p>14h - 19h</p>
           </div>
       </section>
