@@ -19,7 +19,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faPhone, faBuilding, faMail } from '@fortawesome/free-solid-svg-icons';
 
 
-const Home = ({slugId, sectionName}) => {
+const Home = ({slugId, sectionName, skillState, setSkillState}) => {
 
   const sectionRefs = [
     useRef(null),
@@ -110,7 +110,7 @@ const Home = ({slugId, sectionName}) => {
             </span>
             <span className={styles['c-intersection__contact-info']}>
               <FontAwesomeIcon icon={['fas', 'envelope']} />
-              <Link href='mailTo:contact@mancini-avocat.fr'>contact@mancini-avocat.fr</Link>
+              <Link href='mailTo:mancini.lea@avocat-conseil.fr'>mancini.lea@avocat-conseil.fr</Link>
             </span>
           </div>
           <div className={styles['c-intersection__image']}><a className={styles['c-intersection__anchor']} ref={sectionRefs[2]}></a></div>
@@ -122,7 +122,7 @@ const Home = ({slugId, sectionName}) => {
       </section>
       <section className={styles['c-skill']}>
         <h3>DOMAINES D&apos;INTERVENTION</h3>
-        <SkillMenu handleClick={null} colorScheme={'dark'} disabled={true} />
+        <SkillMenu handleClick={null} colorScheme={'dark'} skillState={skillState} setSkillState={setSkillState} disabled={true} />
         <div className={styles['c-skill__button-wrapper']}>
         <Link href={'/competences'}><button className={styles['c-skill__link']}>En savoir plus</button></Link>
         </div>

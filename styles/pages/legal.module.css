@@ -12,6 +12,7 @@
 }
 .c-legal {
     padding: 0rem 8rem;
+    font-variant-numeric: lining-nums;
 }
 .c-legal h2 {
     font-size: 2.4rem;
@@ -46,5 +47,11 @@
     padding: 4rem 0 0;
 }
 .c-legal__developer {
+    padding: 4rem 0;
+}
+.c-legal__cnil {
+    padding: 4rem 0;
+}
+.c-legal__hosting {
     padding: 4rem 0;
 }

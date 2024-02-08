@@ -75,7 +75,26 @@
     width: 100vw;
     overflow: hidden;
 }
-
+.c-contact__link-button {
+    width: fit-content;
+    margin: 0 auto;
+}
+.c-contact__link-button button {
+    margin: 2rem auto 0;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    font-family: raleway;
+    color: white;
+    background-color: var(--yellow);
+    border: none;
+}
+.c-contact__link-button button:hover {
+    background-color: rgb(160, 89, 23);
+    cursor: pointer;
+}
+.c-contact__link-button button:active {
+    background-color: var(--yellow);
+}
 @media screen and (max-width: 65.5rem) {
     .c-contact {
         gap: 8rem;

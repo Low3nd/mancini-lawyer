@@ -19,6 +19,9 @@
     justify-content: center;
     gap: 8rem;
 }
+.c-pricing__card-container a {
+    text-decoration: none;
+}
 .c-pricing__card {
     display: flex;
     flex-flow: column nowrap;
@@ -37,6 +40,9 @@
 .c-pricing__card svg {
     height: 6rem;
     width: 6rem;
+}
+.c-pricing__card:hover {
+    font-weight: bold;
 }
 .c-pricing__card-pen {
     background: url(../../public/img/fees_pen.jpg);

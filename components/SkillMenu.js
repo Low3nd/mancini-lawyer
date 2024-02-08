@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-const SkillMenu = ({ activeSkill, handleClick, colorScheme, disabled }) => {
+const SkillMenu = ({ skillState, setSkillState, colorScheme, disabled }) => {
   
   const skillList = [
     {
@@ -51,11 +51,10 @@ const SkillMenu = ({ activeSkill, handleClick, colorScheme, disabled }) => {
           <Link
             className={clsx(
               styles["skill-button"],
-              activeSkill === index && styles["skill-button--is-active"],
-              colorScheme === "dark" && styles["skill-button--dark"],
-              disabled === true && styles["skill-button--disabled"]
+              disabled !== true && skillState === index && styles["skill-button--is-active"],
+              colorScheme === "dark" && styles["skill-button--dark"]
             )}
-            onClick={() => handleClick(index)}
+            onClick={() => setSkillState(index)}
             href={'/competences#slideshow'}
             scroll={false}
             key={index}

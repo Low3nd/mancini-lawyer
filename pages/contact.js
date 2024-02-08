@@ -38,17 +38,6 @@ const Contact = ({cookieConsent}) => {
           <hr></hr>
         </div>
         <section className={styles["c-contact"]}>
-        <Link
-                href={
-                  "https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html"
-                }
-              >
-                <button
-                  className={`${styles["c-pricing__contact-button"]} ${styles["alternate-link"]}`}
-                >
-                  PRENDRE DIRECTEMENT RENDEZ-VOUS
-                </button>
-              </Link>
           <ContactForm />
           <div className={styles["c-contact__contact-info"]}>
             <div
@@ -71,8 +60,8 @@ const Contact = ({cookieConsent}) => {
               className={`${styles["c-contact__contact-email"]} ${styles["c-contact__container"]}`}
             >
               <FontAwesomeIcon icon={faEnvelope} />
-              <Link href="mailTo:contact@mancini-avocat.fr">
-                contact@mancini-avocat.fr
+              <Link href="mailTo:mancini.lea@avocat-conseil.fr">
+                mancini.lea@avocat-conseil.fr
               </Link>
             </div>
             <div
@@ -86,6 +75,13 @@ const Contact = ({cookieConsent}) => {
               </div>
             </div>
           </div>
+        </section>
+        <section className={styles["c-contact__link-button"]}>
+          <Link href={"https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html"}>
+            <button className={`${styles["c-pricing__contact-button"]} ${styles["alternate-link"]}`}>
+              PRENDRE RENDEZ-VOUS EN LIGNE
+            </button>
+          </Link>
         </section>
         {cookieConsent === "false" || cookieConsent === null ? (
           console.log("no consent")

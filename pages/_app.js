@@ -26,7 +26,9 @@ const MyApp = ({ Component, pageProps }) => {
   const slugId = []
   const sluggifyId = section.name.map((id) => {
       slugId.push(id.replace(/ /g, '-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""))
-  })
+  });
+
+  const [skillState, setSkillState] = useState();
   
   return (
     <>
@@ -35,7 +37,7 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <div className={styles['content-wrapper']}>
         <Layout cookieConsent={cookieConsent} setCookieConsent={setCookieConsent}>
-          <Component {...pageProps} cookieConsent={cookieConsent} sectionName={section.name} slugId={slugId} />
+          <Component {...pageProps} cookieConsent={cookieConsent} sectionName={section.name} slugId={slugId} skillState={skillState} setSkillState={setSkillState} />
         </Layout>
       </div>
     </>

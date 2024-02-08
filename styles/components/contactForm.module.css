@@ -57,6 +57,13 @@
     color: white;
     background-color: var(--green);
 }
+.c-contact__form-submit:hover {
+    background-color: rgb(84, 117, 103);
+    cursor: pointer;
+}
+.c-contact__form-submit:active {
+    background-color: var(--green);
+}
 .c-contact__form-validation-message {
     width: 53rem;
     padding: 2rem 1rem;

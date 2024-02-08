@@ -25,7 +25,7 @@ const Honoraires = ({ slugId, sectionName}) => {
       <section id="honoraires" className={styles["c-pricing"]}>
         <h2>HONORAIRES</h2>
         <div className={styles["c-pricing__card-container"]}>
-          <Link href="https://consultation.avocat.fr/consultation-juridique/forms.php?hashid=f94c03a1a7d32192bde8" target="_blank" rel="noopener noreferrer">
+          <Link href="https://consultation.avocat.fr/consultation-juridique/forms.php?source=profile&targetid=51137" target="_blank" rel="noopener noreferrer">
             <div
               className={`${styles["c-pricing__card"]} ${styles["c-pricing__card-pen"]}`}
             >
@@ -34,7 +34,7 @@ const Honoraires = ({ slugId, sectionName}) => {
               <span>180 euros</span>
             </div>
           </Link>
-          <Link href="https://consultation.avocat.fr/consultation-telephonique/forms.php?hashid=c1873a8bf88a83978551" target="_blank">
+          <Link href="https://consultation.avocat.fr/consultation-telephonique/forms.php?source=profile&targetid=51137" target="_blank">
           <div
             className={`${styles["c-pricing__card"]} ${styles["c-pricing__card-phone"]}`}
           >
@@ -43,7 +43,7 @@ const Honoraires = ({ slugId, sectionName}) => {
             <span>50 euros</span>
           </div>
           </Link>
-          <Link href="https://consultation.avocat.fr/consultation-cabinet/forms.php?hashid=356c28657a903b4672e9" target="_blank">
+          <Link href="https://consultation.avocat.fr/consultation-cabinet/forms.php?source=profile&targetid=51137" target="_blank">
           <div
             className={`${styles["c-pricing__card"]} ${styles["c-pricing__card-desk"]}`}
           >
@@ -97,7 +97,7 @@ const Honoraires = ({ slugId, sectionName}) => {
         <div className={styles["c-pricing__button-wrapper"]}>
           <Link href={"https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html"}>
             <button className={`${styles["c-pricing__contact-button"]} ${styles["alternate-link"]}`}>
-              PRENDRE DIRECTEMENT RENDEZ-VOUS
+              PRENDRE RENDEZ-VOUS EN LIGNE
             </button>
           </Link>
         </div>

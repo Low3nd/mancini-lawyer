@@ -26,9 +26,6 @@
     color: white;
     border-color: white;
 }
-.skill-button--disabled {
-    pointer-events: none;
-}
 .skill-button p {
     width: 100%;
 }
