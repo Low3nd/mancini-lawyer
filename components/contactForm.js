@@ -3,7 +3,7 @@ import styles from '../styles/components/contactForm.module.css'
 
 const ContactForm = () => {
 
-    const [state, handleSubmit] = useForm('xjvdvkjp')
+    const [state, handleSubmit] = useForm('xvoeapzb')
 
     if (state.succeeded) {
         return <p className={styles['c-contact__form-validation-message']}>Merci, votre message a bien été envoyé !<br />Nous vous recontacterons dès que possible.</p>
