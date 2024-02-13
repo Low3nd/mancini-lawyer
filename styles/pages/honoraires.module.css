@@ -45,19 +45,19 @@
     font-weight: bold;
 }
 .c-pricing__card-pen {
-    background: url(../../public/img/fees_pen.jpg);
+    background: url(../../public/img/fees_pen.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(58, 58, 60, 0.3);
 }
 .c-pricing__card-phone {
-    background: url(../../public/img/fees_phone.jpg);
+    background: url(../../public/img/fees_phone.webp);
     background-size: cover;
     background-color: rgba(58, 58, 60, 0.1);
 
 }
 .c-pricing__card-desk {
-    background: url(../../public/img/fees_desk.jpg);
+    background: url(../../public/img/fees_desk.webp);
     background-size: cover;
     background-color: rgba(58, 58, 60, 0.2);
 }

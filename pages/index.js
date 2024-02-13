@@ -13,7 +13,7 @@ import ContactBanner from '../components/contactBanner';
 
 import styles from '../styles/pages/index.module.css';
 
-import bioPic from '../public/img/bio-pic3.jpg';
+import bioPic from '../public/img/bio-pic3.webp';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faPhone, faBuilding, faMail } from '@fortawesome/free-solid-svg-icons';

@@ -9,12 +9,12 @@ import SkillMenu from "../components/SkillMenu";
 import ContactBanner from "../components/contactBanner";
 
 import Image from "next/image";
-import image_penal from "../public/img/image_penal.jpg";
-import image_etranger from "../public/img/image_etranger.jpg";
-import image_famille from "../public/img/image_famille.jpg";
-import image_civil from "../public/img/image_civil.jpg";
-import image_contrat from "../public/img/image_contrat.jpg";
-import image_travail from "../public/img/image_travail.jpg";
+import image_penal from "../public/img/image_penal.webp";
+import image_etranger from "../public/img/image_etranger.webp";
+import image_famille from "../public/img/image_famille.webp";
+import image_civil from "../public/img/image_civil.webp";
+import image_contrat from "../public/img/image_contrat.webp";
+import image_travail from "../public/img/image_travail.webp";
 
 
 import styles from "../styles/pages/competences.module.css";

@@ -37,7 +37,7 @@
     font-feature-settings: 'pnum' on, 'lnum' on;
 }
 .c-footer__contact-info-container {
-    width: 30rem;
+    width: 32rem;
 }
 .c-footer__contact-info {
     display: flex;
@@ -49,12 +49,12 @@
 }
 .c-footer__contact-detail {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     gap: 2rem;
 }
 .c-footer__contact-detail p {
-    width: 25rem;
+    width: 26rem;
     text-align: center;
 }
 .c-footer__contact-detail a {
