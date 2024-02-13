@@ -72,8 +72,8 @@ const Home = ({slugId, sectionName, skillState, setSkillState}) => {
       <section id="a-propos">
       <div className={styles['c-bio__content']}>
           <div className={styles['c-bio__content-title']}>
-            <h3>MAÎTRE <b>LEA MANCINI</b></h3>
-            <h4>Avocate au barreau de Tours</h4>
+            <h2>MAÎTRE <b>LEA MANCINI</b></h2>
+            <h3>Avocate au barreau de Tours</h3>
             <hr />
           </div>
           <div className={styles['c-bio__content-description']}>
@@ -89,7 +89,7 @@ const Home = ({slugId, sectionName, skillState, setSkillState}) => {
             />
           </div>
           <ul className={styles['c-bio__content-bullet']}>
-            <h4>FORMATION</h4>
+            <h3>FORMATION</h3>
             <li>Licence de Droit fondamental</li>
             <li>Diplôme Universitaire de Sciences Criminelles</li>
             <li>Master 1 Carrière judiciaire et droit pénal</li>
@@ -122,7 +122,7 @@ const Home = ({slugId, sectionName, skillState, setSkillState}) => {
           </div>
       </section>
       <section className={styles['c-skill']}>
-        <h3>DOMAINES D&apos;INTERVENTION</h3>
+        <h2>DOMAINES D&apos;INTERVENTION</h2>
         <SkillMenu handleClick={null} colorScheme={'dark'} skillState={skillState} setSkillState={setSkillState} disabled={true} />
         <div className={styles['c-skill__button-wrapper']}>
         <Link href={'/competences'}><button className={styles['c-skill__link']}>En savoir plus</button></Link>

@@ -8,8 +8,8 @@ const ContactBanner = () => {
     return (
         <div className={styles['contact-banner']}>
             <hr />
-            <h4>Besoin d&apos;un renseignement ? De connaître nos disponibilités ?</h4>
-            <p>Nous sommes disponible pour toutes questions ou prises de rendez-vous</p>
+            <h2>Besoin d&apos;un renseignement ? De connaître nos disponibilités ?</h2>
+            <h3>Nous sommes disponible pour toutes questions ou prises de rendez-vous</h3>
             <div className={styles['phone-link']}>
                 <Link href='tel:+33616884541'>
                     <FontAwesomeIcon icon={`fa-solid fa-phone`} />

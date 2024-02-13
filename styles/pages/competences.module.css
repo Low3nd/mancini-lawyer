@@ -4,13 +4,18 @@
     background-size: 50%;
     background-position: center;
 }
-.c-skill h2 {
+.c-skill h1 {
     text-align: center;
     font-family: raleway;
     font-size: 2.4rem;
     font-weight: bold;
-    margin: 0 0 6rem;
+    margin: 0 0;
     padding-top: 6rem;
+}
+.c-skill hr {
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 2rem 8rem 8rem;
 }
 
 .skill-container {
@@ -49,7 +54,7 @@
     gap: 3rem;
     margin-bottom: 5rem;
 }
-.skill-header h3 {
+.skill-header h2 {
     font-size: 4.2rem;
     letter-spacing: 0.5rem;
     font-weight: 500;
@@ -82,12 +87,12 @@
         padding: 1rem;
         padding-right: 0;
     }
-    .skill-header h3 {
+    .skill-header h2 {
         width: 100%;
     }
 }
 @media screen and (max-width: 540px) {
-    .skill-header h3 {
+    .skill-header h2 {
         font-size: 3.6rem;
     }
     .skill-content img {
@@ -95,7 +100,7 @@
     }
 }
 @media screen and (max-width: 370px) {
-    .skill-header h3 {
+    .skill-header h2 {
         font-size: 2.8rem
     }
 }

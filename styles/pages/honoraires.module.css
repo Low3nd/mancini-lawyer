@@ -6,12 +6,17 @@
     padding: 4rem 8rem;
     font-feature-settings: 'pnum' on, 'lnum' on;
 }
-.c-pricing h2 {
+.c-pricing h1 {
     text-align: center;
     font-family: raleway;
     font-size: 2.4rem;
     font-weight: bold;
     padding-top: 6rem;
+}
+.c-pricing hr {
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 0rem 8rem 4rem;
 }
 .c-pricing__card-container {
     display: flex;
@@ -65,6 +70,10 @@
     max-width: fit-content;
     margin: 0 auto;
 }
+.c-pricing__text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
 .c-pricing__description {
     font-size: 1.8rem;
     text-align: justify;
@@ -77,6 +86,7 @@
 .c-pricing__description-bullet {
     list-style: inside;
     margin-left: 1.2rem;
+    margin-bottom: 3rem;
 }
 .c-pricing__button-wrapper {
     width: fit-content;

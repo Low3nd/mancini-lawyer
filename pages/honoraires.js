@@ -30,7 +30,8 @@ const Honoraires = ({ slugId, sectionName}) => {
         forceDarkMode={true}
       />
       <section id="honoraires" className={styles["c-pricing"]}>
-        <h2>HONORAIRES</h2>
+        <h1>HONORAIRES</h1>
+        <hr />
         <div className={styles["c-pricing__card-container"]}>
           <Link
             href="https://consultation.avocat.fr/consultation-juridique/forms.php?source=profile&targetid=51137"
@@ -72,6 +73,7 @@ const Honoraires = ({ slugId, sectionName}) => {
         </div>
         <ContactBanner />
         <div className={styles["c-pricing__text"]}>
+          <h2>Détails des honoraires</h2>
           <p className={styles["c-pricing__description"]}>
             Les honoraires d&apos;avocat sont fonction, notamment, de chacun des
             éléments suivants conformément aux usages :

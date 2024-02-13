@@ -12,11 +12,11 @@
     border: none;
     border-top: 1px solid black;
 }
-.contact-banner h4 {
+.contact-banner h2 {
     font-size: 2.4rem;
     margin-top: 2rem;
 }
-.contact-banner p {
+.contact-banner h3 {
     font-size: 2rem;
 }
 .contact-banner svg {

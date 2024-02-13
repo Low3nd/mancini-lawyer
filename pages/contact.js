@@ -38,6 +38,7 @@ const Contact = ({cookieConsent}) => {
         <section className={styles["c-contact"]}>
           <ContactForm />
           <div className={styles["c-contact__contact-info"]}>
+            <h2>Coordonnées</h2>
             <div
               className={`${styles["c-contact__contact-adress"]} ${styles["c-contact__container"]}`}
             >

@@ -37,7 +37,8 @@ const Competences = ({ slugId, sectionName, skillState, setSkillState }) => {
         forceDarkMode={true}
       />
       <section id="competences" className={styles["c-skill"]}>
-        <h2>DOMAINES D&apos;INTERVENTION</h2>
+        <h1>DOMAINES D&apos;INTERVENTION</h1>
+        <hr />
         <SkillMenu skillState={skillState} setSkillState={setSkillState} />
         <div id="slideshow" className={styles["skill-container"]}>
           <div
@@ -46,7 +47,7 @@ const Competences = ({ slugId, sectionName, skillState, setSkillState }) => {
           >
             <div id="penal" className={`${styles["skill"]}`}>
               <div className={styles["skill-header"]}>
-                <h3>Droit Pénal</h3>
+                <h2>Droit Pénal</h2>
                 <ul>
                   <li>Garde à vue / Dépôt de plainte</li>
                   <li>Crime / Délit / Contravention</li>
@@ -77,7 +78,7 @@ const Competences = ({ slugId, sectionName, skillState, setSkillState }) => {
             </div>
             <div id="etrangers" className={`${styles["skill"]}`}>
               <div className={styles["skill-header"]}>
-                <h3>Droit des Étrangers</h3>
+                <h2>Droit des Étrangers</h2>
                 <ul>
                   <li>Recours contre les OQTF</li>
                   <li>Demande de titre de séjour</li>
@@ -104,7 +105,7 @@ const Competences = ({ slugId, sectionName, skillState, setSkillState }) => {
             </div>
             <div id="famille" className={`${styles["skill"]}`}>
               <div className={styles["skill-header"]}>
-                <h3>Droit des Enfants et de la Famille</h3>
+                <h2>Droit des Enfants et de la Famille</h2>
                 <ul>
                   <li>Divorce</li>
                   <li>Conflit Parental</li>
@@ -132,7 +133,7 @@ const Competences = ({ slugId, sectionName, skillState, setSkillState }) => {
             </div>
             <div id="travail" className={`${styles["skill"]}`}>
               <div className={styles["skill-header"]}>
-                <h3>Droit du Travail</h3>
+                <h2>Droit du Travail</h2>
                 <ul>
                   <li>Contestation de licenciement</li>
                   <li>Harcèlement</li>
@@ -157,7 +158,7 @@ const Competences = ({ slugId, sectionName, skillState, setSkillState }) => {
             </div>
             <div id="contrats" className={`${styles["skill"]}`}>
               <div className={styles["skill-header"]}>
-                <h3>Droit des Contrats</h3>
+                <h2>Droit des Contrats</h2>
                 <ul>
                   <li>Vices cachés / Non-conformité</li>
                   <li>Droit de la consommation</li>
@@ -182,7 +183,7 @@ const Competences = ({ slugId, sectionName, skillState, setSkillState }) => {
             </div>
             <div id="civile" className={`${styles["skill"]}`}>
               <div className={styles["skill-header"]}>
-                <h3>Droit de la Responsabilité Civile</h3>
+                <h2>Droit de la Responsabilité Civile</h2>
                 <ul>
                   <li>Préjudice corporel</li>
                   <li>Expertise judiciaire</li>

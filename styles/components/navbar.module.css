@@ -30,7 +30,7 @@
     border-color: transparent;
     background-color: transparent;
 }
-.c-nav--hero-theme h3 {
+.c-nav--hero-theme span {
     color: white;
 }
 
@@ -48,7 +48,7 @@
 .c-nav__logo-text {
     height: 5rem;
 }
-.c-nav h3 {
+.c-nav span {
     font-size: 2rem;
     letter-spacing: 0.1rem;
     font-family: 'Playfair display';
