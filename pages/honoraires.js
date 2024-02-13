@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 
 import Navbar from "../components/navbar";
@@ -16,6 +17,12 @@ import styles from "../styles/pages/honoraires.module.css";
 const Honoraires = ({ slugId, sectionName}) => {
   return (
     <>
+      <Head>
+        <title>Maître MANCINI - Honoraires</title>
+        <meta name="description" content="Découvrez les tarifs de Maître Léa Mancini, avocate à Tours." />
+        <meta name="robot" content="index" />
+        <link rel="canonical" href="https://www.mancini-avocat.fr/honoraires" />
+      </Head>
       <Navbar
         sectionName={sectionName}
         slugId={slugId}
@@ -25,7 +32,11 @@ const Honoraires = ({ slugId, sectionName}) => {
       <section id="honoraires" className={styles["c-pricing"]}>
         <h2>HONORAIRES</h2>
         <div className={styles["c-pricing__card-container"]}>
-          <Link href="https://consultation.avocat.fr/consultation-juridique/forms.php?source=profile&targetid=51137" target="_blank" rel="noopener noreferrer">
+          <Link
+            href="https://consultation.avocat.fr/consultation-juridique/forms.php?source=profile&targetid=51137"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div
               className={`${styles["c-pricing__card"]} ${styles["c-pricing__card-pen"]}`}
             >
@@ -34,23 +45,29 @@ const Honoraires = ({ slugId, sectionName}) => {
               <span>180 euros</span>
             </div>
           </Link>
-          <Link href="https://consultation.avocat.fr/consultation-telephonique/forms.php?source=profile&targetid=51137" target="_blank">
-          <div
-            className={`${styles["c-pricing__card"]} ${styles["c-pricing__card-phone"]}`}
+          <Link
+            href="https://consultation.avocat.fr/consultation-telephonique/forms.php?source=profile&targetid=51137"
+            target="_blank"
           >
-            <FontAwesomeIcon icon={faPhone} />
-            <span>CONSULTATION TÉLÉPHONIQUE</span>
-            <span>50 euros</span>
-          </div>
+            <div
+              className={`${styles["c-pricing__card"]} ${styles["c-pricing__card-phone"]}`}
+            >
+              <FontAwesomeIcon icon={faPhone} />
+              <span>CONSULTATION TÉLÉPHONIQUE</span>
+              <span>50 euros</span>
+            </div>
           </Link>
-          <Link href="https://consultation.avocat.fr/consultation-cabinet/forms.php?source=profile&targetid=51137" target="_blank">
-          <div
-            className={`${styles["c-pricing__card"]} ${styles["c-pricing__card-desk"]}`}
+          <Link
+            href="https://consultation.avocat.fr/consultation-cabinet/forms.php?source=profile&targetid=51137"
+            target="_blank"
           >
-            <FontAwesomeIcon icon={faBuilding} />
-            <span>CONSULTATION CABINET</span>
-            <span>50 euros</span>
-          </div>
+            <div
+              className={`${styles["c-pricing__card"]} ${styles["c-pricing__card-desk"]}`}
+            >
+              <FontAwesomeIcon icon={faBuilding} />
+              <span>CONSULTATION CABINET</span>
+              <span>50 euros</span>
+            </div>
           </Link>
         </div>
         <ContactBanner />
@@ -95,8 +112,14 @@ const Honoraires = ({ slugId, sectionName}) => {
           </p>
         </div>
         <div className={styles["c-pricing__button-wrapper"]}>
-          <Link href={"https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html"}>
-            <button className={`${styles["c-pricing__contact-button"]} ${styles["alternate-link"]}`}>
+          <Link
+            href={
+              "https://consultation.avocat.fr/avocat-tours/lea-mancini-51137.html"
+            }
+          >
+            <button
+              className={`${styles["c-pricing__contact-button"]} ${styles["alternate-link"]}`}
+            >
               PRENDRE RENDEZ-VOUS EN LIGNE
             </button>
           </Link>

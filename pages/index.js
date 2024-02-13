@@ -38,6 +38,7 @@ const Home = ({slugId, sectionName, skillState, setSkillState}) => {
       <Head>
         <title>Maître MANCINI - Avocate à Tours</title>
         <meta name="description" content="Maître Léa Mancini, avocate du barreau de Tours, vous accompagne et vous conseille dans vos démarches juridiques, procès, ou dans la médiation de vos conflits." />
+        <meta name="robot" content="index" />
         <link rel="canonical" href="https://www.mancini-avocat.fr" />
       </Head>
       <Navbar currentSection={activeSection} sectionName={sectionName} slugId={slugId} />

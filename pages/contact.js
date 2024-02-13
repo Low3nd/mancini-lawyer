@@ -21,10 +21,8 @@ const Contact = ({cookieConsent}) => {
       <>
         <Head>
           <title>Maître MANCINI - Contact et rendez-vous</title>*
-          <meta
-            name="description"
-            content="Maître Léa Mancini, avocate du barreau de Tours, vous accompagne et vous conseille dans vos démarches juridiques, procès, ou dans la médiation de vos conflits. Prenez contact sur cette page."
-          />
+          <meta name="description" content="Pour toutes vos démarches juridiques, conseils ou procès, prenez rendez-vous en ligne avec Maître Mancini." />
+          <meta name="robot" content="index" />
           <link rel="canonical" href="https://www.mancini-avocat.fr/contact" />
         </Head>
         <Navbar

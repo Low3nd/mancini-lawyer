@@ -24,14 +24,12 @@ const Competences = ({ slugId, sectionName, skillState, setSkillState }) => {
 
   return (
     <>
-      <Head>
-        <title>Maître MANCINI - Avocate à Tours</title>
-        <meta
-          name="description"
-          content="Maître Léa Mancini, avocate du barreau de Tours, vous accompagne et vous conseille dans vos démarches juridiques, procès, ou dans la médiation de vos conflits."
-        />
-        <link rel="canonical" href="https://www.mancini-avocat.fr" />
-      </Head>
+        <Head>
+          <title>Maître MANCINI - domaines d&apos;intervention</title>*
+          <meta name="description" content="Formée à plusieurs domaines d'expertise juridique, Maître Mancini intervient et vous conseil dans vos démarches. " />
+          <meta name="robot" content="index" />
+          <link rel="canonical" href="https://www.mancini-avocat.fr/competences" />
+        </Head>
       <Navbar
         sectionName={sectionName}
         slugId={slugId}

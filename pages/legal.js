@@ -10,10 +10,7 @@ const Legal = ({sectionName, slugId}) => {
         <Navbar currentSection={5} sectionName={sectionName} slugId={slugId} />
         <Head>
           <title>Maître MANCINI - Mentions Légales</title>
-          <meta
-            name="description"
-            content="Sur cette page, vous trouverez les mentions légales qui régissent le site internet mancini-avocat.fr"
-          />
+          <meta name="robots" content="noindex" />
           <link rel="canonical" href="https://www.mancini-avocat.fr/legal" />
         </Head>
         <div className={styles["title"]}>
