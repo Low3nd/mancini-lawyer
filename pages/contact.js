@@ -20,7 +20,7 @@ const Contact = ({cookieConsent}) => {
     return (
       <>
         <Head>
-          <title>Maître MANCINI - Contact et rendez-vous</title>*
+          <title>Maître MANCINI - Contact et rendez-vous</title>
           <meta name="description" content="Pour toutes vos démarches juridiques, conseils ou procès, prenez rendez-vous en ligne avec Maître Mancini." />
           <meta name="robot" content="index" />
           <link rel="canonical" href="https://www.mancini-avocat.fr/contact" />
@@ -59,8 +59,8 @@ const Contact = ({cookieConsent}) => {
               className={`${styles["c-contact__contact-email"]} ${styles["c-contact__container"]}`}
             >
               <FontAwesomeIcon icon={faEnvelope} />
-              <Link href="mailTo:mancini.lea@avocat-conseil.fr">
-                mancini.lea@avocat-conseil.fr
+              <Link href="mailTo:lea.mancini@avocat.fr">
+                lea.mancini@avocat.fr
               </Link>
             </div>
             <div

@@ -31,7 +31,7 @@ const Footer = ({sectionName, slugId}) => {
                         </div>
                         <div className={styles['c-footer__contact-detail']}>
                             <FontAwesomeIcon icon={faEnvelope} />
-                            <Link href='mailTo:mancini.lea@avocat-conseil.fr'>mancini.lea@avocat-conseil.fr</Link>
+                            <Link href='mailTo:lea.mancini@avocat.fr'>lea.mancini@avocat.fr</Link>
                         </div>
                         <div className={styles['c-footer__contact-detail']}>
                             <FontAwesomeIcon icon={faLocationDot} />

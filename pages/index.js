@@ -111,14 +111,14 @@ const Home = ({slugId, sectionName, skillState, setSkillState}) => {
             </span>
             <span className={styles['c-intersection__contact-info']}>
               <FontAwesomeIcon icon={['fas', 'envelope']} />
-              <Link href='mailTo:mancini.lea@avocat-conseil.fr'>mancini.lea@avocat-conseil.fr</Link>
+              <Link href='mailTo:lea.mancini@avocat.fr'>lea.mancini@avocat.fr</Link>
             </span>
           </div>
           <div className={styles['c-intersection__image']}><a className={styles['c-intersection__anchor']} ref={sectionRefs[2]}></a></div>
           <div className={`${styles['c-intersection__label']} ${styles['c-intersection__schedule']}`}>
             <p><b>Du Lundi au Vendredi</b></p>
             <p>9h - 12h</p>
-            <p>14h - 19h</p>
+            <p>14h - 18h</p>
           </div>
       </section>
       <section className={styles['c-skill']}>
